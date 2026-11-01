@@ -1,10 +1,10 @@
 {
   "code": "c0",
   "judul": "Orientasi & Diagnosis Awal",
-  "menit": 15,
+  "menit": 20,
   "tenggat_tampil": "5 Nov 2026, 21.00 WIB",
   "deskripsi": "Kenali cara kerja workshop dan modul ini, tetapkan topik bahan ajar Anda, dan ikuti pre-test diagnostik.",
-  "penutup": "Tim fasilitator akan membaca profil dan topik Anda sebelum workshop dimulai. Modul C1 terbuka untuk Anda.",
+  "penutup": "Tim fasilitator akan membaca profil dan topik Anda sebelum workshop dimulai. Modul C1 terbuka setelah modul ini 100% selesai.",
   "blocks": [
     {
       "type": "text",
@@ -14,7 +14,7 @@
       "type": "callout",
       "variant": "tip",
       "title": "Cara kerja modul ini",
-      "html": "<ul><li>Kerjakan <strong>1–2 modul per hari</strong>; tenggat lengkap tertulis di setiap modul. Tenggat terakhir: <strong>8 November 2026, 21.00 WIB</strong>.</li><li>Setiap interaksi <strong>tersimpan otomatis</strong> — boleh berhenti kapan saja dan lanjut dari posisi terakhir.</li><li>Kuis boleh <strong>diulang</strong> (low-stakes). Umpan balik dan rasionalnya justru bagian terpenting dari latihan.</li><li>Jawaban lembar kerja Anda <strong>dibaca fasilitator kelompok</strong> sebelum Hari 1, agar pendampingan langsung tepat sasaran.</li></ul>"
+      "html": "<ul><li>Kerjakan <strong>1–2 modul per hari</strong>; tenggat lengkap tertulis di setiap modul. Tenggat terakhir: <strong>8 November 2026, 21.00 WIB</strong>.</li><li><strong>Modul terbuka berurutan</strong>: modul berikutnya terbuka setelah modul sebelumnya 100% selesai.</li><li>Setiap interaksi <strong>tersimpan otomatis</strong> — boleh berhenti kapan saja dan lanjut dari posisi terakhir.</li><li>Kuis boleh <strong>diulang</strong> (low-stakes). Umpan balik dan rasionalnya justru bagian terpenting dari latihan.</li><li>Setiap modul memuat <strong>bacaan wajib singkat dari artikel riset open access</strong> — jawab kuis bacanya dengan jujur dari bacaan, bukan tebakan.</li><li>Jawaban lembar kerja Anda <strong>dibaca fasilitator kelompok</strong> sebelum Hari 1, agar pendampingan langsung tepat sasaran.</li></ul>"
     },
     {
       "type": "text",

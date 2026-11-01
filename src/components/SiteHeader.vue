@@ -32,8 +32,11 @@ import { brand } from '../lib/brand.js'
   flex-wrap: wrap;
 }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.logo-bpjs { height: 34px; }
-.logo-upnvj { height: 38px; background: #fff; border-radius: 50%; padding: 2px; }
+.logo-bpjs {
+  height: 38px; background: #fff; border-radius: 9px;
+  padding: 6px 10px; /* chip putih agar logo indigo-hijau kontras di header gelap */
+}
+.logo-upnvj { height: 38px; background: #fff; border-radius: 50%; padding: 3px; }
 .x { color: rgba(255,255,255,.65); font-weight: 700; }
 @media (max-width: 640px) {
   .logo-bpjs { height: 26px; }

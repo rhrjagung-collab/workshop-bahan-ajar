@@ -1,20 +1,21 @@
 {
   "code": "c3",
   "judul": "Alur Sesi & Storyboard",
-  "menit": 25,
+  "menit": 35,
   "tenggat_tampil": "6 Nov 2026, 21.00 WIB",
-  "deskripsi": "Menyusun urutan sesi yang membawa peserta dari masalah ke penerapan, lalu memetakan fungsi tiap slide.",
-  "penutup": "Draf alur dan headline slide Anda menjadi bahan sesi storyboard (M3) di Hari 1.",
+  "deskripsi": "Menyusun urutan sesi dari masalah ke penerapan dan memetakan fungsi tiap slide dengan storyboard ala metode fishbone.",
+  "penutup": "Draf alur dan headline slide Anda menjadi bahan sesi M3. Modul C4 terbuka setelah modul ini 100% selesai.",
   "blocks": [
+    { "type": "section", "num": "1", "title": "Deck yang hilang arahnya", "sub": "Masalahnya biasanya bukan isi — tetapi urutan dan fungsi" },
     {
       "type": "text",
-      "html": "<h2>Deck yang hilang arahnya</h2><p>Coba ingat presentasi terakhir yang membingungkan: materi melompat, tidak jelas mana contoh dan mana latihan, dan penutupnya hanya <em>“Terima kasih”</em>. Masalahnya biasanya bukan isi — tetapi <strong>urutan dan fungsi</strong> yang tidak direncanakan.</p><p>Alur desain yang memandu peserta bergerak dari masalah ke penerapan:</p><p><strong>Pemantik/masalah → tujuan → konsep inti → contoh → latihan → umpan balik → rangkuman/transfer</strong></p>"
+      "html": "<p>Ingat presentasi terakhir yang membingungkan: materi melompat, tidak jelas mana contoh dan mana latihan, penutupnya hanya <em>“Terima kasih”</em>. Alur desain yang memandu peserta bergerak dari masalah ke penerapan:</p><p><strong>Pemantik/masalah → tujuan → konsep inti → contoh → latihan → umpan balik → rangkuman/transfer</strong></p>"
     },
     {
       "type": "figure",
       "src": "figures/alur-pembelajaran.svg",
       "alt": "Tujuh chevron alur desain pembelajaran: kenali peserta dan gap, tetapkan hasil terukur, tentukan bukti asesmen, rancang aktivitas dan alur, pilih media, praktikkan, telaah dan revisi — dengan garis umpan balik siklus perbaikan",
-      "caption": "Alur kerja desain pembelajaran dari kebutuhan sampai revisi — siklus, bukan garis lurus.",
+      "caption": "Alur kerja desain pembelajaran — siklus, bukan garis lurus.",
       "credit": "Ilustrasi tim modul (2026), diadaptasi dari materi ToT Workshop Jaminan Sosial — bebas lisensi."
     },
     {
@@ -30,11 +31,12 @@
         "Umpan balik: bahas jawaban dan miskonsepsi",
         "Rangkuman & transfer: satu langkah penerapan di pekerjaan"
       ],
-      "rationale": "Alur ini menjaga beban kognitif: input singkat, lalu pemrosesan, lalu penguatan. Latihan dan umpan balik adalah bagian yang paling sering terpotong saat waktu mepet — lindungi keduanya."
+      "rationale": "Input singkat, lalu pemrosesan, lalu penguatan. Latihan dan umpan balik adalah bagian yang paling sering terpotong saat waktu mepet — lindungi keduanya."
     },
+    { "type": "section", "num": "2", "title": "Storyboard: satu slide, satu alasan hadir", "sub": "Headline pesan, bukan judul topik" },
     {
       "type": "text",
-      "html": "<h2>Headline pesan, bukan judul topik</h2><p>Setiap slide butuh satu alasan untuk hadir. Judul slide yang baik <strong>menyatakan pesannya</strong>, bukan hanya menamai topik:</p><ul><li>Judul topik: <em>“Jenis-jenis Klaim”</em></li><li>Headline pesan: <em>“Klaim rawat jalan hanya sah bila faskes pertama menerbitkan rujukan”</em></li></ul><p>Storyboard kemudian memetakan fungsi tiap slide: pesan, isi minimum, visual, dan interaksinya — sebelum satu pun slide dibuat di PowerPoint. Dengan begitu yang diuji dulu adalah <em>alurnya</em>, bukan hiasannya.</p>"
+      "html": "<p>Storyboard memetakan fungsi tiap slide <strong>sebelum produksi</strong>: pesan utama, isi minimum, visual, dan interaksinya. Revisi storyboard murah; revisi slide jadi mahal. Judul slide yang baik <strong>menyatakan pesannya</strong>:</p><ul><li>Judul topik: <em>“Jenis-jenis Klaim”</em></li><li>Headline pesan: <em>“Klaim rawat jalan hanya sah bila faskes pertama menerbitkan rujukan”</em></li></ul>"
     },
     {
       "type": "mcq",
@@ -42,13 +44,45 @@
       "question": "Apa fungsi utama storyboard?",
       "options": ["Menghias deck", "Mengganti lesson plan", "Merencanakan pesan, urutan, visual, dan aktivitas tiap slide", "Menentukan jumlah animasi"],
       "correct": 2,
-      "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi — murah untuk direvisi, berbeda dengan slide jadi."
+      "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi dimulai."
+    },
+    { "type": "section", "num": "3", "title": "Metode fishbone: mengalokasikan tujuan ke minggu", "sub": "Contoh riset: struktur tulang ikan menyambungkan tujuan–minggu–asesmen" },
+    {
+      "type": "text",
+      "html": "<p>Metode <strong>fishbone</strong> (Li et al., 2024) memakai diagram tulang ikan untuk menyelaraskan <em>hasil belajar → periode/minggu → aktivitas → asesmen</em>. Tulang utamanya adalah hasil belajar; duri-durinya adalah minggu-minggu; setiap duri memuat aktivitas dan bukti asesmennya. Untuk sesi tunggal, logika yang sama bekerja pada skala slide: setiap slide punya tujuan, isi, visual, dan interaksi — persis format storyboard kita.</p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-li-fishbone.png",
+      "alt": "Diagram fishbone dari Li et al. 2024, Contoh 1: tulang utama hasil belajar dengan duri-duri mingguan berisi aktivitas dan asesmen, sampai kepada penilaian",
+      "caption": "Contoh 1 dari artikel: struktur fishbone membuat 'setiap bagian punya tujuan dan bukti' terlihat secara harfiah.",
+      "credit": "Li et al. (2024), Education and Information Technologies 29:25281–25306, Contoh 1 — CC BY 4.0."
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-li-fold-siklus.png",
+      "alt": "Siklus lima tahap metode FOLD: Mapping Learning Outcomes, Setting Milestones, Designing Feedback and Assessment, Aligning Pedagogies and Technologies, Evaluation and Reflection",
+      "caption": "Siklus FOLD — alur desain yang sama yang dipakai sepanjang modul ini, dari pemetaan hasil sampai refleksi.",
+      "credit": "Li et al. (2024), Education and Information Technologies 29:25281–25306 — CC BY 4.0."
+    },
+    {
+      "type": "sort",
+      "item_key": "c3-sort-fold",
+      "instruction": "<p>Urutkan lima tahap metode FOLD sesuai urutan aslinya (bacaan C2).</p>",
+      "items": [
+        "Mapping learning outcomes",
+        "Setting milestones",
+        "Designing feedback & assessment",
+        "Aligning pedagogies & technologies",
+        "Evaluation & reflection"
+      ],
+      "rationale": "Urutan FOLD: hasil belajar → tonggak → umpan balik & asesmen → pedagogi & teknologi → evaluasi & refleksi."
     },
     {
       "type": "form",
       "label": "LK3+LK4 — Alur & storyboard draf",
       "item_key": "lk3",
-      "instruction": "<p>Bagian 1: satu baris alignment dari tujuan Anda di C2. Bagian 2: tuliskan <strong>headline pesan</strong> (bukan judul topik) untuk 6 slide bahan ajar Anda. Boleh dikosongkan sebagian — dilengkapi di workshop.</p>",
+      "instruction": "<p>Bagian 1: satu baris alignment dari tujuan Anda di C2. Bagian 2: <strong>headline pesan</strong> (bukan judul topik) untuk 6 slide bahan ajar Anda — pola alur: pemantik, tujuan, konsep, contoh, latihan, rangkuman.</p>",
       "fields": [
         { "key": "tujuan", "label": "1. Salah satu tujuan Anda (dari LK2)", "type": "input", "placeholder": "…" },
         { "key": "bukti", "label": "1a. Bukti asesmennya", "type": "input", "placeholder": "…" },
@@ -64,16 +98,18 @@
     },
     {
       "type": "quiz",
-      "label": "Kuis modul C3",
+      "label": "Kuis modul C3 (6 soal)",
       "item_key": "kuis-c3",
       "quiz_kind": "modul",
       "passScore": 70,
-      "instruction": "<p>Empat pertanyaan tentang alur dan storyboard.</p>",
+      "instruction": "<p>Nilai minimal 70; boleh diulang.</p>",
       "questions": [
-        { "id": "c3q1", "question": "Apa fungsi utama storyboard?", "options": ["Menghias deck", "Mengganti lesson plan", "Merencanakan pesan, urutan, visual, dan aktivitas tiap slide", "Menentukan jumlah animasi"], "correct": 2, "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi dimulai." },
-        { "id": "c3q2", "question": "Uji “so what / now what” pada satu slide bertujuan mengecek…", "options": ["Apakah slide cukup indah", "Apa yang harus dipahami dan dilakukan peserta setelah slide itu — kelanjutan alur", "Apakah font konsisten", "Jumlah kata per bullet"], "correct": 1, "rationale": "Setiap slide harus punya konsekuensi pada pemahaman dan langkah berikutnya; bila tidak, slide itu dipotong." },
-        { "id": "c3q3", "question": "Manakah headline slide yang paling baik?", "options": ["“Prosedur Verifikasi”", "“Verifikasi Gagal Bila Dokumen Pendukung Tidak Terbaca — Periksa Sebelum Kirim”", "“Slide 7”", "“Lampiran 2: Prosedur”"], "correct": 1, "rationale": "Headline menyatakan pesan lengkap sehingga peserta yang hanya membaca judul tetap menangkap intinya." },
-        { "id": "c3q4", "question": "Bila waktu sesi terpotong setengahnya, bagian yang paling terlindungi seharusnya…", "options": ["Penjelasan konsep, karena paling penting", "Latihan dan umpan balik, karena di situ terjadi pembelajaran", "Slide pembuka dan sambutan", "Rangkuman teoretis"], "correct": 1, "rationale": "Input dapat diringkas lebih jauh; latihan dan umpan balik adalah tempat peserta memproses materi — yang membuat sesi bernilai." }
+        { "id": "c3q1", "question": "Apa fungsi utama storyboard?", "options": ["Menghias deck", "Mengganti lesson plan", "Merencanakan pesan, urutan, visual, dan aktivitas tiap slide", "Menentukan jumlah animasi"], "correct": 2, "rationale": "Peta narasi dan fungsi tiap slide sebelum produksi." },
+        { "id": "c3q2", "question": "Uji “so what / now what” pada satu slide bertujuan mengecek…", "options": ["Apakah slide cukup indah", "Apa yang harus dipahami dan dilakukan peserta setelah slide itu", "Apakah font konsisten", "Jumlah kata per bullet"], "correct": 1, "rationale": "Slide harus punya konsekuensi pada pemahaman dan langkah berikutnya; bila tidak, dipotong." },
+        { "id": "c3q3", "question": "Manakah headline slide yang paling baik?", "options": ["“Prosedur Verifikasi”", "“Verifikasi Gagal Bila Dokumen Pendukung Tidak Terbaca — Periksa Sebelum Kirim”", "“Slide 7”", "“Lampiran 2: Prosedur”"], "correct": 1, "rationale": "Headline menyatakan pesan lengkap sehingga pembaca judul saja tetap menangkap inti." },
+        { "id": "c3q4", "question": "Bila waktu sesi terpotong setengahnya, bagian yang paling terlindungi seharusnya…", "options": ["Penjelasan konsep, karena paling penting", "Latihan dan umpan balik, karena di situ terjadi pembelajaran", "Slide pembuka dan sambutan", "Rangkuman teoretis"], "correct": 1, "rationale": "Input dapat diringkas; latihan dan umpan balik adalah tempat peserta memproses materi." },
+        { "id": "c3q5", "question": "Dalam metode fishbone (Li et al., 2024), 'duri' pada tulang ikan mewakili…", "options": ["Daftar topik dari buku", "Periode/minggu dengan aktivitas dan asesmennya yang selaras pada satu hasil belajar", "Daftar nama peserta", "Sumber referensi"], "correct": 1, "rationale": "Fishbone menyelaraskan hasil belajar (tulang utama) dengan periode, aktivitas, dan bukti asesmen (duri)." },
+        { "id": "c3q6", "question": "Mengapa revisi dilakukan di tahap storyboard, bukan di tahap slide jadi?", "options": ["Storyboard lebih indah dilihat", "Perubahan struktur di storyboard murah; setelah slide jadi, perbaikan alur berarti mengerjakan ulang banyak slide", "Storyboard tidak boleh diubah", "Karena PowerPoint tidak bisa diedit"], "correct": 1, "rationale": "Biaya revisi meningkat tajam setelah produksi — prinsip umum desain, dan alasan utama storyboard ada." }
       ]
     },
     {

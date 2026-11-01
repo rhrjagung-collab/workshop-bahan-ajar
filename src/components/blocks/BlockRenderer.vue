@@ -3,6 +3,7 @@
 import TextBlock from './TextBlock.vue'
 import CalloutBlock from './CalloutBlock.vue'
 import FigureBlock from './FigureBlock.vue'
+import SectionBlock from './SectionBlock.vue'
 import McqBlock from './McqBlock.vue'
 import DragWordsBlock from './DragWordsBlock.vue'
 import MatchingBlock from './MatchingBlock.vue'
@@ -17,6 +18,7 @@ const map = {
   text: TextBlock,
   callout: CalloutBlock,
   figure: FigureBlock,
+  section: SectionBlock,
   mcq: McqBlock,
   dragwords: DragWordsBlock,
   matching: MatchingBlock,

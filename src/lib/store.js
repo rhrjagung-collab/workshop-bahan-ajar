@@ -78,6 +78,15 @@ export async function syncModuleProgress(moduleCode) {
   }
 }
 
+// Gerbang progresi: modul terbuka bila merupakan modul pertama, atau modul
+// sebelumnya sudah 100% selesai.
+export function moduleUnlocked(code) {
+  const i = modules.findIndex(m => m.code === code)
+  if (i <= 0) return true
+  const prev = modules[i - 1]
+  return (store.modules[prev.code]?.percent || 0) >= 100
+}
+
 export const isFacilitator = computed(() =>
   store.session && ['fasilitator', 'narasumber', 'admin'].includes(store.session.peran)
 )

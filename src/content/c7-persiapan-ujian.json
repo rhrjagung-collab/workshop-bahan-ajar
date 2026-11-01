@@ -1,14 +1,15 @@
 {
   "code": "c7",
   "judul": "Persiapan Praktik & Ujian Akhir",
-  "menit": 25,
+  "menit": 30,
   "tenggat_tampil": "8 Nov 2026, 21.00 WIB",
-  "deskripsi": "Memfinalisasi brief bahan ajar Anda, lalu ujian akhir untuk membuka sertifikat penyelesaian.",
+  "deskripsi": "Memfinalisasi brief bahan ajar Anda, memahami mekanisme transfer 30 hari, dan ujian akhir untuk sertifikat.",
   "penutup": "Brief Anda sudah sampai ke fasilitator kelompok. Sampai jumpa di Bogor, 9 November pukul 08.00 WIB!",
   "blocks": [
+    { "type": "section", "num": "1", "title": "Dari modul ke ruang workshop", "sub": "Seluruh latihan Anda menjadi mentahan paket mini" },
     {
       "type": "text",
-      "html": "<h2>Dari modul ke ruang workshop</h2><p>Seluruh latihan Anda selama ini — profil sasaran, tujuan, storyboard, audit slide, rencana visual, aktivitas, dan soal — akan menjadi <strong>mentahan paket mini bahan ajar</strong> yang disempurnakan di workshop. Hari pertama fokus pada penyusunan; hari kedua pada visual, interaksi, praktik microteaching, dan revisi. Target akhir: <strong>8–12 slide bahan ajar digital siap telaah</strong>.</p>"
+      "html": "<p>Seluruh latihan Anda — profil sasaran, tujuan, storyboard, audit slide, rencana visual, aktivitas, dan soal — menjadi <strong>mentahan paket mini bahan ajar</strong> yang disempurnakan di workshop. Hari pertama fokus penyusunan; hari kedua visual, interaksi, microteaching, dan revisi. Target akhir: <strong>8–12 slide bahan ajar digital siap telaah</strong>.</p>"
     },
     {
       "type": "callout",
@@ -20,7 +21,7 @@
       "type": "form",
       "label": "Brief bahan ajar final",
       "item_key": "brief-final",
-      "instruction": "<p>Rangkum hasil seluruh modul menjadi satu brief untuk fasilitator kelompok Anda. Ini dibaca sebelum Hari 1.</p>",
+      "instruction": "<p>Rangkum hasil seluruh modul menjadi satu brief untuk fasilitator kelompok Anda — dibaca sebelum Hari 1.</p>",
       "fields": [
         { "key": "topik", "label": "Topik final bahan ajar", "type": "input", "placeholder": "…" },
         { "key": "sasaran", "label": "Sasaran peserta & kebutuhan prioritas", "type": "textarea", "rows": 2, "placeholder": "…" },
@@ -29,9 +30,30 @@
         { "key": "bantuan", "label": "Bantuan apa yang paling Anda butuhkan dari fasilitator", "type": "textarea", "rows": 2, "placeholder": "Contoh: menajamkan kriteria tujuan ke-2…" }
       ]
     },
+    { "type": "section", "num": "2", "title": "Bacaan wajib C7", "sub": "±10 menit — retrieval & spacing: bekal transfer" },
+    {
+      "type": "callout",
+      "variant": "key",
+      "title": "Tugas baca",
+      "html": "<p><strong>Trumble et al. (2024)</strong>, <em>Systematic review of distributed practice and retrieval practice in health professions education</em> — baca <em>Abstract</em> dan bagian <em>implications</em> (±2 halaman): <a href=\"bacaan/trumble-2024-retrieval.pdf\" target=\"_blank\" rel=\"noopener\">buka PDF (CC BY 4.0)</a>. Hubungkan dengan rencana transfer 30 hari: latihan terdistribusi dan mengingat kembali terjadwal bekerja justru <em>setelah</em> pelatihan berakhir.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c7-mcq-baca1",
+      "question": "Bacaan Trumble et al. (2024): dalam pendidikan profesi kesehatan, praktik yang paling didukung bukti untuk retensi jangka panjang adalah…",
+      "options": [
+        "Membaca ulang materi segera setelah sesi",
+        "Mengingat kembali (retrieval) yang didistribusikan di beberapa titik waktu, bukan sekali di akhir",
+        "Menonton rekaman sesi penuh",
+        "Menghafal slide satu per satu"
+      ],
+      "correct": 1,
+      "rationale": "Review tersebut mendukung retrieval practice dan distribusi latihan di berbagai titik waktu — dasar desain rencana transfer 7–14–30 hari program ini."
+    },
+    { "type": "section", "num": "3", "title": "Setelah workshop: rencana transfer 30 hari", "sub": "Pelatihan baru bernilai bila dipakai" },
     {
       "type": "text",
-      "html": "<h2>Setelah workshop: rencana transfer 30 hari</h2><p>Pelatihan baru bernilai bila dipakai. Komitmen standar program:</p><ul><li><strong>Hari 7</strong> — implementasikan satu bagian sesi/bahan ajar dan kumpulkan umpan balik peserta.</li><li><strong>Hari 14</strong> — revisi bahan ajar ke versi 2 dan simpan bukti perubahan.</li><li><strong>Hari 30</strong> — tunjukkan artefak penerapan, refleksi, dan satu perubahan perilaku belajar peserta yang teramati.</li></ul><p>Rencana transfer lengkap (LK10) diisi pada penutupan workshop di Bogor.</p>"
+      "html": "<p>Komitmen standar program:</p><ul><li><strong>Hari 7</strong> — implementasikan satu bagian sesi/bahan ajar dan kumpulkan umpan balik peserta.</li><li><strong>Hari 14</strong> — revisi bahan ajar ke versi 2 dan simpan bukti perubahan.</li><li><strong>Hari 30</strong> — tunjukkan artefak penerapan, refleksi, dan satu perubahan perilaku belajar peserta yang teramati.</li></ul><p>Rencana transfer lengkap (LK10) diisi pada penutupan workshop di Bogor.</p>"
     },
     {
       "type": "quiz",
@@ -53,9 +75,9 @@
         { "id": "c7q10", "question": "Mengapa peer review perlu rubrik?", "options": ["Agar semua produk tampak sama", "Agar komentar fokus pada kriteria dan bukti, bukan selera", "Agar fasilitator tidak perlu hadir", "Agar penilaian lebih cepat tanpa membaca"], "correct": 1, "rationale": "Bahasa bersama untuk mutu dan revisi." },
         { "id": "c7q11", "question": "Apa yang perlu dilakukan jika masalah performa disebabkan alat kerja yang rusak?", "options": ["Buat lebih banyak slide", "Latih peserta menggunakan alat yang rusak", "Tangani faktor alat/sistem; jangan menganggap semua gap selesai lewat pelatihan", "Tambah kuis"], "correct": 2, "rationale": "Pelatihan bukan jawaban untuk hambatan sistem." },
         { "id": "c7q12", "question": "Satu kelompok membuat infografis tanpa sumber data. Revisi pertama yang paling penting adalah…", "options": ["Menambah ikon", "Mengganti font", "Menambahkan sumber, tahun, unit, dan konteks data", "Mengubah latar menjadi gradasi"], "correct": 2, "rationale": "Akurasi dan keterlacakan mengalahkan dekorasi." },
-        { "id": "c7q13", "question": "Label pada diagram diletakkan dekat dengan bagian yang dirujuk. Ini penerapan prinsip…", "options": ["Spatial contiguity", "Coherence", "Modality", "Personalization"], "correct": 0, "rationale": "Contiguity: teks dan visual yang saling menjelaskan didekatkan agar perhatian tidak terpecah." },
-        { "id": "c7q14", "question": "Untuk membantu peserta menguji alasannya dengan aman sebelum berbicara di forum besar, aktivitas paling tepat adalah…", "options": ["Kuis kompetitif real-time dengan papan skor", "Think–pair–share", "Ceramah singkat plus tanya jawab terbuka", "Menonton video tanpa diskusi"], "correct": 1, "rationale": "TPS memberi ruang berpikir mandiri lalu menguji alasan pada satu rekan — aman dan aktif." },
-        { "id": "c7q15", "question": "Pada hari ke-7 pasca-workshop, bukti transfer yang paling kuat adalah…", "options": ["Sertifikat kehadiran workshop", "Implementasi satu bagian bahan ajar + umpan balik peserta yang dikumpulkan", "Jumlah slide yang dibuat", "Kepuasan pribadi terhadap materi"], "correct": 1, "rationale": "Transfer dinilai dari perubahan praktik dan buktinya, bukan dari kehadiran atau perasaan." }
+        { "id": "c7q13", "question": "Label pada diagram diletakkan dekat dengan bagian yang dirujuk. Ini penerapan prinsip…", "options": ["Spatial contiguity", "Coherence", "Modality", "Personalization"], "correct": 0, "rationale": "Contiguity: teks dan visual yang saling menjelaskan didekatkan." },
+        { "id": "c7q14", "question": "Menurut Freeman et al. (2014), manakah pernyataan yang benar tentang pembelajaran aktif?", "options": ["Hanya efektif di bidang komputer", "Nilai ujian naik ±6% dan risiko gagal turun dari ±34% menjadi ±22% dibanding ceramah tradisional", "Efeknya muncul hanya setelah satu tahun", "Tidak berbeda dari ceramah pada ukuran kelas besar"], "correct": 1, "rationale": "Angka meta-analisis 225 studi: g = 0,47 (±6 poin), kegagalan 33,8% → 21,8%." },
+        { "id": "c7q15", "question": "Pada hari ke-7 pasca-workshop, bukti transfer yang paling kuat adalah…", "options": ["Sertifikat kehadiran workshop", "Implementasi satu bagian bahan ajar + umpan balik peserta yang dikumpulkan", "Jumlah slide yang dibuat", "Kepuasan pribadi terhadap materi"], "correct": 1, "rationale": "Transfer dinilai dari perubahan praktik dan buktinya, bukan kehadiran." }
       ]
     },
     {

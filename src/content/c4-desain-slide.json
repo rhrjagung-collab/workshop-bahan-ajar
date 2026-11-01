@@ -1,14 +1,34 @@
 {
   "code": "c4",
   "judul": "Desain Slide & Beban Kognitif",
-  "menit": 30,
+  "menit": 40,
   "tenggat_tampil": "7 Nov 2026, 21.00 WIB",
-  "deskripsi": "Memperbaiki slide menggunakan prinsip multimedia: coherence, signaling, segmenting, dan contiguity.",
-  "penutup": "Audit dua slide Anda akan ditelaah pada sesi M4 — bawa berkas slide aslinya ke Bogor.",
+  "deskripsi": "Teori multimedia Mayer secara utuh — prinsip, bagan keputusan, dan bukti — lalu praktik audit dua slide Anda.",
+  "penutup": "Audit slide Anda ditelaah pada sesi M4 — bawa berkas slide aslinya ke Bogor. Modul C5 terbuka setelah modul ini 100% selesai.",
   "blocks": [
+    { "type": "section", "num": "1", "title": "Mengapa slide penuh teks gagal", "sub": "Dua saluran informasi, kapasitas terbatas, pemrosesan aktif" },
     {
       "type": "text",
-      "html": "<h2>Mengapa slide penuh teks gagal</h2><p>Ketika pembaca membaca teks panjang di layar sambil mendengarkan penjelasan, dua saluran informasi berebut perhatian: mata memproses teks, telinga memproses suara — dan keduanya membawa isi yang sama yang harus diproses ulang. Teori multimedia Mayer (2024) menunjukkan orang belajar lebih baik dari <strong>kata + gambar yang menjelaskan</strong> daripada kata saja, dan <strong>lebih buruk lagi</strong> bila teks di slide dibacakan persis oleh presenter.</p><p>Lima prinsip yang paling sering menyelamatkan slide pelatihan:</p><ul><li><strong>Coherence</strong> — hapus elemen yang tidak mendukung tujuan (dekorasi, gambar pembangkit semangat, detail samping).</li><li><strong>Signaling</strong> — beri penanda pada ide utama (tebal, warna aksen, panah) agar perhatian menuju hal yang penting.</li><li><strong>Segmenting</strong> — pecah proses kompleks menjadi bagian-bagian yang bisa dicerna berurutan.</li><li><strong>Contiguity</strong> — dekatkan label/teks dengan bagian visual yang dijelaskan; jangan biarkan pembaca menebak-nebak.</li><li><strong>Redundancy</strong> — jangan menduplikasi narasi lisan sebagai teks penuh di slide.</li></ul>"
+      "html": "<p>Teori multimedia Mayer (2024) berdiri di atas tiga asumsi: manusia memproses informasi melalui <strong>dua saluran terpisah</strong> (visual–tulisan dan auditori–verbal), masing-masing <strong>berkapasitas terbatas</strong>, dan belajar terjadi bila peserta <strong>mengolah secara aktif</strong> — memperhatikan, menata, mengaitkan. Ketika slide penuh teks dibacakan persis oleh presenter, saluran visual dan auditori membawa teks yang sama: kapasitas terbuang untuk memproses ulang, bukan untuk memahami.</p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-mayer-modality.png",
+      "alt": "Ilustrasi prinsip modality dari Mayer 2024: working memory yang menerima animasi + narasi menghasilkan learning outcome lebih baik daripada animasi + teks tulisan (tanpa suara)",
+      "caption": "Prinsip modality: animasi + <em>narasi lisan</em> mengungguli animasi + <em>teks tulisan</em> — saluran verbal menampung narasi, saluran visual fokus pada gambar.",
+      "credit": "Mayer (2024), Educational Psychology Review 36:8 — CC BY 4.0."
+    },
+    { "type": "section", "num": "2", "title": "Lima prinsip yang paling sering menyelamatkan slide", "sub": "Coherence, signaling, segmenting, contiguity, redundancy" },
+    {
+      "type": "text",
+      "html": "<ul><li><strong>Coherence</strong> — hapus elemen yang tidak mendukung tujuan (dekorasi, gambar pembangkit semangat, detail samping).</li><li><strong>Signaling</strong> — beri penanda pada ide utama (tebal, warna aksen, panah) agar perhatian menuju hal penting.</li><li><strong>Segmenting</strong> — pecah proses kompleks menjadi bagian yang bisa dicerna berurutan.</li><li><strong>Contiguity</strong> — dekatkan label/teks dengan bagian visual yang dijelaskan.</li><li><strong>Redundancy</strong> — jangan menduplikasi narasi lisan sebagai teks penuh di slide.</li></ul>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-mayer-ekstrinsik.png",
+      "alt": "Bagan keputusan dari Mayer 2024 untuk mengidentifikasi materi ekstrinsik: apakah teks berpotensi menimbulkan beban ekstra bila dihapus, dan kapan meniadakannya",
+      "caption": "Bagan keputusan Mayer untuk materi ekstrinsik: uji setiap elemen slide — 'bila dihapus, apakah tujuan tetap tercapai?'",
+      "credit": "Mayer (2024), Educational Psychology Review 36:8 — CC BY 4.0."
     },
     {
       "type": "beforeafter",
@@ -18,7 +38,7 @@
       "afterHtml": "<div style='padding:0'><p style='margin:0 0 6px; font-size:11.5px; font-weight:800; color:#fff'>Klaim gagal verifikasi paling sering karena satu hal: dokumen pendukung tidak terbaca</p><div style='display:flex; align-items:center; gap:10px; margin:10px 0'><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>PERIKSA</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Keterbacaan dokumen sebelum dikirim</p></div><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>KONFIRMASI</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Ketidaksesuaian lewat kanal resmi</p></div><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>CATAT</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Kode status sesuai kebijakan</p></div></div><p style='margin:0; font-size:8.5px; color:#C9CEE6'>Detail prosedur lengkap: handout hal. 4–9 — tidak perlu tampil di slide</p></div>",
       "labelBefore": "Sebelum — dinding teks",
       "labelAfter": "Sesudah — satu pesan",
-      "rationale": "Yang berubah: judul menjadi pesan utama (signaling), enam poin disalin-SOP dipindahkan ke handout (coherence), proses dipadatkan menjadi tiga langkah berlabel (segmenting), dan detail tetap terlacak lewat handout. Narasi Anda mengisi sisanya — bukan teks slide."
+      "rationale": "Judul menjadi pesan utama (signaling), enam poin disalin-SOP pindah ke handout (coherence), proses dipadatkan menjadi tiga langkah berlabel (segmenting). Narasi Anda mengisi sisanya — bukan teks slide."
     },
     {
       "type": "callout",
@@ -32,7 +52,7 @@
       "question": "Prinsip coherence menyarankan…",
       "options": ["Menambah dekorasi", "Menghapus elemen yang tidak mendukung pembelajaran", "Menggunakan banyak warna", "Membaca seluruh isi slide"],
       "correct": 1,
-      "rationale": "Materi verbal/visual yang tidak relevan menimbulkan pemrosesan ekstra (extraneous load) tanpa menambah pemahaman."
+      "rationale": "Materi yang tidak relevan menimbulkan pemrosesan ekstra (extraneous load) tanpa menambah pemahaman."
     },
     {
       "type": "mcq",
@@ -45,13 +65,33 @@
         "Peserta lebih menghargai presenter yang lengkap"
       ],
       "correct": 1,
-      "rationale": "Ketika slide hampir kosong dan penjelasan disampaikan lisan, hasil belajar justru lebih baik dibanding slide penuh yang dibacakan kata per kata."
+      "rationale": "Slide hampir kosong + penjelasan lisan menghasilkan belajar lebih baik daripada slide penuh yang dibacakan kata per kata."
+    },
+    { "type": "section", "num": "3", "title": "Bacaan wajib C4", "sub": "±15 menit — dari tangan pertama sang pencetus teori" },
+    {
+      "type": "callout",
+      "variant": "key",
+      "title": "Tugas baca",
+      "html": "<p><strong>Mayer (2024)</strong>, <em>The Past, Present, and Future of the Cognitive Theory of Multimedia Learning</em> — baca bagian yang memuat <strong>daftar prinsip desain</strong> (coherence, signaling, redundancy, spatial contiguity, segmenting, modality) ±4 halaman: <a href=\"bacaan/mayer-2024-multimedia.pdf\" target=\"_blank\" rel=\"noopener\">buka PDF (CC BY 4.0)</a>. Buat catatan: satu prinsip yang paling sering dilanggar pada slide di unit Anda.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c4-mcq-baca1",
+      "question": "Bacaan Mayer (2024): ilustrasi working memory di modul ini menunjukkan kombinasi yang menghasilkan belajar terbaik adalah…",
+      "options": [
+        "Animasi + narasi lisan",
+        "Animasi + teks tulisan lengkap di layar",
+        "Teks panjang tanpa gambar",
+        "Gambar tanpa penjelasan apa pun"
+      ],
+      "correct": 0,
+      "rationale": "Prinsip modality: narasi masuk lewat saluran auditori dan teks di layar digantikan gambar — dua saluran bekerja paralel tanpa saling menabrak."
     },
     {
       "type": "form",
       "label": "LK5 — Audit dua slide Anda sendiri",
       "item_key": "lk5",
-      "instruction": "<p>Buka dua slide dari materi Anda yang paling padat. Audit dengan prinsip tadi, lalu rencanakan perbaikannya (perbaikan dilakukan saat workshop).</p>",
+      "instruction": "<p>Buka dua slide dari materi Anda yang paling padat. Audit dengan prinsip tadi, lalu rencanakan perbaikannya (dikerjakan saat workshop).</p>",
       "fields": [
         { "key": "slide1_masalah", "label": "Slide 1 — masalah utama yang Anda temukan", "type": "textarea", "rows": 2, "placeholder": "Contoh: 9 bullet, judul hanya nama topik, diagram tidak berlabel…" },
         { "key": "slide1_perbaikan", "label": "Slide 1 — rencana perbaikan (prinsip yang dipakai)", "type": "textarea", "rows": 2, "placeholder": "Contoh: coherence — pindah 3 poin ke handout; signaling — tebalkan kriteria wajib…" },
@@ -61,16 +101,18 @@
     },
     {
       "type": "quiz",
-      "label": "Kuis modul C4",
+      "label": "Kuis modul C4 (6 soal)",
       "item_key": "kuis-c4",
       "quiz_kind": "modul",
       "passScore": 70,
-      "instruction": "<p>Empat pertanyaan tentang desain slide.</p>",
+      "instruction": "<p>Nilai minimal 70; boleh diulang.</p>",
       "questions": [
-        { "id": "c4q1", "question": "Prinsip coherence menyarankan…", "options": ["Menambah dekorasi", "Menghapus elemen yang tidak mendukung pembelajaran", "Menggunakan banyak warna", "Membaca seluruh isi slide"], "correct": 1, "rationale": "Kurangi materi verbal/visual yang tidak relevan untuk mengurangi pemrosesan ekstra." },
-        { "id": "c4q2", "question": "Label angka pada diagram diletakkan jauh dari bagian yang dirujuk. Prinsip yang dilanggar adalah…", "options": ["Signaling", "Spatial contiguity", "Segmenting", "Modality"], "correct": 1, "rationale": "Contiguity menuntut label dekat dengan objek yang dijelaskan agar pembaca tidak memecah perhatian." },
-        { "id": "c4q3", "question": "Cara paling tepat menyajikan proses 8 langkah yang kompleks adalah…", "options": ["Satu slide berisi 8 langkah sekaligus agar padat", "Dipecah menjadi beberapa bagian (segmenting) dengan satu fokus per slide", "Hanya lisan tanpa visual", "Semua langkah dalam animasi otomatis cepat"], "correct": 1, "rationale": "Segmenting memberi peserta kendali untuk memproses tiap bagian sebelum lanjut." },
-        { "id": "c4q4", "question": "Warna merah dan hijau dipakai sebagai satu-satunya pembeda status berkas. Masalah utamanya…", "options": ["Warna kurang modis", "Peserta dengan buta warna/layar buram tidak dapat membedakan — informasi hilang", "Merah identik dengan brand", "Tidak masalah karena ada legenda"], "correct": 1, "rationale": "Aksesibilitas: informasi tidak boleh bergantung pada warna saja — beri teks/ikon sebagai penanda kedua." }
+        { "id": "c4q1", "question": "Prinsip coherence menyarankan…", "options": ["Menambah dekorasi", "Menghapus elemen yang tidak mendukung pembelajaran", "Menggunakan banyak warna", "Membaca seluruh isi slide"], "correct": 1, "rationale": "Kurangi pemrosesan ekstra yang tidak relevan." },
+        { "id": "c4q2", "question": "Label angka pada diagram diletakkan jauh dari bagian yang dirujuk. Prinsip yang dilanggar adalah…", "options": ["Signaling", "Spatial contiguity", "Segmenting", "Modality"], "correct": 1, "rationale": "Contiguity: label dekat dengan objek yang dijelaskan." },
+        { "id": "c4q3", "question": "Cara paling tepat menyajikan proses 8 langkah yang kompleks adalah…", "options": ["Satu slide berisi 8 langkah sekaligus agar padat", "Dipecah menjadi beberapa bagian (segmenting) dengan satu fokus per slide", "Hanya lisan tanpa visual", "Semua langkah dalam animasi otomatis cepat"], "correct": 1, "rationale": "Segmenting memberi peserta waktu memproses tiap bagian." },
+        { "id": "c4q4", "question": "Warna merah dan hijau dipakai sebagai satu-satunya pembeda status berkas. Masalah utamanya…", "options": ["Warna kurang modis", "Peserta dengan buta warna/layar buram tidak dapat membedakan — informasi hilang", "Merah identik dengan brand", "Tidak masalah karena ada legenda"], "correct": 1, "rationale": "Informasi tidak boleh bergantung pada warna saja — beri teks/ikon sebagai penanda kedua." },
+        { "id": "c4q5", "question": "Kombinasi yang paling mendukung belajar menurut prinsip modality adalah…", "options": ["Grafik + narasi lisan presenter", "Grafik + paragraf teks lengkap di layar yang dibacakan persis", "Hanya teks panjang", "Grafik tanpa penjelasan"], "correct": 0, "rationale": "Saluran visual memproses grafik; saluran auditori memproses narasi — tanpa duplikasi." },
+        { "id": "c4q6", "question": "Slide berisi diagram proses, tabel data, kutipan inspirasi, dan logo beranimasi. Berdasarkan bagan keputusan Mayer, langkah pertama yang benar adalah…", "options": ["Mengubah semua font", "Menguji tiap elemen: 'bila dihapus, apakah tujuan pembelajaran tetap tercapai?' — lalu hapus yang tidak lulus", "Menambah slide baru untuk membagi beban", "Memperkecil semua teks agar muat"], "correct": 1, "rationale": "Itulah logika bagan Mayer untuk materi ekstrinsik: uji kebutuhan tiap elemen terhadap tujuan, bukan menghias ulang." }
       ]
     },
     {

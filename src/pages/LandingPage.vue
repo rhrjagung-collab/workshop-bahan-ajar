@@ -2,8 +2,10 @@
 // Halaman pembuka course (pola ToxMSDT): hero, deskripsi, audiens, LO,
 // daftar modul dengan status + tenggat, credits & lisensi.
 import { course, modules } from '../lib/course.js'
-import { store, overallPercent } from '../lib/store.js'
+import { store, overallPercent, moduleUnlocked } from '../lib/store.js'
 import ProgressBar from '../components/ProgressBar.vue'
+
+const unlockedAt = (i) => i === 0 || moduleUnlocked(modules[i].code)
 
 const statusClass = s => s === 'selesai' ? 'badge-selesai' : s === 'mulai' ? 'badge-mulai' : 'badge-belum'
 const statusText = s => s === 'selesai' ? 'Selesai' : s === 'mulai' ? 'Berjalan' : 'Belum mulai'
@@ -46,13 +48,17 @@ const statusText = s => s === 'selesai' ? 'Selesai' : s === 'mulai' ? 'Berjalan'
     <section class="modules">
       <h2>Daftar modul <span class="muted">(± {{ course.total_menit }} menit total — kerjakan 1–2 modul per hari)</span></h2>
       <ol class="module-list">
-        <li v-for="m in modules" :key="m.code" class="card module-card">
+        <li v-for="(m, mi) in modules" :key="m.code" class="card module-card" :class="{ 'card-locked': !unlockedAt(mi) }">
           <div class="module-main">
-            <span class="code">{{ m.code.toUpperCase() }}</span>
+            <span class="code">{{ unlockedAt(mi) ? m.code.toUpperCase() : '🔒' }}</span>
             <div class="module-info">
-              <a :href="store.session ? '#/modul/' + m.code : '#/login'" class="module-title">{{ m.judul }}</a>
+              <a v-if="unlockedAt(mi)" :href="store.session ? '#/modul/' + m.code : '#/login'" class="module-title">{{ m.judul }}</a>
+              <span v-else class="module-title locked-title">{{ m.judul }}</span>
               <p class="module-desc">{{ m.deskripsi }}</p>
-              <p class="module-meta">⏱ ±{{ m.menit }} menit • Tenggat: <strong>{{ m.tenggat_tampil }}</strong></p>
+              <p class="module-meta">
+                <template v-if="unlockedAt(mi)">⏱ ±{{ m.menit }} menit • Tenggat: <strong>{{ m.tenggat_tampil }}</strong></template>
+                <template v-else>Terbuka setelah modul sebelumnya 100% selesai</template>
+              </p>
             </div>
           </div>
           <div class="module-side">
@@ -99,6 +105,8 @@ const statusText = s => s === 'selesai' ? 'Selesai' : s === 'mulai' ? 'Berjalan'
 }
 .module-title { font-weight: 700; font-size: var(--fs-h3); text-decoration: none; }
 .module-title:hover { text-decoration: underline; }
+.locked-title { color: var(--ink-faint); }
+.card-locked { opacity: .75; background: #FBFBFC; }
 .module-desc { margin: 4px 0; color: var(--ink-soft); font-size: var(--fs-small); }
 .module-meta { margin: 0; font-size: 13px; color: var(--ink-faint); }
 .module-side { text-align: right; flex: none; }

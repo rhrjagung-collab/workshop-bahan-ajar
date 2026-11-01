@@ -1,0 +1,16 @@
+{
+  "catatan": "Semua figur dipakai utuh (tanpa modifikasi) dengan atribusi. Unduhan PDF dari penerbit/repositori resmi oleh tim modul (Nov 2026). Periksa kembali lisensi sebelum penggunaan komersial.",
+  "figures": [
+    { "file": "fig-freeman-ukuran-efek.png", "sumber": "Freeman, S., Eddy, S. L., McDonough, M., Smith, M. K., Okoroafor, N., Jordt, H., & Wenderoth, M. P. (2014). Active learning increases student performance in science, engineering, and mathematics. PNAS, 111(23), 8410–8415.", "lisensi": "PNAS open access; digunakan utuh dengan atribusi (non-komersial, edukasi)", "halaman": "hlm. 8412, Gambar 1" },
+    { "file": "fig-freeman-per-disiplin.png", "sumber": "Freeman et al. (2014), PNAS 111(23), 8410–8415.", "lisensi": "PNAS open access; digunakan utuh dengan atribusi (non-komersial, edukasi)", "halaman": "hlm. 8412, Gambar 2" },
+    { "file": "fig-li-bloom-roda.png", "sumber": "Li, N., Huijser, H., Zhang, S., Zhang, T., et al. (2024). Putting the flesh on the bones: using a fishbone digital learning design method. Education and Information Technologies, 29, 25281–25306.", "lisensi": "CC BY 4.0", "halaman": "hlm. 10, Gambar contoh EDS445" },
+    { "file": "fig-li-fold-siklus.png", "sumber": "Li et al. (2024), Education and Information Technologies, 29, 25281–25306.", "lisensi": "CC BY 4.0", "halaman": "hlm. 8, metode FOLD" },
+    { "file": "fig-li-fishbone.png", "sumber": "Li et al. (2024), Education and Information Technologies, 29, 25281–25306.", "lisensi": "CC BY 4.0", "halaman": "hlm. 11, Contoh 1" },
+    { "file": "fig-li-fishbone-mingguan.png", "sumber": "Li et al. (2024), Education and Information Technologies, 29, 25281–25306.", "lisensi": "CC BY 4.0", "halaman": "hlm. 12, Contoh 2" },
+    { "file": "fig-mayer-modality.png", "sumber": "Mayer, R. E. (2024). The Past, Present, and Future of the Cognitive Theory of Multimedia Learning. Educational Psychology Review, 36, Article 8.", "lisensi": "CC BY 4.0", "halaman": "hlm. 14, ilustrasi prinsip modality" },
+    { "file": "fig-mayer-ekstrinsik.png", "sumber": "Mayer (2024), Educational Psychology Review, 36, Article 8.", "lisensi": "CC BY 4.0", "halaman": "hlm. 11, bagan keputusan materi ekstrinsik" },
+    { "file": "fig-alam-kerangka.png", "sumber": "Alam, T. M., Stoica, G. A., & Özgöbek, Ö. (2025). Asking the classroom with technology: a systematic literature review. Smart Learning Environments, 12, Article 7.", "lisensi": "CC BY 4.0", "halaman": "hlm. 6, kerangka response technologies" },
+    { "file": "fig-alam-metode.png", "sumber": "Alam et al. (2025), Smart Learning Environments, 12, Article 7.", "lisensi": "CC BY 4.0", "halaman": "hlm. 21, distribusi metode pasif vs aktif" },
+    { "file": "fig-traboco-venn.png", "sumber": "Traboco, L., Pandian, H., Nikiphorou, E., & Gupta, L. (2022). Designing infographics: visual representations for enhancing education, meaningful communication, and analysis and critical thinking. Journal of Korean Medical Science, 37, e214.", "lisensi": "CC BY-NC 4.0 — hanya untuk penggunaan non-komersial dengan atribusi", "halaman": "hlm. 3, Gambar 1" }
+  ]
+}

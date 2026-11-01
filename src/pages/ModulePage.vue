@@ -1,9 +1,10 @@
 <script setup>
 // Player modul: sidebar daftar modul + status, konten scroll berisi blok,
-// navigasi Lanjut, dan panel "modul selesai".
+// navigasi Lanjut, panel "modul selesai", dan gerbang progresi berurutan
+// (modul berikutnya terbuka setelah modul sebelumnya 100%).
 import { computed, ref, watch } from 'vue'
 import { modules, getModule, nextModule, requiredBlocks, isBlockDone } from '../lib/course.js'
-import { store, getItemState, syncModuleProgress } from '../lib/store.js'
+import { store, getItemState, syncModuleProgress, moduleUnlocked } from '../lib/store.js'
 import { go } from '../lib/router.js'
 import BlockRenderer from '../components/blocks/BlockRenderer.vue'
 import ProgressBar from '../components/ProgressBar.vue'
@@ -13,9 +14,11 @@ const mod = computed(() => getModule(props.code))
 const idx = computed(() => modules.findIndex(m => m.code === props.code))
 const next = computed(() => nextModule(props.code))
 const prev = computed(() => idx.value > 0 ? modules[idx.value - 1] : null)
+const prevMod = computed(() => (idx.value > 0 ? modules[idx.value - 1] : null))
 
 const percent = computed(() => store.modules[props.code]?.percent || 0)
 const done = computed(() => store.modules[props.code]?.status === 'selesai')
+const unlocked = computed(() => moduleUnlocked(props.code))
 
 const blocks = computed(() => mod.value?.blocks || [])
 
@@ -26,9 +29,10 @@ const statusText = s => s === 'selesai' ? 'Selesai' : s === 'mulai' ? 'Berjalan'
 if (!store.session) { go('/login') }
 
 // Sinkronkan progres saat modul dibuka (bila ada blok selesai namun modul belum terhitung)
-watch(() => props.code, () => { syncModuleProgress(props.code) }, { immediate: true })
+watch(() => props.code, () => { if (moduleUnlocked(props.code)) syncModuleProgress(props.code) }, { immediate: true })
 
 function menuDone(m) { return store.modules[m.code]?.status === 'selesai' }
+function menuLocked(m) { return !moduleUnlocked(m.code) }
 </script>
 
 <template>
@@ -44,7 +48,7 @@ function menuDone(m) { return store.modules[m.code]?.status === 'selesai' }
       </div>
       <ol class="side-list">
         <li v-for="m in modules" :key="m.code" :class="{ current: m.code === props.code }">
-          <a :href="'#/modul/' + m.code" class="side-link">
+          <a v-if="!menuLocked(m)" :href="'#/modul/' + m.code" class="side-link">
             <span class="side-code">{{ m.code.toUpperCase() }}</span>
             <span class="side-title">
               {{ m.judul }}
@@ -53,11 +57,19 @@ function menuDone(m) { return store.modules[m.code]?.status === 'selesai' }
               </span>
             </span>
           </a>
+          <span v-else class="side-link locked" aria-disabled="true">
+            <span class="side-code">🔒</span>
+            <span class="side-title">
+              {{ m.judul }}
+              <span class="side-status lock-label">Terkunci</span>
+            </span>
+          </span>
         </li>
       </ol>
     </aside>
 
     <article class="content">
+      <template v-if="unlocked">
       <header class="mod-header card">
         <p class="crumb">Modul {{ mod.code.toUpperCase() }} • ±{{ mod.menit }} menit • Tenggat {{ mod.tenggat_tampil }}</p>
         <h1>{{ mod.judul }}</h1>
@@ -81,6 +93,17 @@ function menuDone(m) { return store.modules[m.code]?.status === 'selesai' }
         <p>Selesaikan seluruh latihan dan kuis pada halaman ini. Progres tersimpan otomatis — Anda boleh berhenti dan melanjutkan kapan saja.</p>
         <a v-if="next" class="btn btn-ghost btn-small" :href="'#/modul/' + next.code">Buka modul berikutnya saja →</a>
       </section>
+      </template>
+
+      <section v-else class="card gate-locked">
+        <h1>🔒 Modul {{ mod.code.toUpperCase() }} masih terkunci</h1>
+        <p>
+          Modul dibuka berurutan. Selesaikan seluruh aktivitas modul sebelumnya
+          <strong v-if="prevMod">— {{ prevMod.code.toUpperCase() }}: {{ prevMod.judul }}</strong> — hingga 100% untuk membuka modul ini.
+        </p>
+        <a v-if="prevMod" class="btn btn-primary" :href="'#/modul/' + prevMod.code">Lanjutkan {{ prevMod.code.toUpperCase() }} →</a>
+        <a v-else class="btn btn-primary" href="#/">Kembali ke beranda</a>
+      </section>
     </article>
   </div>
 
@@ -101,6 +124,12 @@ function menuDone(m) { return store.modules[m.code]?.status === 'selesai' }
   font-size: 14px; line-height: 1.4;
 }
 .side-link:hover { background: var(--bpjs-indigo-soft); }
+.side-link.locked { opacity: .55; cursor: not-allowed; }
+.lock-label { color: var(--ink-faint); font-size: 11px; font-weight: 700; }
+li.current .side-link.locked { opacity: .75; }
+.gate-locked { border-left: 6px solid var(--upn-gold); max-width: 640px; margin: 40px auto; text-align: center; padding: 40px 30px; }
+.gate-locked h1 { margin-top: 0; }
+.gate-locked .btn { margin-top: 10px; }
 li.current .side-link { background: var(--bpjs-indigo); color: #fff; }
 li.current .side-title { color: #fff; }
 li.current .side-code { background: var(--upn-gold); color: var(--bpjs-indigo-dark); }

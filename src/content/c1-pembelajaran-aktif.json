@@ -1,14 +1,15 @@
 {
   "code": "c1",
   "judul": "Pembelajaran Aktif & Analisis Kebutuhan Belajar",
-  "menit": 30,
+  "menit": 40,
   "tenggat_tampil": "5 Nov 2026, 21.00 WIB",
-  "deskripsi": "Bedakan pembelajaran aktif dari sekadar permainan, dan mulai analisis kebutuhan untuk topik bahan ajar Anda.",
-  "penutup": "Bawa isian LK1 Anda ke workshop — Hari 1 langsung dipakai untuk menyaring kebutuhan prioritas bersama kelompok.",
+  "deskripsi": "Evidensi meta-analisis pembelajaran aktif, anatomi gap kompetensi vs hambatan sistem, dan analisis kebutuhan untuk topik Anda.",
+  "penutup": "LK1 Anda menjadi bahan diskusi Hari 1. Modul C2 (Tujuan & Alignment) terbuka setelah modul ini 100% selesai.",
   "blocks": [
+    { "type": "section", "num": "1", "title": "Kasus pembuka: sesi 90 menit yang sunyi", "sub": "Mengapa sesi yang 'lancar' bisa gagal mengubah perilaku" },
     {
       "type": "text",
-      "html": "<h2>Kasus pembuka: sesi 90 menit yang sunyi</h2><p>Bayangkan sebuah sesi sosialisasi berdurasi 90 menit: satu narasumber, 42 slide penuh teks, dibacakan dari awal hingga akhir. Peserta duduk, mendengarkan, beberapa membuka ponsel. Di akhir sesi, tidak ada yang ditanyakan — dan pekan berikutnya, pertanyaan yang sama kembali masuk ke layanan bantuan.</p><p>Tandai gejalanya: apa yang <em>hilang</em> dari sesi tersebut?</p>"
+      "html": "<p>Bayangkan sosialisasi berdurasi 90 menit: satu narasumber, 42 slide penuh teks, dibacakan dari awal hingga akhir. Peserta duduk, mendengarkan, sebagian membuka ponsel. Tidak ada pertanyaan di akhir sesi — dan pekan berikutnya, pertanyaan yang sama kembali masuk ke layanan bantuan.</p><p>Gejalanya mudah dikenali: <strong>peserta tidak pernah melakukan apa pun dengan materi</strong>. Tidak diminta mengingat kembali, menjelaskan, membandingkan, atau menerapkan. Informasi masuk tanpa diproses, lalu cepat memudar.</p>"
     },
     {
       "type": "mcq",
@@ -21,11 +22,12 @@
         "Jumlah slide yang terlalu banyak untuk satu topik"
       ],
       "correct": 1,
-      "rationale": "Masalah intinya bukan durasi atau jumlah slide, melainkan peserta pasif: mereka tidak pernah diminta mengingat kembali, menjelaskan, membandingkan, atau menerapkan ide. Ceramah panjang tanpa pemrosesan menghasilkan pengetahuan yang cepat memudar."
+      "rationale": "Masalah intinya bukan durasi atau jumlah slide, melainkan peserta pasif: tidak ada tugas pemrosesan. Ceramah panjang tanpa pemrosesan menghasilkan pengetahuan yang cepat memudar."
     },
+    { "type": "section", "num": "2", "title": "Apa yang sebenarnya terjadi ketika peserta 'aktif'", "sub": "Tiga lapis aktivasi: kognitif, sosial, performatif" },
     {
       "type": "text",
-      "html": "<h2>Apa itu pembelajaran aktif</h2><p>Pembelajaran aktif berarti peserta <strong>melakukan proses kognitif atau sosial yang terarah dengan materi</strong> — bukan sekadar ramai atau memakai aplikasi. Bentuknya tiga lapis:</p><ul><li><strong>Aktif secara kognitif</strong> — mengingat kembali, menjelaskan, membandingkan, memecahkan masalah.</li><li><strong>Aktif secara sosial</strong> — berdiskusi, menguji alasan, memberi umpan balik.</li><li><strong>Aktif secara performatif</strong> — membuat, mempraktikkan, mensimulasikan.</li></ul><p>Ceramah tetap berperan sebagai <em>input</em> singkat; yang wajib ada adalah tugas pemrosesan setelahnya. Meta-analisis Freeman et al. (2014) terhadap 225 studi pendidikan tinggi menemukan pembelajaran aktif menaikkan performa ujian sekitar setengah huruf dan menurunkan tingkat kegagalan dibanding ceramah. Perlu diingat batasannya: konteksnya pendidikan tinggi STEM, sehingga besaran efek tidak otomatis identik di pelatihan kerja — arah temuan yang konsisten inilah yang kami gunakan.</p>"
+      "html": "<p>Pembelajaran aktif berarti peserta <strong>melakukan proses kognitif atau sosial yang terarah dengan materi</strong> — bukan sekadar ruangan ramai atau memakai aplikasi. Tiga lapis aktivasi:</p><ul><li><strong>Aktif secara kognitif</strong> — mengingat kembali, menjelaskan, membandingkan, memecahkan masalah.</li><li><strong>Aktif secara sosial</strong> — berdiskusi, menguji alasan, memberi umpan balik.</li><li><strong>Aktif secara performatif</strong> — membuat, mempraktikkan, mensimulasikan.</li></ul><p>Ceramah tetap berperan sebagai <em>input</em> singkat; yang wajib ada adalah tugas pemrosesan setelahnya. Karena itu satu jam ceramah yang diselingi tiga latihan kecil biasanya lebih baik daripada tiga jam mendengarkan tanpa jeda.</p>"
     },
     {
       "type": "dragwords",
@@ -36,27 +38,86 @@
       "answers": ["memproses", "tujuan", "permainan"],
       "rationale": "SKKNI 333/2020 menegaskan metode dipilih untuk menciptakan suasana belajar aktif — bukan untuk hiburan. Alat seperti proyektor hanyalah media."
     },
+    { "type": "section", "num": "3", "title": "Bukti: apa kata meta-analisis 225 studi", "sub": "Freeman et al. (2014) — performa naik, tingkat kegagalan turun" },
     {
       "type": "text",
-      "html": "<h2>Dari kebutuhan, bukan dari PowerPoint</h2><p>Sebelum merancang apa pun, kita perlu tahu <em>untuk siapa</em> dan <em>untuk masalah apa</em>. Analisis kebutuhan belajar menjawab tiga pertanyaan: apa yang harus bisa dilakukan orang (tugas), apa yang terjadi sekarang (bukti), dan mengapa kesenjangannya muncul (penyebab).</p>"
+      "html": "<p>Meta-analisis Freeman dan kolega (2014) merangkum <strong>225 studi</strong> pendidikan tinggi STEM yang membandingkan pembelajaran aktif dengan ceramah tradisional. Temuan utamanya:</p><ul><li>Nilai ujian naik <strong>±6%</strong> pada kelas aktif (ukuran efek rata-rata <strong>0,47 standar deviasi</strong>).</li><li>Peserta kelas ceramah tradisional <strong>1,5× lebih mungkin gagal</strong>: tingkat kegagalan ±34% (ceramah) menjadi ±22% (aktif).</li></ul>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-freeman-ukuran-efek.png",
+      "alt": "Dua grafik Freeman 2014: histogram ukuran efek pembelajaran aktif dan dua kurva kepadatan yang membandingkan persentase peserta yang gagal pada kelas ceramah (lebih tinggi) versus kelas aktif (lebih rendah)",
+      "caption": "Kiri: sebaran ukuran efek dari tiap studi (rata-rata g = 0,47). Kanan: kurva kepadatan tingkat kegagalan — kelas ceramah (biru) bergeser lebih tinggi daripada kelas aktif (oranye).",
+      "credit": "Freeman et al. (2014), PNAS 111(23):8410–8415, Gambar 1 — digunakan utuh dengan atribusi."
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-freeman-per-disiplin.png",
+      "alt": "Forest plot ukuran efek per disiplin (biologi, kimia, komputer, teknik, geologi, matematika, fisika, psikologi) dan persentase penurunan tingkat kegagalan per disiplin",
+      "caption": "Efek positif konsisten di semua disiplin yang diteliti — bukan fenomena satu bidang saja.",
+      "credit": "Freeman et al. (2014), PNAS 111(23):8410–8415, Gambar 2 — digunakan utuh dengan atribusi."
+    },
+    {
+      "type": "callout",
+      "variant": "gold",
+      "title": "Batasan bukti — baca sebelum mengutip",
+      "html": "<p>Konteks meta-analisis ini adalah <strong>pendidikan tinggi STEM</strong>. Arah temuan (aktif > pasif) konsisten dan kuat, tetapi besaran efek tidak otomatis identik di pelatihan kerja. Angka retensi populer seperti <em>“ceramah 10%, praktik 75%”</em> <strong>tidak</strong> memiliki basis primer yang memadai dan sengaja tidak digunakan dalam program ini.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c1-mcq-freeman",
+      "question": "Berdasarkan Freeman et al. (2014), manakah pernyataan yang paling akurat?",
+      "options": [
+        "Pembelajaran aktif menghilangkan seluruh kegagalan belajar",
+        "Nilai ujian naik ±6% dan risiko gagal turun dari ±34% menjadi ±22%",
+        "Efek hanya muncul pada bidang komputer dan teknik",
+        "Ceramah 45 menit sama baiknya dengan pembelajaran aktif"
+      ],
+      "correct": 1,
+      "rationale": "Itulah angka meta-analisisnya: rata-rata g = 0,47 (±6 poin nilai), kegagalan 33,8% → 21,8%. Efeknya justru konsisten di semua disiplin."
+    },
+    { "type": "section", "num": "4", "title": "Bacaan wajib C1", "sub": "±15 menit membaca — jadi dasar kuis di bawah" },
+    {
+      "type": "callout",
+      "variant": "key",
+      "title": "Tugas baca (dua sumber)",
+      "html": "<p><strong>1. Freeman et al. (2014)</strong> — baca <em>Abstract</em> dan bagian <em>Results</em> awal (±2 halaman): <a href=\"https://doi.org/10.1073/pnas.1319030111\" target=\"_blank\" rel=\"noopener\">doi.org/10.1073/pnas.1319030111</a> (salinan PDF juga tersedia via <a href=\"https://serc.carleton.edu/download/files/298690/freeman_2014_pnas_active_le.pdf.pdf\" target=\"_blank\" rel=\"noopener\">SERC Carleton</a>).</p><p><strong>2. Güngör et al. (2026)</strong> — baca <em>Abstract</em> saja (±1 halaman): <a href=\"bacaan/gungor-2026-cooperative.pdf\" target=\"_blank\" rel=\"noopener\">buka PDF (CC BY 4.0)</a>. Catat: meta-meta-analisis pembelajaran kooperatif menemukan efek positif pada capaian, berpikir tingkat tinggi, dan aspek afektif — dengan heterogenitas tinggi, sehingga <em>desain</em> kerja kelompok (akuntabilitas individual, interdependensi positif, refleksi) menentukan hasil.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c1-mcq-baca1",
+      "question": "Bacaan Güngör et al. (2026): menurut meta-meta-analisis tersebut, hasil kerja kelompok paling ditentukan oleh…",
+      "options": [
+        "Jumlah anggota kelompok yang banyak",
+        "Kualitas desain: akuntabilitas individual, interdependensi positif, dan refleksi kelompok",
+        "Penggunaan aplikasi kolaborasi daring",
+        "Kehadiran seluruh anggota setiap saat"
+      ],
+      "correct": 1,
+      "rationale": "Heterogenitas hasil tinggi — yang membedakan kelompok berhasil dan gagal adalah struktur kerja samanya: tanggung jawab individual, ketergantungan positif antaranggota, dan refleksi bersama."
+    },
+    { "type": "section", "num": "5", "title": "Analisis kebutuhan: dari tugas nyata ke prioritas belajar", "sub": "Memilah gap kompetensi dari hambatan sistem" },
+    {
+      "type": "text",
+      "html": "<p>Sebelum merancang apa pun, kita perlu tahu <em>untuk siapa</em> dan <em>untuk masalah apa</em>. Analisis kebutuhan belajar menjawab tiga pertanyaan: apa yang harus bisa dilakukan orang (tugas), apa yang terjadi sekarang (bukti), dan mengapa kesenjangannya muncul (penyebab). SKKNI 333/2020 menempatkan langkah ini sebagai unit kompetensi tersendiri (unit 009/010 — <em>Menentukan Kebutuhan Pelatihan Mikro dan Individu</em>).</p>"
     },
     {
       "type": "figure",
       "src": "figures/analisis-kebutuhan.svg",
       "alt": "Diagram alur analisis kebutuhan lima langkah: tugas sasaran, bukti aktual, gap kinerja, pemeriksaan penyebab yang bercabang menjadi gap kompetensi dan hambatan sistem, lalu prioritas kebutuhan belajar",
-      "caption": "Alur analisis kebutuhan belajar: dari tugas nyata ke prioritas, dengan pemilahan penyebab pelatihan vs non-pelatihan.",
+      "caption": "Alur analisis kebutuhan: cabang penyebab adalah langkah yang paling sering dilewati — dan paling menentukan.",
       "credit": "Ilustrasi tim modul (2026), diadaptasi dari Panduan Fasilitator ToT dan SKKNI 333/2020 unit 009/010 — bebas lisensi."
     },
     {
       "type": "callout",
       "variant": "warn",
       "title": "Jangan langsung menyimpulkan semua masalah perlu pelatihan",
-      "html": "<p>Bila hambatan berasal dari <strong>SOP, alat kerja, beban kerja, insentif, kewenangan, atau akses informasi</strong>, pelatihan tidak akan menyelesaikannya — dan pelatihan yang salah sasaran memboroskan waktu semua pihak. Pisahkan dua jenis penyebab sebelum menetapkan kebutuhan belajar.</p>"
+      "html": "<p>Bila hambatan berasal dari <strong>SOP, alat kerja, beban kerja, insentif, kewenangan, atau akses informasi</strong>, pelatihan tidak akan menyelesaikannya — dan pelatihan yang salah sasaran memboroskan waktu semua pihak. Pertanyaan pembeda: <em>“Bila orang ini benar-benar tahu dan bisa, apakah masalahnya selesai?”</em> Bila jawabannya tidak, penyebabnya bukan kompetensi.</p>"
     },
     {
       "type": "mcq",
       "item_key": "c1-mcq-skenario",
-      "question": "Skenario: petugas layanan sering salah menutup berkas klaim. Ternyata kebijakan penutupan berkas baru saja berubah, tetapi SOP di sistem belum diperbarui dan petugas tidak punya akses ke dokumen terbaru. Apa tindakan yang tepat?",
+      "question": "Skenario: petugas layanan sering salah menutup berkas klaim. Ternyata kebijakan penutupan berkas baru berubah, tetapi SOP di sistem belum diperbarui dan petugas tidak punya akses ke dokumen terbaru. Apa tindakan yang tepat?",
       "options": [
         "Membuat modul pelatihan tentang prosedur penutupan berkas",
         "Memperbaiki faktor sistem — perbarui SOP dan buka akses dokumen — sebelum menilai perlunya pelatihan",
@@ -64,13 +125,13 @@
         "Mengulang sosialisasi materi lama secara daring"
       ],
       "correct": 1,
-      "rationale": "Ketika penyebabnya faktor sistem (dokumen usang, akses terbatas), pelatihan tidak menghilangkan penyebabnya. Analisis kebutuhan justru melindungi organisasi dari pelatihan yang salah sasaran."
+      "rationale": "Penyebabnya faktor sistem (dokumen usang, akses terbatas). Pertanyaan pembeda — 'bila mereka tahu dan bisa, apakah selesai?' — jawabannya tidak; maka pelatihan bukan solusinya."
     },
     {
       "type": "form",
       "label": "LK1 — Profil sasaran & analisis kebutuhan",
       "item_key": "lk1",
-      "instruction": "<p>Isi untuk <strong>topik yang Anda tulis di modul C0</strong>. Jawaban ringkas saja; akan disempurnakan bersama kelompok di workshop.</p>",
+      "instruction": "<p>Isi untuk <strong>topik yang Anda tulis di modul C0</strong>. Jawaban ringkas; akan disaring bersama kelompok di workshop.</p>",
       "fields": [
         { "key": "sasaran", "label": "Siapa peserta sasaran Anda? (peran, pengalaman, konteks kerja)", "type": "textarea", "rows": 2, "placeholder": "Contoh: 15 staf layanan mitra, pengalaman 1–3 tahun, akses ponsel di lok kerja" },
         { "key": "tugas", "label": "Tugas/performa apa yang harus bisa dilakukan setelah pembelajaran?", "type": "textarea", "rows": 2, "placeholder": "Contoh: mengisi formulir klaim tanpa kesalahan administrasi" },
@@ -81,16 +142,18 @@
     },
     {
       "type": "quiz",
-      "label": "Kuis modul C1",
+      "label": "Kuis modul C1 (6 soal)",
       "item_key": "kuis-c1",
       "quiz_kind": "modul",
       "passScore": 70,
-      "instruction": "<p>Empat pertanyaan singkat. Nilai minimal 70; boleh diulang. Baca rasionalnya baik-baik — di situlah pembelajarannya.</p>",
+      "instruction": "<p>Nilai minimal 70; boleh diulang. Baca rasionalnya — di situlah pembelajarannya.</p>",
       "questions": [
-        { "id": "c1q1", "question": "Langkah pertama sebelum memilih media dan metode adalah…", "options": ["Memilih aplikasi paling populer", "Menganalisis peserta dan kebutuhan", "Membuat slide judul", "Menentukan warna tema"], "correct": 1, "rationale": "Desain harus menjawab gap performa dan karakteristik peserta. Ini juga soal bank utama program." },
+        { "id": "c1q1", "question": "Langkah pertama sebelum memilih media dan metode adalah…", "options": ["Memilih aplikasi paling populer", "Menganalisis peserta dan kebutuhan", "Membuat slide judul", "Menentukan warna tema"], "correct": 1, "rationale": "Desain harus menjawab gap performa dan karakteristik peserta." },
         { "id": "c1q2", "question": "Apa yang perlu dilakukan jika masalah performa disebabkan alat kerja yang rusak?", "options": ["Buat lebih banyak slide", "Latih peserta menggunakan alat yang rusak", "Tangani faktor alat/sistem; jangan menganggap semua gap selesai lewat pelatihan", "Tambah kuis"], "correct": 2, "rationale": "Pelatihan mengatasi gap kompetensi, bukan hambatan sistem." },
-        { "id": "c1q3", "question": "Think–pair–share adalah contoh aktivitas yang terutama mengaktifkan peserta melalui…", "options": ["Kompetisi antarindividu dengan papan skor", "Pemikiran mandiri, pengujian alasan dengan rekan, lalu pembagian ke kelompok besar", "Menonton video pembelajaran secara mandiri", "Mengisi lembar kerja tanpa berdiskusi"], "correct": 1, "rationale": "TPS memaksa setiap orang berpikir dulu (think), menguji idenya (pair), lalu membagikannya (share) — aktif kognitif sekaligus sosial." },
-        { "id": "c1q4", "question": "Manakah bukti kebutuhan belajar yang paling kuat?", "options": ["Kata atasan bahwa timnya 'kurang paham'", "Data keluhan berulang + observasi pekerjaan + contoh hasil kerja aktual", "Jumlah peserta yang mendaftar pelatihan", "Ketersediaan materi dari pusat"], "correct": 1, "rationale": "Kebutuhan ditarik dari bukti tugas dan kinerja aktual, bukan dari asumsi atau permintaan sekunder." }
+        { "id": "c1q3", "question": "Think–pair–share mengaktifkan peserta terutama melalui…", "options": ["Kompetisi antarindividu dengan papan skor", "Pemikiran mandiri, pengujian alasan dengan rekan, lalu pembagian ke forum", "Menonton video secara mandiri", "Mengisi lembar kerja tanpa diskusi"], "correct": 1, "rationale": "Aktif kognitif (berpikir) sekaligus sosial (menguji alasan, membagikan)." },
+        { "id": "c1q4", "question": "Manakah bukti kebutuhan belajar yang paling kuat?", "options": ["Kata atasan bahwa timnya 'kurang paham'", "Data keluhan berulang + observasi pekerjaan + contoh hasil kerja aktual", "Jumlah peserta yang mendaftar", "Ketersediaan materi dari pusat"], "correct": 1, "rationale": "Kebutuhan ditarik dari bukti tugas dan kinerja aktual, bukan asumsi." },
+        { "id": "c1q5", "question": "Menurut Freeman et al. (2014), peserta kelas ceramah tradisional berisiko gagal…", "options": ["Sama dengan kelas aktif", "1,5× lebih tinggi daripada kelas aktif", "Setengah dari kelas aktif", "Tidak dapat dibandingkan"], "correct": 1, "rationale": "Tingkat kegagalan 33,8% (ceramah) versus 21,8% (aktif) — risiko gagal 1,5× lebih besar di kelas ceramah." },
+        { "id": "c1q6", "question": "Sebuah tim merancang pelatihan 'kerja kelompok' tanpa pembagian peran dan tanpa refleksi. Berdasarkan Güngör et al. (2026), risiko terbesarnya adalah…", "options": ["Ruangan menjadi bising", "Kerja kelompok berubah menjadi penumpangan kerja tanpa akuntabilitas — efek belajar melemah", "Peserta menjadi terlalu kompak", "Waktu sesi tidak cukup"], "correct": 1, "rationale": "Elemen desain (akuntabilitas individual, interdependensi positif, refleksi) adalah penentu efek kerja kelompok." }
       ]
     },
     {

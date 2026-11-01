@@ -1,14 +1,15 @@
 {
   "code": "c2",
   "judul": "Tujuan Pembelajaran & Alignment",
-  "menit": 30,
+  "menit": 40,
   "tenggat_tampil": "6 Nov 2026, 21.00 WIB",
-  "deskripsi": "Mengubah tujuan yang kabur menjadi tujuan terukur, dan menyelaskan tujuan–asesmen–aktivitas.",
-  "penutup": "Draf 2 tujuan terukur Anda akan ditelaah fasilitator sebelum sesi M2 di Hari 1.",
+  "deskripsi": "Merumuskan tujuan terukur dengan taksonomi Bloom, memahami backward design dan constructive alignment dengan contoh riset.",
+  "penutup": "Draf tujuan Anda ditelaah fasilitator sebelum sesi M2. Modul C3 terbuka setelah modul ini 100% selesai.",
   "blocks": [
+    { "type": "section", "num": "1", "title": "Tujuan kabur vs tujuan terukur", "sub": "Tiga komponen: perilaku teramati, kondisi, kriteria" },
     {
       "type": "text",
-      "html": "<h2>Tujuan kabur vs tujuan terukur</h2><p>Bandingkan dua rumusan ini:</p><ul><li>Kabur: <em>“Peserta memahami infografis.”</em></li><li>Terukur: <em>“Peserta membuat satu diagram alur dengan minimal empat langkah berlabel benar.”</em></li></ul><p>Tujuan terukur menyebutkan <strong>perilaku yang dapat diamati</strong>, <strong>kondisi/konteks</strong> tempat perilaku itu dilakukan, dan <strong>kriteria keberhasilan</strong>. Kata kerja seperti <em>memahami</em>, <em>mengetahui</em>, atau <em>mengenal</em> boleh dipakai dalam uraian umum, tetapi harus diturunkan menjadi performa yang bisa dibuktikan.</p>"
+      "html": "<p>Bandingkan dua rumusan:</p><ul><li>Kabur: <em>“Peserta memahami infografis.”</em></li><li>Terukur: <em>“Peserta membuat satu diagram alur dengan minimal empat langkah berlabel benar.”</em></li></ul><p>Tujuan terukur menyebutkan <strong>perilaku yang dapat diamati</strong> (kata kerja yang bisa dibuktikan), <strong>kondisi/konteks</strong> tempat perilaku itu dilakukan, dan <strong>kriteria keberhasilan</strong> (berapa banyak, seberapa akurat, dalam waktu berapa). Kata kerja seperti <em>memahami</em>, <em>mengetahui</em>, <em>mengenal</em> boleh dipakai dalam uraian umum, tetapi harus diturunkan menjadi performa yang bisa dibuktikan.</p>"
     },
     {
       "type": "mcq",
@@ -18,23 +19,36 @@
       "correct": 2,
       "rationale": "Kata kerja membuat dapat diamati; produk dan kriteria dinyatakan. Dua opsi lain tidak menghasilkan bukti kinerja apa pun."
     },
+    { "type": "section", "num": "2", "title": "Taksonomi Bloom sebagai alat pemilih kata kerja", "sub": "Dari 'mengingat' hingga 'mencipta' — dan bagaimana riset terkini memetakannya ke desain" },
+    {
+      "type": "text",
+      "html": "<p>Taksonomi Bloom (revisi) menyusun tingkat kognitif dari <strong>mengingat → memahami → menerapkan → menganalisis → mengevaluasi → mencipta</strong>. Fungsinya praktis: kata kerja pada tujuan menentukan jenis aktivitas dan jenis bukti. Tujuan “menganalisis kasus” tidak terbukti dengan soal hafalan; tujuan “mengingat istilah” tidak butuh proyek kelompok.</p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-li-bloom-roda.png",
+      "alt": "Roda taksonomi Bloom dari artikel Li et al. 2024 dengan tingkat Remember, Understand, Apply, Analyze, Evaluate, Create, Share, dipetakan ke contoh kegiatan pada diagram fishbone",
+      "caption": "Riset desain terkini (Li et al., 2024) memetakan taksonomi Bloom langsung ke aktivitas dan asesmen mingguan — setiap kata kerja punya tempat yang jelas dalam desain.",
+      "credit": "Li et al. (2024), Education and Information Technologies 29:25281–25306 — CC BY 4.0."
+    },
+    { "type": "section", "num": "3", "title": "Constructive alignment: asesmen harus membuktikan tujuan", "sub": "Konsep Biggs + urutan kerja backward design" },
     {
       "type": "figure",
       "src": "figures/alignment.svg",
       "alt": "Segitiga constructive alignment: tujuan pembelajaran di puncak, terhubung dengan bukti asesmen dan aktivitas belajar; materi dan media memayungi ketiganya",
-      "caption": "Constructive alignment: asesmen harus membuktikan tujuan, dan aktivitas harus mengembangkan tujuan yang sama.",
+      "caption": "Asesmen membuktikan tujuan; aktivitas mengembangkan tujuan yang sama; media memayungi ketiganya.",
       "credit": "Ilustrasi tim modul (2026) — konsep Biggs, disesuaikan dari materi M2 ToT — bebas lisensi."
     },
     {
       "type": "text",
-      "html": "<h2>Backward design: mulai dari akhir</h2><p>Urutan kerja yang selaras (backward design):</p><ol><li>Tetapkan <strong>hasil akhir</strong> yang harus dicapai peserta.</li><li>Tentukan <strong>bukti keberhasilan</strong> — produk atau jawaban apa yang membuktikan hasil itu.</li><li>Baru pilih <strong>aktivitas, konten, dan media</strong> yang menghasilkan bukti tersebut.</li></ol><p>Kebalikannya sering terjadi di lapangan: pilih materi menarik dulu, baru mencari soal. Akibatnya asesmen tidak membuktikan apa pun tentang tujuan.</p>"
+      "html": "<p>Urutan kerja yang selaras (<strong>backward design</strong>):</p><ol><li>Tetapkan <strong>hasil akhir</strong> yang harus dicapai peserta.</li><li>Tentukan <strong>bukti keberhasilan</strong> — produk atau jawaban apa yang membuktikan hasil itu.</li><li>Baru pilih <strong>aktivitas, konten, dan media</strong> yang menghasilkan bukti tersebut.</li></ol><p>Kebalikannya sering terjadi di lapangan: pilih materi menarik dulu, baru mencari soal. Akibatnya asesmen tidak membuktikan apa pun tentang tujuan. Metode FOLD (Li et al., 2024) memformalkan siklus ini dalam lima tahap — berikut figure-nya, dan tahap pertamanya persis seperti urutan di atas.</p>"
     },
     {
       "type": "matching",
       "item_key": "c2-match1",
       "instruction": "<p>Pasangkan setiap tujuan dengan bukti asesmen yang <em>benar-benar</em> membuktikannya.</p>",
       "pairs": [
-        { "left": "Peserta meringkas satu kasus penanganan keluhan sesuai SOP", "right": "Tulis ringkasan 5 kalimat kasus berbeda; dinilai dengan daftar cek kelengkapan langkah SOP" },
+        { "left": "Peserta meringkas satu kasus penanganan keluhan sesuai SOP", "right": "Tulis ringkasan 5 kalimat kasus berbeda; dinilai dengan daftar cek langkah SOP" },
         { "left": "Peserta memilih bentuk visual yang tepat untuk data perbandingan", "right": "Soal studi kasus: pilih jenis diagram dari 3 dataset berbeda dan jelaskan alasannya" },
         { "left": "Peserta menjalankan simulasi edukasi singkat kepada peserta didik", "right": "Rubrik observasi microteaching 8 menit oleh rekan sejawat" }
       ],
@@ -47,13 +61,33 @@
       "text": "Setelah pelatihan, peserta mampu [[mengoperasikan]] aplikasi verifikasi klaim [[dengan bantuan lembar panduan]], dan mampu memverifikasi minimal [[5 berkas]] tanpa kesalahan administrasi.",
       "options": ["mengoperasikan", "dengan bantuan lembar panduan", "5 berkas", "memahami", "secepatnya"],
       "answers": ["mengoperasikan", "dengan bantuan lembar panduan", "5 berkas"],
-      "rationale": "Rumusan lengkap berisi perilaku teramati (mengoperasikan), kondisi (dengan lembar panduan), dan kriteria (minimal 5 berkas, tanpa kesalahan)."
+      "rationale": "Rumusan lengkap: perilaku teramati (mengoperasikan), kondisi (dengan lembar panduan), kriteria (minimal 5 berkas, tanpa kesalahan)."
+    },
+    { "type": "section", "num": "4", "title": "Bacaan wajib C2", "sub": "±15 menit — metode FOLD dari riset desain pembelajaran" },
+    {
+      "type": "callout",
+      "variant": "key",
+      "title": "Tugas baca",
+      "html": "<p><strong>Li et al. (2024)</strong>, <em>Fishbone digital learning design method</em> — baca bagian <em>Abstract</em> dan bagian metode lima tahap FOLD (±3 halaman): <a href=\"bacaan/li-2024-fishbone.pdf\" target=\"_blank\" rel=\"noopener\">buka PDF (CC BY 4.0)</a>. Fokuskan pada nama dan urutan kelima tahapnya; hubungkan dengan backward design di atas.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c2-mcq-baca1",
+      "question": "Bacaan Li et al. (2024): tahap pertama metode FOLD adalah…",
+      "options": [
+        "Setting milestones (menetapkan tonggak waktu)",
+        "Mapping learning outcomes (memetakan hasil belajar)",
+        "Designing feedback and assessment",
+        "Aligning pedagogies and technologies"
+      ],
+      "correct": 1,
+      "rationale": "FOLD dimulai dari pemetaan hasil belajar, lalu tonggak, rancangan umpan balik & asesmen, penyelarasan pedagogi & teknologi, dan ditutup evaluasi-refleksi. Urutannya sejalan dengan backward design."
     },
     {
       "type": "form",
       "label": "LK2 — Draf learning outcomes",
       "item_key": "lk2",
-      "instruction": "<p>Tulis <strong>dua tujuan</strong> untuk bahan ajar Anda. Gunakan pola: perilaku teramati + kondisi + kriteria.</p>",
+      "instruction": "<p>Tulis <strong>dua tujuan</strong> untuk bahan ajar Anda. Pola: perilaku teramati + kondisi + kriteria.</p>",
       "fields": [
         { "key": "lo1_perilaku", "label": "Tujuan 1 — perilaku teramati (kata kerja yang bisa dibuktikan)", "type": "input", "placeholder": "Contoh: menganalisis…" },
         { "key": "lo1_kondisi", "label": "Tujuan 1 — kondisi/konteks", "type": "input", "placeholder": "Dengan alat/materi apa, dalam situasi apa" },
@@ -67,16 +101,18 @@
     },
     {
       "type": "quiz",
-      "label": "Kuis modul C2",
+      "label": "Kuis modul C2 (6 soal)",
       "item_key": "kuis-c2",
       "quiz_kind": "modul",
       "passScore": 70,
-      "instruction": "<p>Empat pertanyaan tentang tujuan dan alignment.</p>",
+      "instruction": "<p>Nilai minimal 70; boleh diulang.</p>",
       "questions": [
         { "id": "c2q1", "question": "Constructive alignment berarti…", "options": ["Semua slide memiliki animasi", "Tujuan, asesmen, aktivitas, dan konten saling selaras", "Semua peserta memakai aplikasi yang sama", "Materi disampaikan berurutan sesuai buku"], "correct": 1, "rationale": "Kesesuaian outcome–bukti–aktivitas memastikan asesmen membuktikan tujuan." },
         { "id": "c2q2", "question": "Urutan kerja backward design yang benar adalah…", "options": ["Pilih aktivitas menarik → susun materi → tulis tujuan", "Tetapkan hasil akhir → tentukan bukti keberhasilan → pilih aktivitas dan konten", "Susun slide → buat kuis → tetapkan tujuan", "Tentukan media → susun tujuan → tentukan hasil"], "correct": 1, "rationale": "Mulai dari hasil akhir memastikan setiap aktivitas punya alasan yang bisa dibuktikan." },
-        { "id": "c2q3", "question": "Tujuan “peserta memahami kebijakan klaim” sebaiknya diturunkan menjadi…", "options": ["“Peserta mengikuti sesi kebijakan klaim”", "“Peserta menentukan status kelayakan 5 kasus klaim hipotetis sesuai kebijakan terkini”", "“Peserta mengenal istilah klaim”", "“Peserta menyimak penjelasan narasumber”"], "correct": 1, "rationale": "Menentukan status kelayakan adalah perilaku yang dapat diamati dan dinilai; mengikuti/menyimak bukan bukti." },
-        { "id": "c2q4", "question": "Bila asesmen hanya berupa soal hafalan padahal tujuannya “memecahkan masalah”, masalah utamanya adalah…", "options": ["Kuis terlalu mudah dibuat", "Asesmen tidak membuktikan tujuan — alignment putus", "Peserta akan senang karena soal mudah", "Nilai akan selalu tinggi"], "correct": 1, "rationale": "Jenis bukti harus setara dengan kata kerja tujuan; soal hafalan tidak membuktikan kemampuan memecahkan masalah." }
+        { "id": "c2q3", "question": "Tujuan “peserta memahami kebijakan klaim” sebaiknya diturunkan menjadi…", "options": ["“Peserta mengikuti sesi kebijakan klaim”", "“Peserta menentukan status kelayakan 5 kasus klaim hipotetis sesuai kebijakan terkini”", "“Peserta mengenal istilah klaim”", "“Peserta menyimak penjelasan narasumber”"], "correct": 1, "rationale": "Menentukan status kelayakan dapat diamati dan dinilai; mengikuti/menyimak bukan bukti." },
+        { "id": "c2q4", "question": "Bila asesmen hanya berupa soal hafalan padahal tujuannya “memecahkan masalah”, masalah utamanya adalah…", "options": ["Kuis terlalu mudah dibuat", "Asesmen tidak membuktikan tujuan — alignment putus", "Peserta akan senang karena soal mudah", "Nilai akan selalu tinggi"], "correct": 1, "rationale": "Jenis bukti harus setara dengan kata kerja tujuan." },
+        { "id": "c2q5", "question": "Kata kerja “menganalisis” pada tujuan paling tepat dibuktikan dengan…", "options": ["Soal pilihan ganda hafalan istilah", "Tugas membedah kasus: memisahkan penyebab kompetensi dari hambatan sistem lalu menjelaskan alasannya", "Daftar hadir saat diskusi", "Jumlah slide yang dibaca"], "correct": 1, "rationale": "Tingkat kognitif menentukan jenis bukti — analisis terbukti lewat produk analisis, bukan hafalan." },
+        { "id": "c2q6", "question": "Dalam metode FOLD (Li et al., 2024), rancangan umpan balik dan asesmen dibuat…", "options": ["Paling akhir, setelah semua materi jadi", "Setelah hasil belajar dan tonggak ditetapkan, sebelum memilih pedagogi dan teknologi", "Hanya bila ada waktu tersisa", "Oleh pihak luar, bukan perancang"], "correct": 1, "rationale": "Urutan FOLD menempatkan asesmen sebelum pemilihan pedagogi/teknologi — persis logika backward design." }
       ]
     },
     {
