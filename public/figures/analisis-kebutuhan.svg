@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Diagram: alur analisis kebutuhan belajar -->
+  <rect width="960" height="420" fill="#FFFFFF"/>
+  <text x="480" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#2B3078">Analisis kebutuhan: dari tugas nyata ke prioritas belajar</text>
+
+  <g font-size="14.5" text-anchor="middle">
+    <!-- langkah 1 -->
+    <rect x="40" y="70" width="180" height="64" rx="10" fill="#2B3078"/>
+    <text x="130" y="96" fill="#fff" font-weight="700">1. Tugas sasaran</text>
+    <text x="130" y="116" fill="#D9DCEB" font-size="12.5">Apa yang harus bisa dilakukan?</text>
+    <line x1="220" y1="102" x2="270" y2="102" stroke="#7A8090" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- langkah 2 -->
+    <rect x="272" y="70" width="180" height="64" rx="10" fill="#3A4192"/>
+    <text x="362" y="96" fill="#fff" font-weight="700">2. Bukti aktual</text>
+    <text x="362" y="116" fill="#D9DCEB" font-size="12.5">Observasi, dokumen, wawancara</text>
+    <line x1="452" y1="102" x2="502" y2="102" stroke="#7A8090" stroke-width="2"/>
+
+    <!-- langkah 3 -->
+    <rect x="504" y="70" width="180" height="64" rx="10" fill="#009F3C"/>
+    <text x="594" y="96" fill="#fff" font-weight="700">3. Gap kinerja</text>
+    <text x="594" y="116" fill="#D9F4E3" font-size="12.5">Target dibanding kondisi nyata</text>
+    <line x1="684" y1="102" x2="734" y2="102" stroke="#7A8090" stroke-width="2"/>
+
+    <!-- langkah 4: pertanyaan penyebab -->
+    <path d="M736 102 h40 l24 0" stroke="none"/>
+    <rect x="736" y="70" width="184" height="64" rx="10" fill="#FFD200"/>
+    <text x="828" y="94" fill="#1F2430" font-weight="700">4. Kenapa gap terjadi?</text>
+    <text x="828" y="114" fill="#4A5060" font-size="12.5">Periksa SOP, alat, waktu, dukungan</text>
+
+    <!-- cabang -->
+    <path d="M828 134 v46" stroke="#7A8090" stroke-width="2"/>
+    <path d="M828 180 h-440" stroke="#7A8090" stroke-width="2"/>
+    <path d="M388 180 v24" stroke="#7A8090" stroke-width="2"/>
+
+    <rect x="268" y="204" width="240" height="86" rx="10" fill="#009F3C"/>
+    <text x="388" y="232" fill="#fff" font-weight="700">Gap kompetensi</text>
+    <text x="388" y="252" fill="#D9F4E3" font-size="12.5">Belum tahu / belum bisa →</text>
+    <text x="388" y="270" fill="#D9F4E3" font-size="12.5">jawab dengan pembelajaran</text>
+
+    <path d="M828 180 h60" stroke="#7A8090" stroke-width="2"/>
+    <path d="M888 180 v24" stroke="#7A8090" stroke-width="2"/>
+    <rect x="748" y="204" width="240" height="86" rx="10" fill="#C8102E"/>
+    <text x="868" y="232" fill="#fff" font-weight="700">Hambatan sistem</text>
+    <text x="868" y="252" fill="#F8D9DE" font-size="12.5">Alat rusak, SOP, beban kerja, kewenangan →</text>
+    <text x="868" y="270" fill="#F8D9DE" font-size="12.5">jangan dijawab dengan pelatihan</text>
+
+    <!-- langkah 5 -->
+    <path d="M388 290 v26 h-248" stroke="#7A8090" stroke-width="2"/>
+    <path d="M140 316 h0" stroke="#7A8090"/>
+    <rect x="40" y="316" width="360" height="60" rx="10" fill="#2B3078"/>
+    <text x="220" y="341" fill="#fff" font-weight="700">5. Prioritaskan kebutuhan belajar</text>
+    <text x="220" y="361" fill="#D9DCEB" font-size="12.5">Dua kebutuhan paling penting + alasan + implikasi desain</text>
+  </g>
+
+  <text x="480" y="404" text-anchor="middle" font-size="12.5" fill="#7A8090" font-style="italic">Ilustrasi tim modul (2026), diadaptasi dari Panduan Fasilitator ToT &amp; SKKNI 333/2020 unit 009/010 — bebas lisensi.</text>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#7A8090"/>
+    </marker>
+  </defs>
+</svg>

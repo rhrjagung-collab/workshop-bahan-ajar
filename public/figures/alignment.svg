@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Diagram: constructive alignment -->
+  <rect width="900" height="560" fill="#FFFFFF"/>
+  <text x="450" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#2B3078">Constructive alignment: asesmen harus membuktikan tujuan</text>
+
+  <!-- segitiga -->
+  <path d="M450 120 L230 400 L670 400 Z" fill="none" stroke="#2B3078" stroke-width="3.5"/>
+
+  <!-- node atas: tujuan -->
+  <rect x="330" y="76" width="240" height="72" rx="12" fill="#2B3078"/>
+  <text x="450" y="106" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">TUJUAN PEMBELAJARAN</text>
+  <text x="450" y="128" text-anchor="middle" font-size="13" fill="#D9DCEB">perilaku teramati + kondisi + kriteria</text>
+
+  <!-- node kiri bawah: asesmen -->
+  <rect x="60" y="400" width="260" height="72" rx="12" fill="#009F3C"/>
+  <text x="190" y="430" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">BUKTI ASESMEN</text>
+  <text x="190" y="452" text-anchor="middle" font-size="13" fill="#D9F4E3">produk/jawaban yang membuktikan tujuan</text>
+
+  <!-- node kanan bawah: aktivitas -->
+  <rect x="580" y="400" width="260" height="72" rx="12" fill="#C8102E"/>
+  <text x="710" y="430" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">AKTIVITAS BELAJAR</text>
+ <text x="710" y="452" text-anchor="middle" font-size="13" fill="#F8D9DE">peserta melakukan sesuatu dengan ide</text>
+
+  <!-- tengah: alignment -->
+  <circle cx="450" cy="330" r="46" fill="#FFD200"/>
+  <text x="450" y="325" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1F2430">ALIGNED</text>
+  <text x="450" y="344" text-anchor="middle" font-size="11.5" fill="#4A5060">saling selaras</text>
+
+  <!-- label sisi -->
+  <text x="300" y="240" text-anchor="middle" font-size="13.5" fill="#009F3C" font-weight="700" transform="rotate(-46 300 240)">membuktikan</text>
+  <text x="600" y="240" text-anchor="middle" font-size="13.5" fill="#C8102E" font-weight="700" transform="rotate(46 600 240)">mengembangkan</text>
+  <text x="450" y="415" text-anchor="middle" font-size="0" fill="none"> </text>
+
+  <!-- media strip bawah -->
+  <rect x="150" y="500" width="600" height="40" rx="8" fill="#EEF0F8"/>
+  <text x="450" y="525" text-anchor="middle" font-size="14" fill="#2B3078" font-weight="600">Materi &amp; media memayungi ketiganya — dipilih terakhir, bukan pertama</text>
+
+  <text x="450" y="552" text-anchor="middle" font-size="12.5" fill="#7A8090" font-style="italic">Ilustrasi tim modul (2026) — konsep Biggs; disesuaikan dari materi M2 ToT — bebas lisensi.</text>
+</svg>

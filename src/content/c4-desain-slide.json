@@ -1,0 +1,83 @@
+{
+  "code": "c4",
+  "judul": "Desain Slide & Beban Kognitif",
+  "menit": 30,
+  "tenggat_tampil": "7 Nov 2026, 21.00 WIB",
+  "deskripsi": "Memperbaiki slide menggunakan prinsip multimedia: coherence, signaling, segmenting, dan contiguity.",
+  "penutup": "Audit dua slide Anda akan ditelaah pada sesi M4 — bawa berkas slide aslinya ke Bogor.",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<h2>Mengapa slide penuh teks gagal</h2><p>Ketika pembaca membaca teks panjang di layar sambil mendengarkan penjelasan, dua saluran informasi berebut perhatian: mata memproses teks, telinga memproses suara — dan keduanya membawa isi yang sama yang harus diproses ulang. Teori multimedia Mayer (2024) menunjukkan orang belajar lebih baik dari <strong>kata + gambar yang menjelaskan</strong> daripada kata saja, dan <strong>lebih buruk lagi</strong> bila teks di slide dibacakan persis oleh presenter.</p><p>Lima prinsip yang paling sering menyelamatkan slide pelatihan:</p><ul><li><strong>Coherence</strong> — hapus elemen yang tidak mendukung tujuan (dekorasi, gambar pembangkit semangat, detail samping).</li><li><strong>Signaling</strong> — beri penanda pada ide utama (tebal, warna aksen, panah) agar perhatian menuju hal yang penting.</li><li><strong>Segmenting</strong> — pecah proses kompleks menjadi bagian-bagian yang bisa dicerna berurutan.</li><li><strong>Contiguity</strong> — dekatkan label/teks dengan bagian visual yang dijelaskan; jangan biarkan pembaca menebak-nebak.</li><li><strong>Redundancy</strong> — jangan menduplikasi narasi lisan sebagai teks penuh di slide.</li></ul>"
+    },
+    {
+      "type": "beforeafter",
+      "item_key": "c4-ba1",
+      "instruction": "<p>Geser pembanding untuk melihat satu slide yang sama sebelum dan sesudah diperbaiki. Perhatikan apa yang dihilangkan, apa yang ditonjolkan.</p>",
+      "beforeHtml": "<div style='padding:0'><p style='margin:0 0 4px; font-size:11px; font-weight:700; color:#4A5060'>PROSEDUR VERIFIKASI KLAIM</p><p style='margin:0 0 6px; font-size:9.5px; line-height:1.5; color:#1F2430'>• Verifikasi klaim dilakukan oleh petugas verifikator yang telah ditetapkan berdasarkan surat keputusan yang berlaku dan mempertimbangkan beban kerja unit • Dokumen yang diverifikasi meliputi formulir klaim, lampiran bukti layanan, kartu identitas peserta, serta dokumen pendukung lainnya sesuai ketentuan yang berlaku • Bila terdapat ketidaksesuaian data maka petugas wajib melakukan konfirmasi kepada faskes pengirim melalui kanal resmi yang telah ditetapkan • Hasil verifikasi dicatat pada sistem dengan kode status yang telah ditentukan oleh kebijakan yang berlaku saat ini • Rekapitulasi hasil verifikasi dilaporkan secara berkala kepada kepala unit untuk ditindaklanjuti sesuai kebutuhan • Pertanyaan seputar prosedur dapat disampaikan melalui kanal resmi unit verifikasi</p><p style='margin:0; font-size:8.5px; color:#7A8090'>Sumber: rangkuman SOP hal. 4–9 (disalin utuh)</p></div>",
+      "afterHtml": "<div style='padding:0'><p style='margin:0 0 6px; font-size:11.5px; font-weight:800; color:#fff'>Klaim gagal verifikasi paling sering karena satu hal: dokumen pendukung tidak terbaca</p><div style='display:flex; align-items:center; gap:10px; margin:10px 0'><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>PERIKSA</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Keterbacaan dokumen sebelum dikirim</p></div><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>KONFIRMASI</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Ketidaksesuaian lewat kanal resmi</p></div><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>CATAT</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Kode status sesuai kebijakan</p></div></div><p style='margin:0; font-size:8.5px; color:#C9CEE6'>Detail prosedur lengkap: handout hal. 4–9 — tidak perlu tampil di slide</p></div>",
+      "labelBefore": "Sebelum — dinding teks",
+      "labelAfter": "Sesudah — satu pesan",
+      "rationale": "Yang berubah: judul menjadi pesan utama (signaling), enam poin disalin-SOP dipindahkan ke handout (coherence), proses dipadatkan menjadi tiga langkah berlabel (segmenting), dan detail tetap terlacak lewat handout. Narasi Anda mengisi sisanya — bukan teks slide."
+    },
+    {
+      "type": "callout",
+      "variant": "gold",
+      "title": "Prinsip, bukan hukum",
+      "html": "<p>Aturan populer seperti <em>“24pt”</em> atau <em>aturan 6×6</em> bukan hukum universal. Ukuran huruf diuji pada <strong>ruang, proyektor, dan audiens</strong> nyata. Yang tidak boleh dikompromikan: keterbacaan, kontras, dan warna yang bukan satu-satunya pemberi makna (aksesibilitas).</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c4-mcq1",
+      "question": "Prinsip coherence menyarankan…",
+      "options": ["Menambah dekorasi", "Menghapus elemen yang tidak mendukung pembelajaran", "Menggunakan banyak warna", "Membaca seluruh isi slide"],
+      "correct": 1,
+      "rationale": "Materi verbal/visual yang tidak relevan menimbulkan pemrosesan ekstra (extraneous load) tanpa menambah pemahaman."
+    },
+    {
+      "type": "mcq",
+      "item_key": "c4-mcq2",
+      "question": "Presenter membacakan persis seluruh paragraf di slide. Berdasarkan prinsip redundancy, akibatnya…",
+      "options": [
+        "Peserta lebih mudah karena menerima dua kali",
+        "Pembelajaran cenderung menurun — saluran visual dan auditori memproses teks yang sama secara berulang",
+        "Tidak ada pengaruh, asalkan suara jelas",
+        "Peserta lebih menghargai presenter yang lengkap"
+      ],
+      "correct": 1,
+      "rationale": "Ketika slide hampir kosong dan penjelasan disampaikan lisan, hasil belajar justru lebih baik dibanding slide penuh yang dibacakan kata per kata."
+    },
+    {
+      "type": "form",
+      "label": "LK5 — Audit dua slide Anda sendiri",
+      "item_key": "lk5",
+      "instruction": "<p>Buka dua slide dari materi Anda yang paling padat. Audit dengan prinsip tadi, lalu rencanakan perbaikannya (perbaikan dilakukan saat workshop).</p>",
+      "fields": [
+        { "key": "slide1_masalah", "label": "Slide 1 — masalah utama yang Anda temukan", "type": "textarea", "rows": 2, "placeholder": "Contoh: 9 bullet, judul hanya nama topik, diagram tidak berlabel…" },
+        { "key": "slide1_perbaikan", "label": "Slide 1 — rencana perbaikan (prinsip yang dipakai)", "type": "textarea", "rows": 2, "placeholder": "Contoh: coherence — pindah 3 poin ke handout; signaling — tebalkan kriteria wajib…" },
+        { "key": "slide2_masalah", "label": "Slide 2 — masalah utama", "type": "textarea", "rows": 2, "placeholder": "…" },
+        { "key": "slide2_perbaikan", "label": "Slide 2 — rencana perbaikan", "type": "textarea", "rows": 2, "placeholder": "…" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "label": "Kuis modul C4",
+      "item_key": "kuis-c4",
+      "quiz_kind": "modul",
+      "passScore": 70,
+      "instruction": "<p>Empat pertanyaan tentang desain slide.</p>",
+      "questions": [
+        { "id": "c4q1", "question": "Prinsip coherence menyarankan…", "options": ["Menambah dekorasi", "Menghapus elemen yang tidak mendukung pembelajaran", "Menggunakan banyak warna", "Membaca seluruh isi slide"], "correct": 1, "rationale": "Kurangi materi verbal/visual yang tidak relevan untuk mengurangi pemrosesan ekstra." },
+        { "id": "c4q2", "question": "Label angka pada diagram diletakkan jauh dari bagian yang dirujuk. Prinsip yang dilanggar adalah…", "options": ["Signaling", "Spatial contiguity", "Segmenting", "Modality"], "correct": 1, "rationale": "Contiguity menuntut label dekat dengan objek yang dijelaskan agar pembaca tidak memecah perhatian." },
+        { "id": "c4q3", "question": "Cara paling tepat menyajikan proses 8 langkah yang kompleks adalah…", "options": ["Satu slide berisi 8 langkah sekaligus agar padat", "Dipecah menjadi beberapa bagian (segmenting) dengan satu fokus per slide", "Hanya lisan tanpa visual", "Semua langkah dalam animasi otomatis cepat"], "correct": 1, "rationale": "Segmenting memberi peserta kendali untuk memproses tiap bagian sebelum lanjut." },
+        { "id": "c4q4", "question": "Warna merah dan hijau dipakai sebagai satu-satunya pembeda status berkas. Masalah utamanya…", "options": ["Warna kurang modis", "Peserta dengan buta warna/layar buram tidak dapat membedakan — informasi hilang", "Merah identik dengan brand", "Tidak masalah karena ada legenda"], "correct": 1, "rationale": "Aksesibilitas: informasi tidak boleh bergantung pada warna saja — beri teks/ikon sebagai penanda kedua." }
+      ]
+    },
+    {
+      "type": "reflect",
+      "item_key": "refleksi-c4",
+      "prompt": "<p>Slide mana yang paling sulit Anda kecilkan — dan apa yang membuat Anda ragu untuk menghapus isinya? Apakah ragu itu tentang pembelajaran peserta, atau tentang kelengkapan dokumen?</p>",
+      "placeholder": "Tulis di sini…"
+    }
+  ]
+}

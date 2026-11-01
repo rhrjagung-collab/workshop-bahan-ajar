@@ -1,0 +1,20 @@
+{
+  "name": "modul-jaminan-sosial",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Modul Persiapan Daring - Workshop Inovasi Bahan Ajar Digital Jaminan Sosial (Corporate University BPJS Kesehatan x UPN Veteran Jakarta)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.10",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7"
+  }
+}

@@ -1,0 +1,6 @@
+nama,email,kelompok,kode_access,peran
+Contoh Peserta Satu,peserta1@contoh.id,Kelompok 1,MJS-DEMO-01,peserta
+Contoh Peserta Dua,peserta2@contoh.id,Kelompok 1,MJS-DEMO-02,peserta
+Contoh Peserta Tiga,peserta3@contoh.id,Kelompok 2,MJS-DEMO-03,peserta
+Contoh Fasilitator,fasilitator@contoh.id,Tim,MJS-FASIL-01,fasilitator
+Contoh Narasumber,narasumber@contoh.id,Tim,MJS-NARA-01,narasumber

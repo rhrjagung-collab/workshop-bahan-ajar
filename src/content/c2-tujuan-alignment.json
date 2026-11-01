@@ -1,0 +1,89 @@
+{
+  "code": "c2",
+  "judul": "Tujuan Pembelajaran & Alignment",
+  "menit": 30,
+  "tenggat_tampil": "6 Nov 2026, 21.00 WIB",
+  "deskripsi": "Mengubah tujuan yang kabur menjadi tujuan terukur, dan menyelaskan tujuan–asesmen–aktivitas.",
+  "penutup": "Draf 2 tujuan terukur Anda akan ditelaah fasilitator sebelum sesi M2 di Hari 1.",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<h2>Tujuan kabur vs tujuan terukur</h2><p>Bandingkan dua rumusan ini:</p><ul><li>Kabur: <em>“Peserta memahami infografis.”</em></li><li>Terukur: <em>“Peserta membuat satu diagram alur dengan minimal empat langkah berlabel benar.”</em></li></ul><p>Tujuan terukur menyebutkan <strong>perilaku yang dapat diamati</strong>, <strong>kondisi/konteks</strong> tempat perilaku itu dilakukan, dan <strong>kriteria keberhasilan</strong>. Kata kerja seperti <em>memahami</em>, <em>mengetahui</em>, atau <em>mengenal</em> boleh dipakai dalam uraian umum, tetapi harus diturunkan menjadi performa yang bisa dibuktikan.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c2-mcq-terukur",
+      "question": "Manakah tujuan yang paling terukur?",
+      "options": ["Peserta memahami infografis", "Peserta mengetahui PowerPoint", "Peserta membuat satu diagram alur dengan minimal 4 langkah berlabel benar", "Peserta mengenal visual"],
+      "correct": 2,
+      "rationale": "Kata kerja membuat dapat diamati; produk dan kriteria dinyatakan. Dua opsi lain tidak menghasilkan bukti kinerja apa pun."
+    },
+    {
+      "type": "figure",
+      "src": "figures/alignment.svg",
+      "alt": "Segitiga constructive alignment: tujuan pembelajaran di puncak, terhubung dengan bukti asesmen dan aktivitas belajar; materi dan media memayungi ketiganya",
+      "caption": "Constructive alignment: asesmen harus membuktikan tujuan, dan aktivitas harus mengembangkan tujuan yang sama.",
+      "credit": "Ilustrasi tim modul (2026) — konsep Biggs, disesuaikan dari materi M2 ToT — bebas lisensi."
+    },
+    {
+      "type": "text",
+      "html": "<h2>Backward design: mulai dari akhir</h2><p>Urutan kerja yang selaras (backward design):</p><ol><li>Tetapkan <strong>hasil akhir</strong> yang harus dicapai peserta.</li><li>Tentukan <strong>bukti keberhasilan</strong> — produk atau jawaban apa yang membuktikan hasil itu.</li><li>Baru pilih <strong>aktivitas, konten, dan media</strong> yang menghasilkan bukti tersebut.</li></ol><p>Kebalikannya sering terjadi di lapangan: pilih materi menarik dulu, baru mencari soal. Akibatnya asesmen tidak membuktikan apa pun tentang tujuan.</p>"
+    },
+    {
+      "type": "matching",
+      "item_key": "c2-match1",
+      "instruction": "<p>Pasangkan setiap tujuan dengan bukti asesmen yang <em>benar-benar</em> membuktikannya.</p>",
+      "pairs": [
+        { "left": "Peserta meringkas satu kasus penanganan keluhan sesuai SOP", "right": "Tulis ringkasan 5 kalimat kasus berbeda; dinilai dengan daftar cek kelengkapan langkah SOP" },
+        { "left": "Peserta memilih bentuk visual yang tepat untuk data perbandingan", "right": "Soal studi kasus: pilih jenis diagram dari 3 dataset berbeda dan jelaskan alasannya" },
+        { "left": "Peserta menjalankan simulasi edukasi singkat kepada peserta didik", "right": "Rubrik observasi microteaching 8 menit oleh rekan sejawat" }
+      ],
+      "rationale": "Bukti asesmen harus memuat perilaku yang sama dengan kata kerja tujuan — bukan sekadar topik yang dekat."
+    },
+    {
+      "type": "dragwords",
+      "item_key": "c2-drag1",
+      "instruction": "<p>Susun rumusan tujuan yang lengkap.</p>",
+      "text": "Setelah pelatihan, peserta mampu [[mengoperasikan]] aplikasi verifikasi klaim [[dengan bantuan lembar panduan]], dan mampu memverifikasi minimal [[5 berkas]] tanpa kesalahan administrasi.",
+      "options": ["mengoperasikan", "dengan bantuan lembar panduan", "5 berkas", "memahami", "secepatnya"],
+      "answers": ["mengoperasikan", "dengan bantuan lembar panduan", "5 berkas"],
+      "rationale": "Rumusan lengkap berisi perilaku teramati (mengoperasikan), kondisi (dengan lembar panduan), dan kriteria (minimal 5 berkas, tanpa kesalahan)."
+    },
+    {
+      "type": "form",
+      "label": "LK2 — Draf learning outcomes",
+      "item_key": "lk2",
+      "instruction": "<p>Tulis <strong>dua tujuan</strong> untuk bahan ajar Anda. Gunakan pola: perilaku teramati + kondisi + kriteria.</p>",
+      "fields": [
+        { "key": "lo1_perilaku", "label": "Tujuan 1 — perilaku teramati (kata kerja yang bisa dibuktikan)", "type": "input", "placeholder": "Contoh: menganalisis…" },
+        { "key": "lo1_kondisi", "label": "Tujuan 1 — kondisi/konteks", "type": "input", "placeholder": "Dengan alat/materi apa, dalam situasi apa" },
+        { "key": "lo1_kriteria", "label": "Tujuan 1 — kriteria keberhasilan", "type": "input", "placeholder": "Berapa banyak, seberapa akurat, dalam berapa waktu" },
+        { "key": "lo1_bukti", "label": "Tujuan 1 — bukti asesmen yang membuktikannya", "type": "input", "placeholder": "Produk/jawaban yang akan dikumpulkan" },
+        { "key": "lo2_perilaku", "label": "Tujuan 2 — perilaku teramati", "type": "input", "placeholder": "…" },
+        { "key": "lo2_kondisi", "label": "Tujuan 2 — kondisi/konteks", "type": "input", "placeholder": "…" },
+        { "key": "lo2_kriteria", "label": "Tujuan 2 — kriteria keberhasilan", "type": "input", "placeholder": "…" },
+        { "key": "lo2_bukti", "label": "Tujuan 2 — bukti asesmen", "type": "input", "placeholder": "…" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "label": "Kuis modul C2",
+      "item_key": "kuis-c2",
+      "quiz_kind": "modul",
+      "passScore": 70,
+      "instruction": "<p>Empat pertanyaan tentang tujuan dan alignment.</p>",
+      "questions": [
+        { "id": "c2q1", "question": "Constructive alignment berarti…", "options": ["Semua slide memiliki animasi", "Tujuan, asesmen, aktivitas, dan konten saling selaras", "Semua peserta memakai aplikasi yang sama", "Materi disampaikan berurutan sesuai buku"], "correct": 1, "rationale": "Kesesuaian outcome–bukti–aktivitas memastikan asesmen membuktikan tujuan." },
+        { "id": "c2q2", "question": "Urutan kerja backward design yang benar adalah…", "options": ["Pilih aktivitas menarik → susun materi → tulis tujuan", "Tetapkan hasil akhir → tentukan bukti keberhasilan → pilih aktivitas dan konten", "Susun slide → buat kuis → tetapkan tujuan", "Tentukan media → susun tujuan → tentukan hasil"], "correct": 1, "rationale": "Mulai dari hasil akhir memastikan setiap aktivitas punya alasan yang bisa dibuktikan." },
+        { "id": "c2q3", "question": "Tujuan “peserta memahami kebijakan klaim” sebaiknya diturunkan menjadi…", "options": ["“Peserta mengikuti sesi kebijakan klaim”", "“Peserta menentukan status kelayakan 5 kasus klaim hipotetis sesuai kebijakan terkini”", "“Peserta mengenal istilah klaim”", "“Peserta menyimak penjelasan narasumber”"], "correct": 1, "rationale": "Menentukan status kelayakan adalah perilaku yang dapat diamati dan dinilai; mengikuti/menyimak bukan bukti." },
+        { "id": "c2q4", "question": "Bila asesmen hanya berupa soal hafalan padahal tujuannya “memecahkan masalah”, masalah utamanya adalah…", "options": ["Kuis terlalu mudah dibuat", "Asesmen tidak membuktikan tujuan — alignment putus", "Peserta akan senang karena soal mudah", "Nilai akan selalu tinggi"], "correct": 1, "rationale": "Jenis bukti harus setara dengan kata kerja tujuan; soal hafalan tidak membuktikan kemampuan memecahkan masalah." }
+      ]
+    },
+    {
+      "type": "reflect",
+      "item_key": "refleksi-c2",
+      "prompt": "<p>Uji cepat draf tujuan Anda: apakah setiap tujuan menghasilkan <strong>bukti yang benar-benar bisa dikumpulkan</strong>? Tuliskan satu tujuan yang masih sulit dibuktikan dan cara Anda memperbaikinya.</p>",
+      "placeholder": "Contoh: “Peserta sadar pentingnya akurasi” sulit dibuktikan → saya ganti menjadi…"
+    }
+  ]
+}

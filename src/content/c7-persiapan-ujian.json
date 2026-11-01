@@ -1,0 +1,68 @@
+{
+  "code": "c7",
+  "judul": "Persiapan Praktik & Ujian Akhir",
+  "menit": 25,
+  "tenggat_tampil": "8 Nov 2026, 21.00 WIB",
+  "deskripsi": "Memfinalisasi brief bahan ajar Anda, lalu ujian akhir untuk membuka sertifikat penyelesaian.",
+  "penutup": "Brief Anda sudah sampai ke fasilitator kelompok. Sampai jumpa di Bogor, 9 November pukul 08.00 WIB!",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<h2>Dari modul ke ruang workshop</h2><p>Seluruh latihan Anda selama ini — profil sasaran, tujuan, storyboard, audit slide, rencana visual, aktivitas, dan soal — akan menjadi <strong>mentahan paket mini bahan ajar</strong> yang disempurnakan di workshop. Hari pertama fokus pada penyusunan; hari kedua pada visual, interaksi, praktik microteaching, dan revisi. Target akhir: <strong>8–12 slide bahan ajar digital siap telaah</strong>.</p>"
+    },
+    {
+      "type": "callout",
+      "variant": "key",
+      "title": "Quality check sebelum bahan ajar dipakai",
+      "html": "<ol><li>Apakah kebutuhan dan tujuan jelas?</li><li>Apakah asesmen membuktikan tujuan?</li><li>Apakah alur dan visual membantu peserta memahami?</li><li>Apakah aktivitas inklusif dan dapat dijalankan dengan sumber daya yang tersedia?</li><li>Apakah sumber, aksesibilitas, dan rencana revisi sudah diperiksa?</li></ol>"
+    },
+    {
+      "type": "form",
+      "label": "Brief bahan ajar final",
+      "item_key": "brief-final",
+      "instruction": "<p>Rangkum hasil seluruh modul menjadi satu brief untuk fasilitator kelompok Anda. Ini dibaca sebelum Hari 1.</p>",
+      "fields": [
+        { "key": "topik", "label": "Topik final bahan ajar", "type": "input", "placeholder": "…" },
+        { "key": "sasaran", "label": "Sasaran peserta & kebutuhan prioritas", "type": "textarea", "rows": 2, "placeholder": "…" },
+        { "key": "lo", "label": "2–3 tujuan pembelajaran final (perilaku + kondisi + kriteria)", "type": "textarea", "rows": 3, "placeholder": "…" },
+        { "key": "alur", "label": "Alur slide ringkas (headline slide 1–6/8)", "type": "textarea", "rows": 3, "placeholder": "1) … 2) … 3) …" },
+        { "key": "bantuan", "label": "Bantuan apa yang paling Anda butuhkan dari fasilitator", "type": "textarea", "rows": 2, "placeholder": "Contoh: menajamkan kriteria tujuan ke-2…" }
+      ]
+    },
+    {
+      "type": "text",
+      "html": "<h2>Setelah workshop: rencana transfer 30 hari</h2><p>Pelatihan baru bernilai bila dipakai. Komitmen standar program:</p><ul><li><strong>Hari 7</strong> — implementasikan satu bagian sesi/bahan ajar dan kumpulkan umpan balik peserta.</li><li><strong>Hari 14</strong> — revisi bahan ajar ke versi 2 dan simpan bukti perubahan.</li><li><strong>Hari 30</strong> — tunjukkan artefak penerapan, refleksi, dan satu perubahan perilaku belajar peserta yang teramati.</li></ul><p>Rencana transfer lengkap (LK10) diisi pada penutupan workshop di Bogor.</p>"
+    },
+    {
+      "type": "quiz",
+      "label": "Ujian akhir (15 soal)",
+      "item_key": "ujian-akhir",
+      "quiz_kind": "akhir",
+      "passScore": 70,
+      "instruction": "<p>Ujian akhir merangkum seluruh modul. Nilai minimal <strong>70</strong>; boleh diulang. Lulus membuka sertifikat penyelesaian modul persiapan Anda.</p>",
+      "questions": [
+        { "id": "c7q1", "question": "Langkah pertama sebelum memilih media dan metode adalah…", "options": ["Memilih aplikasi paling populer", "Menganalisis peserta dan kebutuhan", "Membuat slide judul", "Menentukan warna tema"], "correct": 1, "rationale": "Desain dimulai dari kebutuhan — gap performa dan karakteristik peserta." },
+        { "id": "c7q2", "question": "Manakah tujuan yang paling terukur?", "options": ["Peserta memahami infografis", "Peserta mengetahui PowerPoint", "Peserta membuat satu diagram alur dengan minimal 4 langkah berlabel benar", "Peserta mengenal visual"], "correct": 2, "rationale": "Perilaku teramati + kondisi + kriteria." },
+        { "id": "c7q3", "question": "Constructive alignment berarti…", "options": ["Semua slide memiliki animasi", "Tujuan, asesmen, aktivitas, dan konten saling selaras", "Semua peserta memakai aplikasi sama", "Materi disampaikan berurutan sesuai buku"], "correct": 1, "rationale": "Asesmen harus membuktikan tujuan yang sama dengan aktivitas." },
+        { "id": "c7q4", "question": "Apa fungsi utama storyboard?", "options": ["Menghias deck", "Mengganti lesson plan", "Merencanakan pesan, urutan, visual, dan aktivitas tiap slide", "Menentukan jumlah animasi"], "correct": 2, "rationale": "Peta narasi dan fungsi tiap slide sebelum produksi." },
+        { "id": "c7q5", "question": "Prinsip coherence menyarankan…", "options": ["Menambah dekorasi", "Menghapus elemen yang tidak mendukung pembelajaran", "Menggunakan banyak warna", "Membaca seluruh isi slide"], "correct": 1, "rationale": "Kurangi pemrosesan ekstra yang tidak relevan." },
+        { "id": "c7q6", "question": "Diagram paling tepat digunakan ketika…", "options": ["Ingin membuat slide lebih ramai", "Ada relasi, urutan, struktur, atau proses yang perlu dipahami", "Tidak ada data atau konsep", "Semua informasi harus masuk satu halaman"], "correct": 1, "rationale": "Bentuk visual mengikuti struktur pesan." },
+        { "id": "c7q7", "question": "Kuis formatif paling bermanfaat ketika…", "options": ["Nilai dipakai untuk mempermalukan peserta", "Jawaban disimpan tanpa dibahas", "Disertai umpan balik dan kesempatan memperbaiki miskonsepsi", "Hanya untuk menentukan pemenang"], "correct": 2, "rationale": "Siklus jawaban → umpan balik → perbaikan." },
+        { "id": "c7q8", "question": "Jika jaringan internet tidak tersedia, trainer sebaiknya…", "options": ["Membatalkan aktivitas", "Mengganti tujuan belajar", "Menggunakan kartu jawaban, kertas, atau diskusi berpasangan", "Meminta peserta membeli paket data"], "correct": 2, "rationale": "Tujuan tetap, kendaraan berganti." },
+        { "id": "c7q9", "question": "Manakah contoh umpan balik yang paling berguna?", "options": ["Bagus!", "Slide Anda jelek", "Pada slide 3, label sumbu tidak ada sehingga pembaca tidak dapat menafsirkan angka; tambahkan unit dan sumber", "Saya lebih suka warna biru"], "correct": 2, "rationale": "Spesifik, berbasis bukti, dapat ditindaklanjuti." },
+        { "id": "c7q10", "question": "Mengapa peer review perlu rubrik?", "options": ["Agar semua produk tampak sama", "Agar komentar fokus pada kriteria dan bukti, bukan selera", "Agar fasilitator tidak perlu hadir", "Agar penilaian lebih cepat tanpa membaca"], "correct": 1, "rationale": "Bahasa bersama untuk mutu dan revisi." },
+        { "id": "c7q11", "question": "Apa yang perlu dilakukan jika masalah performa disebabkan alat kerja yang rusak?", "options": ["Buat lebih banyak slide", "Latih peserta menggunakan alat yang rusak", "Tangani faktor alat/sistem; jangan menganggap semua gap selesai lewat pelatihan", "Tambah kuis"], "correct": 2, "rationale": "Pelatihan bukan jawaban untuk hambatan sistem." },
+        { "id": "c7q12", "question": "Satu kelompok membuat infografis tanpa sumber data. Revisi pertama yang paling penting adalah…", "options": ["Menambah ikon", "Mengganti font", "Menambahkan sumber, tahun, unit, dan konteks data", "Mengubah latar menjadi gradasi"], "correct": 2, "rationale": "Akurasi dan keterlacakan mengalahkan dekorasi." },
+        { "id": "c7q13", "question": "Label pada diagram diletakkan dekat dengan bagian yang dirujuk. Ini penerapan prinsip…", "options": ["Spatial contiguity", "Coherence", "Modality", "Personalization"], "correct": 0, "rationale": "Contiguity: teks dan visual yang saling menjelaskan didekatkan agar perhatian tidak terpecah." },
+        { "id": "c7q14", "question": "Untuk membantu peserta menguji alasannya dengan aman sebelum berbicara di forum besar, aktivitas paling tepat adalah…", "options": ["Kuis kompetitif real-time dengan papan skor", "Think–pair–share", "Ceramah singkat plus tanya jawab terbuka", "Menonton video tanpa diskusi"], "correct": 1, "rationale": "TPS memberi ruang berpikir mandiri lalu menguji alasan pada satu rekan — aman dan aktif." },
+        { "id": "c7q15", "question": "Pada hari ke-7 pasca-workshop, bukti transfer yang paling kuat adalah…", "options": ["Sertifikat kehadiran workshop", "Implementasi satu bagian bahan ajar + umpan balik peserta yang dikumpulkan", "Jumlah slide yang dibuat", "Kepuasan pribadi terhadap materi"], "correct": 1, "rationale": "Transfer dinilai dari perubahan praktik dan buktinya, bukan dari kehadiran atau perasaan." }
+      ]
+    },
+    {
+      "type": "reflect",
+      "item_key": "refleksi-c7",
+      "prompt": "<p>Tuliskan <strong>satu kalimat komitmen</strong>: bahan ajar apa yang akan Anda bawa selesai draf-nya dari Bogor, dan kepada siapa Anda akan mengajarkannya lebih dulu.</p>",
+      "placeholder": "Contoh: Saya akan membawa draf modul sosialisasi klaim 10 slide dan mengujinya pada tim cabang saya pekan pertama Desember…"
+    }
+  ]
+}

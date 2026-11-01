@@ -1,0 +1,63 @@
+{
+  "code": "c0",
+  "judul": "Orientasi & Diagnosis Awal",
+  "menit": 15,
+  "tenggat_tampil": "5 Nov 2026, 21.00 WIB",
+  "deskripsi": "Kenali cara kerja workshop dan modul ini, tetapkan topik bahan ajar Anda, dan ikuti pre-test diagnostik.",
+  "penutup": "Tim fasilitator akan membaca profil dan topik Anda sebelum workshop dimulai. Modul C1 terbuka untuk Anda.",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<h2>Selamat datang</h2><p>Workshop <strong>Inovasi Bahan Ajar Digital Jaminan Sosial</strong> berlangsung dua hari di Swiss-belhotel Bogor, 9–10 November 2026. Kedua hari itu sengaja dirancang untuk <strong>praktik, telaah antarpeserta, dan perbaikan</strong> — bukan ceramah. Pengetahuan dasarnya Anda pelajari lewat delapan modul pendek ini, sehingga waktu bersama narasumber dan fasilitator dipakai seefisien mungkin.</p><p>Hasil akhir workshop: <strong>satu rancangan bahan ajar digital (8–12 slide) untuk subtopik pekerjaan Anda sendiri</strong>, lengkap dengan tujuan terukur, alur, visual, aktivitas interaktif, dan asesmen formatif.</p>"
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "Cara kerja modul ini",
+      "html": "<ul><li>Kerjakan <strong>1–2 modul per hari</strong>; tenggat lengkap tertulis di setiap modul. Tenggat terakhir: <strong>8 November 2026, 21.00 WIB</strong>.</li><li>Setiap interaksi <strong>tersimpan otomatis</strong> — boleh berhenti kapan saja dan lanjut dari posisi terakhir.</li><li>Kuis boleh <strong>diulang</strong> (low-stakes). Umpan balik dan rasionalnya justru bagian terpenting dari latihan.</li><li>Jawaban lembar kerja Anda <strong>dibaca fasilitator kelompok</strong> sebelum Hari 1, agar pendampingan langsung tepat sasaran.</li></ul>"
+    },
+    {
+      "type": "text",
+      "html": "<h2>Yang akan Anda buat</h2><p>Sepanjang modul, latihan diarahkan ke paket mini bahan ajar Anda sendiri:</p><ul><li>Profil sasaran dan analisis kebutuhan berbasis bukti.</li><li>2–3 tujuan pembelajaran terukur.</li><li>Alur sesi dan storyboard 6–8 slide.</li><li>Dua slide yang diperbaiki plus satu rencana diagram/infografis.</li><li>Satu aktivitas interaktif dan tiga soal formatif berkunci.</li></ul>"
+    },
+    {
+      "type": "form",
+      "label": "Brief awal",
+      "item_key": "topik-awal",
+      "instruction": "<p>Isi tiga isian berikut. Ini menjadi titik awal seluruh latihan di modul berikutnya — pilih topik yang <em>benar-benar</em> akan Anda ajarkan.</p>",
+      "fields": [
+        { "key": "topik", "label": "Topik bahan ajar yang akan saya kembangkan", "type": "textarea", "rows": 2, "placeholder": "Contoh: Sosialisasi tata cara klaim JKN untuk mitra faskes tingkat pertama" },
+        { "key": "sasaran", "label": "Siapa peserta yang akan mengikuti pembelajaran saya", "type": "textarea", "rows": 2, "placeholder": "Peran, latar belakang, jumlah, konteks kerja" },
+        { "key": "alasan", "label": "Mengapa topik ini penting saat ini", "type": "textarea", "rows": 2, "placeholder": "Masalah atau kebutuhan nyata yang mendorong topik ini" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "label": "Pre-test diagnostik (12 soal)",
+      "item_key": "pretest",
+      "quiz_kind": "pre",
+      "passScore": null,
+      "instruction": "<p>Jawab sesuai kondisi Anda <strong>saat ini</strong> — tidak ada nilai lulus. Hasilnya menjadi baseline untuk mengukur peningkatan setelah workshop dan membantu fasilitator memetakan kebutuhan kelompok.</p>",
+      "questions": [
+        { "id": "pre-1", "question": "Langkah pertama sebelum memilih media dan metode adalah…", "options": ["Memilih aplikasi paling populer", "Menganalisis peserta dan kebutuhan", "Membuat slide judul", "Menentukan warna tema"], "correct": 1, "rationale": "Desain harus menjawab kesenjangan performa dan karakteristik peserta, bukan dimulai dari alat." },
+        { "id": "pre-2", "question": "Manakah tujuan yang paling terukur?", "options": ["Peserta memahami infografis", "Peserta mengetahui PowerPoint", "Peserta membuat satu diagram alur dengan minimal 4 langkah berlabel benar", "Peserta mengenal visual"], "correct": 2, "rationale": "Kata kerja <em>membuat</em> dapat diamati; kondisi/produk dan kriteria dinyatakan eksplisit." },
+        { "id": "pre-3", "question": "Constructive alignment berarti…", "options": ["Semua slide memiliki animasi", "Tujuan, asesmen, aktivitas, dan konten saling selaras", "Semua peserta memakai aplikasi yang sama", "Materi disampaikan berurutan sesuai buku"], "correct": 1, "rationale": "Kesesuaian outcome–bukti–aktivitas memastikan asesmen benar-benar membuktikan tujuan." },
+        { "id": "pre-4", "question": "Apa fungsi utama storyboard?", "options": ["Menghias deck", "Mengganti lesson plan", "Merencanakan pesan, urutan, visual, dan aktivitas tiap slide", "Menentukan jumlah animasi"], "correct": 2, "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi dimulai." },
+        { "id": "pre-5", "question": "Prinsip coherence menyarankan…", "options": ["Menambah dekorasi", "Menghapus elemen yang tidak mendukung pembelajaran", "Menggunakan banyak warna", "Membaca seluruh isi slide"], "correct": 1, "rationale": "Materi verbal/visual yang tidak relevan membebani pemrosesan tanpa menambah pemahaman." },
+        { "id": "pre-6", "question": "Diagram paling tepat digunakan ketika…", "options": ["Ingin membuat slide lebih ramai", "Ada relasi, urutan, struktur, atau proses yang perlu dipahami", "Tidak ada data atau konsep", "Semua informasi harus masuk satu halaman"], "correct": 1, "rationale": "Bentuk visual dipilih berdasarkan struktur pesan, bukan dekorasi." },
+        { "id": "pre-7", "question": "Kuis formatif paling bermanfaat ketika…", "options": ["Nilai dipakai untuk mempermalukan peserta", "Jawaban disimpan tanpa dibahas", "Disertai umpan balik dan kesempatan memperbaiki miskonsepsi", "Hanya untuk menentukan pemenang"], "correct": 2, "rationale": "Umpan balik membantu peserta memahami alasan jawaban dan langkah belajar berikutnya." },
+        { "id": "pre-8", "question": "Jika jaringan internet tidak tersedia, trainer sebaiknya…", "options": ["Membatalkan aktivitas", "Mengganti tujuan belajar", "Menggunakan kartu jawaban, kertas, atau diskusi berpasangan", "Meminta peserta membeli paket data"], "correct": 2, "rationale": "Tujuan aktivitas tetap dapat dicapai melalui alternatif low-tech." },
+        { "id": "pre-9", "question": "Manakah contoh umpan balik yang paling berguna?", "options": ["Bagus!", "Slide Anda jelek", "Pada slide 3, label sumbu tidak ada sehingga pembaca tidak dapat menafsirkan angka; tambahkan unit dan sumber", "Saya lebih suka warna biru"], "correct": 2, "rationale": "Umpan balik yang berguna spesifik, berbasis bukti, dan dapat ditindaklanjuti." },
+        { "id": "pre-10", "question": "Mengapa peer review perlu rubrik?", "options": ["Agar semua produk tampak sama", "Agar komentar fokus pada kriteria dan bukti, bukan selera", "Agar fasilitator tidak perlu hadir", "Agar penilaian lebih cepat tanpa membaca"], "correct": 1, "rationale": "Rubrik memberi bahasa bersama tentang mutu dan arah revisi." },
+        { "id": "pre-11", "question": "Apa yang perlu dilakukan jika masalah performa disebabkan alat kerja yang rusak?", "options": ["Buat lebih banyak slide", "Latih peserta menggunakan alat yang rusak", "Tangani faktor alat/sistem; jangan menganggap semua gap selesai lewat pelatihan", "Tambah kuis"], "correct": 2, "rationale": "Analisis kebutuhan harus membedakan gap kompetensi dari hambatan sistem." },
+        { "id": "pre-12", "question": "Satu kelompok membuat infografis tanpa sumber data. Revisi pertama yang paling penting adalah…", "options": ["Menambah ikon", "Mengganti font", "Menambahkan sumber, tahun, unit, dan konteks data", "Mengubah latar menjadi gradasi"], "correct": 2, "rationale": "Akurasi dan keterlacakan data lebih penting daripada dekorasi." }
+      ]
+    },
+    {
+      "type": "reflect",
+      "item_key": "refleksi-ekspektasi",
+      "prompt": "<p>Tuliskan <strong>satu hal</strong> yang paling ingin Anda kuasai setelah workshop ini, dan bagaimana Anda akan menggunakannya dalam pekerjaan.</p>",
+      "placeholder": "Contoh: Saya ingin bisa meringkas slide yang sekarang terlalu padat menjadi satu pesan per slide…"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+/* Gaya bersama untuk blok konten modul */
+.block { margin: 0 0 26px; }
+
+.block-head {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--bpjs-indigo);
+  margin-bottom: 10px;
+}
+.block-head .chip {
+  background: var(--bpjs-indigo-soft); border-radius: 999px; padding: 2px 10px;
+}
+.block-head .saved { color: var(--bpjs-green); text-transform: none; letter-spacing: 0; }
+
+.rich p { margin: 0 0 12px; }
+.rich ul, .rich ol { margin: 0 0 12px; padding-left: 22px; }
+.rich li { margin-bottom: 6px; }
+.rich strong { color: var(--bpjs-indigo-dark); }
+
+.interactive {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--upn-gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+}
+.interactive.done-ok { border-left-color: var(--bpjs-green); }
+
+.feedback {
+  margin-top: 12px; padding: 12px 14px; border-radius: var(--radius-sm);
+  font-size: var(--fs-small); line-height: 1.5;
+}
+.feedback.ok { background: var(--bpjs-green-soft); color: var(--bpjs-green-dark); }
+.feedback.no { background: var(--upn-red-soft); color: var(--upn-red); }
+
+.hint { font-size: var(--fs-small); color: var(--ink-faint); margin-top: 8px; }
+.actions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+
+.done-note {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--bpjs-green-dark); font-weight: 700; font-size: var(--fs-small);
+}

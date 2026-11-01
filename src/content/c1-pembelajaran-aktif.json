@@ -1,0 +1,103 @@
+{
+  "code": "c1",
+  "judul": "Pembelajaran Aktif & Analisis Kebutuhan Belajar",
+  "menit": 30,
+  "tenggat_tampil": "5 Nov 2026, 21.00 WIB",
+  "deskripsi": "Bedakan pembelajaran aktif dari sekadar permainan, dan mulai analisis kebutuhan untuk topik bahan ajar Anda.",
+  "penutup": "Bawa isian LK1 Anda ke workshop — Hari 1 langsung dipakai untuk menyaring kebutuhan prioritas bersama kelompok.",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<h2>Kasus pembuka: sesi 90 menit yang sunyi</h2><p>Bayangkan sebuah sesi sosialisasi berdurasi 90 menit: satu narasumber, 42 slide penuh teks, dibacakan dari awal hingga akhir. Peserta duduk, mendengarkan, beberapa membuka ponsel. Di akhir sesi, tidak ada yang ditanyakan — dan pekan berikutnya, pertanyaan yang sama kembali masuk ke layanan bantuan.</p><p>Tandai gejalanya: apa yang <em>hilang</em> dari sesi tersebut?</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c1-mcq-gejala",
+      "question": "Pada kasus di atas, kegagalan utamanya terletak pada…",
+      "options": [
+        "Durasi yang terlalu singkat untuk 42 slide",
+        "Peserta tidak melakukan apa pun dengan materi — tidak ada pemrosesan kognitif maupun sosial",
+        "Narasumber yang kurang fasih berbicara",
+        "Jumlah slide yang terlalu banyak untuk satu topik"
+      ],
+      "correct": 1,
+      "rationale": "Masalah intinya bukan durasi atau jumlah slide, melainkan peserta pasif: mereka tidak pernah diminta mengingat kembali, menjelaskan, membandingkan, atau menerapkan ide. Ceramah panjang tanpa pemrosesan menghasilkan pengetahuan yang cepat memudar."
+    },
+    {
+      "type": "text",
+      "html": "<h2>Apa itu pembelajaran aktif</h2><p>Pembelajaran aktif berarti peserta <strong>melakukan proses kognitif atau sosial yang terarah dengan materi</strong> — bukan sekadar ramai atau memakai aplikasi. Bentuknya tiga lapis:</p><ul><li><strong>Aktif secara kognitif</strong> — mengingat kembali, menjelaskan, membandingkan, memecahkan masalah.</li><li><strong>Aktif secara sosial</strong> — berdiskusi, menguji alasan, memberi umpan balik.</li><li><strong>Aktif secara performatif</strong> — membuat, mempraktikkan, mensimulasikan.</li></ul><p>Ceramah tetap berperan sebagai <em>input</em> singkat; yang wajib ada adalah tugas pemrosesan setelahnya. Meta-analisis Freeman et al. (2014) terhadap 225 studi pendidikan tinggi menemukan pembelajaran aktif menaikkan performa ujian sekitar setengah huruf dan menurunkan tingkat kegagalan dibanding ceramah. Perlu diingat batasannya: konteksnya pendidikan tinggi STEM, sehingga besaran efek tidak otomatis identik di pelatihan kerja — arah temuan yang konsisten inilah yang kami gunakan.</p>"
+    },
+    {
+      "type": "dragwords",
+      "item_key": "c1-drag1",
+      "instruction": "<p>Lengkapi kalimat berikut dengan kata dari bank.</p>",
+      "text": "Pembelajaran aktif terjadi ketika peserta [[memproses]] materi secara kognitif atau sosial; aktivitas dipilih berdasarkan [[tujuan]] pembelajaran; dan bukan sekadar [[permainan]] yang meriah tanpa arah.",
+      "options": ["memproses", "tujuan", "permainan", "proyektor", "kewenangan"],
+      "answers": ["memproses", "tujuan", "permainan"],
+      "rationale": "SKKNI 333/2020 menegaskan metode dipilih untuk menciptakan suasana belajar aktif — bukan untuk hiburan. Alat seperti proyektor hanyalah media."
+    },
+    {
+      "type": "text",
+      "html": "<h2>Dari kebutuhan, bukan dari PowerPoint</h2><p>Sebelum merancang apa pun, kita perlu tahu <em>untuk siapa</em> dan <em>untuk masalah apa</em>. Analisis kebutuhan belajar menjawab tiga pertanyaan: apa yang harus bisa dilakukan orang (tugas), apa yang terjadi sekarang (bukti), dan mengapa kesenjangannya muncul (penyebab).</p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/analisis-kebutuhan.svg",
+      "alt": "Diagram alur analisis kebutuhan lima langkah: tugas sasaran, bukti aktual, gap kinerja, pemeriksaan penyebab yang bercabang menjadi gap kompetensi dan hambatan sistem, lalu prioritas kebutuhan belajar",
+      "caption": "Alur analisis kebutuhan belajar: dari tugas nyata ke prioritas, dengan pemilahan penyebab pelatihan vs non-pelatihan.",
+      "credit": "Ilustrasi tim modul (2026), diadaptasi dari Panduan Fasilitator ToT dan SKKNI 333/2020 unit 009/010 — bebas lisensi."
+    },
+    {
+      "type": "callout",
+      "variant": "warn",
+      "title": "Jangan langsung menyimpulkan semua masalah perlu pelatihan",
+      "html": "<p>Bila hambatan berasal dari <strong>SOP, alat kerja, beban kerja, insentif, kewenangan, atau akses informasi</strong>, pelatihan tidak akan menyelesaikannya — dan pelatihan yang salah sasaran memboroskan waktu semua pihak. Pisahkan dua jenis penyebab sebelum menetapkan kebutuhan belajar.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c1-mcq-skenario",
+      "question": "Skenario: petugas layanan sering salah menutup berkas klaim. Ternyata kebijakan penutupan berkas baru saja berubah, tetapi SOP di sistem belum diperbarui dan petugas tidak punya akses ke dokumen terbaru. Apa tindakan yang tepat?",
+      "options": [
+        "Membuat modul pelatihan tentang prosedur penutupan berkas",
+        "Memperbaiki faktor sistem — perbarui SOP dan buka akses dokumen — sebelum menilai perlunya pelatihan",
+        "Menambah sesi ceramah tentang kedisiplinan",
+        "Mengulang sosialisasi materi lama secara daring"
+      ],
+      "correct": 1,
+      "rationale": "Ketika penyebabnya faktor sistem (dokumen usang, akses terbatas), pelatihan tidak menghilangkan penyebabnya. Analisis kebutuhan justru melindungi organisasi dari pelatihan yang salah sasaran."
+    },
+    {
+      "type": "form",
+      "label": "LK1 — Profil sasaran & analisis kebutuhan",
+      "item_key": "lk1",
+      "instruction": "<p>Isi untuk <strong>topik yang Anda tulis di modul C0</strong>. Jawaban ringkas saja; akan disempurnakan bersama kelompok di workshop.</p>",
+      "fields": [
+        { "key": "sasaran", "label": "Siapa peserta sasaran Anda? (peran, pengalaman, konteks kerja)", "type": "textarea", "rows": 2, "placeholder": "Contoh: 15 staf layanan mitra, pengalaman 1–3 tahun, akses ponsel di lok kerja" },
+        { "key": "tugas", "label": "Tugas/performa apa yang harus bisa dilakukan setelah pembelajaran?", "type": "textarea", "rows": 2, "placeholder": "Contoh: mengisi formulir klaim tanpa kesalahan administrasi" },
+        { "key": "gap", "label": "Bukti kemampuan aktual & kesenjangan yang terlihat", "type": "textarea", "rows": 3, "placeholder": "Observasi, dokumen, data keluhan, hasil kerja…" },
+        { "key": "hambatan", "label": "Hambatan non-pelatihan yang mungkin ikut berperan", "type": "textarea", "rows": 2, "placeholder": "SOP, alat, waktu, akses informasi, dukungan atasan…" },
+        { "key": "prioritas", "label": "Dua kebutuhan belajar prioritas + alasan pemilihannya", "type": "textarea", "rows": 3, "placeholder": "1) … 2) … — sertakan alasan singkat" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "label": "Kuis modul C1",
+      "item_key": "kuis-c1",
+      "quiz_kind": "modul",
+      "passScore": 70,
+      "instruction": "<p>Empat pertanyaan singkat. Nilai minimal 70; boleh diulang. Baca rasionalnya baik-baik — di situlah pembelajarannya.</p>",
+      "questions": [
+        { "id": "c1q1", "question": "Langkah pertama sebelum memilih media dan metode adalah…", "options": ["Memilih aplikasi paling populer", "Menganalisis peserta dan kebutuhan", "Membuat slide judul", "Menentukan warna tema"], "correct": 1, "rationale": "Desain harus menjawab gap performa dan karakteristik peserta. Ini juga soal bank utama program." },
+        { "id": "c1q2", "question": "Apa yang perlu dilakukan jika masalah performa disebabkan alat kerja yang rusak?", "options": ["Buat lebih banyak slide", "Latih peserta menggunakan alat yang rusak", "Tangani faktor alat/sistem; jangan menganggap semua gap selesai lewat pelatihan", "Tambah kuis"], "correct": 2, "rationale": "Pelatihan mengatasi gap kompetensi, bukan hambatan sistem." },
+        { "id": "c1q3", "question": "Think–pair–share adalah contoh aktivitas yang terutama mengaktifkan peserta melalui…", "options": ["Kompetisi antarindividu dengan papan skor", "Pemikiran mandiri, pengujian alasan dengan rekan, lalu pembagian ke kelompok besar", "Menonton video pembelajaran secara mandiri", "Mengisi lembar kerja tanpa berdiskusi"], "correct": 1, "rationale": "TPS memaksa setiap orang berpikir dulu (think), menguji idenya (pair), lalu membagikannya (share) — aktif kognitif sekaligus sosial." },
+        { "id": "c1q4", "question": "Manakah bukti kebutuhan belajar yang paling kuat?", "options": ["Kata atasan bahwa timnya 'kurang paham'", "Data keluhan berulang + observasi pekerjaan + contoh hasil kerja aktual", "Jumlah peserta yang mendaftar pelatihan", "Ketersediaan materi dari pusat"], "correct": 1, "rationale": "Kebutuhan ditarik dari bukti tugas dan kinerja aktual, bukan dari asumsi atau permintaan sekunder." }
+      ]
+    },
+    {
+      "type": "reflect",
+      "item_key": "refleksi-c1",
+      "prompt": "<p>Dari analisis Anda: apakah semua masalah yang Anda temukan benar-benar dapat dijawab dengan pembelajaran? Jelaskan satu hal yang <strong>bukan</strong> gap kompetensi dan bagaimana Anda akan menanganinya.</p>",
+      "placeholder": "Contoh: Keterlambatan input ternyata karena akses sistem baru dibuka hari Senin…"
+    }
+  ]
+}

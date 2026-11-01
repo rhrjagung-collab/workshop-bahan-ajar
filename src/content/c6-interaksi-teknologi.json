@@ -1,0 +1,97 @@
+{
+  "code": "c6",
+  "judul": "Interaksi, Teknologi & Asesmen Formatif",
+  "menit": 30,
+  "tenggat_tampil": "8 Nov 2026, 21.00 WIB",
+  "deskripsi": "Memilih aktivitas interaktif sesuai tujuan, menyiapkan opsi low-tech, dan menulis soal formatif berkunci.",
+  "penutup": "Aktivitas dan soal Anda (LK7–LK8) akan disimulasikan antar kelompok pada sesi M6.",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<h2>Teknologi bukan tujuan</h2><p>Pertanyaan pertama bukan <em>“pakai aplikasi apa?”</em>, melainkan <strong>“tujuan aktivitas ini apa?”</strong>. Pilih aktivitas berdasarkan apa yang perlu terjadi pada peserta:</p><ul><li><strong>Recall / mengingat kembali</strong> → kuis singkat, flashcard, retrieval practice</li><li><strong>Diagnosis miskonsepsi</strong> → polling anonim + pembahasan alasan jawaban</li><li><strong>Latihan keputusan</strong> → studi kasus, case clinic, skenario bercabang</li><li><strong>Mengolah alasan</strong> → think–pair–share, diskusi berpasangan</li><li><strong>Cek pemahaman & langkah lanjut</strong> → exit ticket</li><li><strong>Akuntabilitas kelompok</strong> → jigsaw dengan peran dan tanggung jawab individual</li></ul><p>Teknologi (Kahoot, Mentimeter, kuis daring) hanya salah satu kendaraan. Kajian sistematis (Alam et al., 2025) mengingatkan hambatannya: kesenjangan perangkat, jaringan, literasi digital, dan privasi. Meta-analisis kuis kompetitif real-time (Jurado-Castro et al., 2023) mendukung penggunaannya sebagai <em>satu opsi</em> — bukan tujuan pembelajaran, dan tidak boleh mempermalukan peserta.</p>"
+    },
+    {
+      "type": "matching",
+      "item_key": "c6-match1",
+      "instruction": "<p>Pasangkan kebutuhan dengan aktivitas yang paling tepat.</p>",
+      "pairs": [
+        { "left": "Mengolah alasan secara mendalam dengan aman", "right": "Think–pair–share" },
+        { "left": "Melihat distribusi pemahaman tanpa mempermalukan siapa pun", "right": "Polling anonim lalu dibahas" },
+        { "left": "Melatih mengambil keputusan pada kasus nyata", "right": "Case clinic / skenario bercabang" },
+        { "left": "Menutup sesi dengan mengecek pemahaman & langkah berikutnya", "right": "Exit ticket" }
+      ],
+      "rationale": "Setiap aktivitas punya kegunaan khas. Memilihnya dari tujuan — bukan dari tren aplikasi — menjaga sesi tetap fokus."
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "Selalu siapkan opsi low-tech",
+      "html": "<p>Jaringan mati, perangkat tidak merata, atau peserta tak ingin membuka akun pribadi — semuanya normal di ruang pelatihan. Sediakan alternatif: <strong>kartu jawaban warna, polling lisan dengan jari, kertas A3, diskusi berpasangan</strong>. Tujuan aktivitas tidak berubah; hanya kendaraannya.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c6-mcq1",
+      "question": "Kuis formatif paling bermanfaat ketika…",
+      "options": ["Nilai dipakai untuk mempermalukan peserta", "Jawaban disimpan tanpa dibahas", "Disertai umpan balik dan kesempatan memperbaiki miskonsepsi", "Hanya untuk menentukan pemenang"],
+      "correct": 2,
+      "rationale": "Tanpa pembahasan, kuis hanya mengukur; dengan umpan balik, kuis menjadi instrumen belajar. Bukti asesmen formatif menekankan siklus jawaban → umpan balik → perbaikan (Morris et al., 2021)."
+    },
+    {
+      "type": "mcq",
+      "item_key": "c6-mcq2",
+      "question": "Jika jaringan internet tidak tersedia, trainer sebaiknya…",
+      "options": ["Membatalkan aktivitas", "Mengganti tujuan belajar", "Menggunakan kartu jawaban, kertas, atau diskusi berpasangan", "Meminta peserta membeli paket data"],
+      "correct": 2,
+      "rationale": "Tujuan aktivitas tetap dicapai lewat alternatif low-tech — kendaraan boleh berganti, tujuan tidak."
+    },
+    {
+      "type": "text",
+      "html": "<h2>Menulis soal formatif yang berguna</h2><p>Soal formatif yang baik menguji <strong>tujuan</strong>, punya <strong>kunci</strong>, dan — yang paling sering dilupakan — <strong>rasional</strong>: mengapa jawaban benar itu benar dan pengecoh itu menyesatkan. Distraktor yang baik berasal dari miskonsepsi nyata yang Anda temui di lapangan, bukan dari opsi acak. Dengan rasional, pembahasan kuis bisa berlangsung 1–2 menit per soal dan tetap tajam.</p>"
+    },
+    {
+      "type": "form",
+      "label": "LK7 — Rancangan aktivitas interaktif",
+      "item_key": "lk7",
+      "instruction": "<p>Rancang satu aktivitas untuk bahan ajar Anda — termasuk untuk kondisi tanpa teknologi.</p>",
+      "fields": [
+        { "key": "tujuan", "label": "Tujuan aktivitas (terkait salah satu LO Anda)", "type": "input", "placeholder": "…" },
+        { "key": "instruksi", "label": "Instruksi untuk peserta (kata kerja jelas)", "type": "textarea", "rows": 2, "placeholder": "Contoh: Baca kasus, tulis keputusan Anda + satu alasan, 3 menit…" },
+        { "key": "durasi", "label": "Durasi & tahapan", "type": "input", "placeholder": "Contoh: 10 menit — think 2, pair 4, share 4" },
+        { "key": "produk", "label": "Produk/hasil yang dikumpulkan", "type": "input", "placeholder": "Contoh: satu keputusan + alasan per pasangan" },
+        { "key": "lowtech", "label": "Opsi low-tech / aksesibilitas", "type": "textarea", "rows": 2, "placeholder": "Contoh: kartu tulis bila ponsel tidak tersedia; waktu baca ekstra…" }
+      ]
+    },
+    {
+      "type": "form",
+      "label": "LK8 — Tiga soal formatif",
+      "item_key": "lk8",
+      "instruction": "<p>Tulis tiga soal untuk menguji tujuan Anda. Format bebas — cukup soal, kunci, dan rasionalnya.</p>",
+      "fields": [
+        { "key": "soal1", "label": "Soal 1 — soal, kunci, dan rasional", "type": "textarea", "rows": 3, "placeholder": "Soal: … Kunci: … Rasional: …" },
+        { "key": "soal2", "label": "Soal 2 — soal, kunci, dan rasional", "type": "textarea", "rows": 3, "placeholder": "…" },
+        { "key": "soal3", "label": "Soal 3 — soal, kunci, dan rasional", "type": "textarea", "rows": 3, "placeholder": "…" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "label": "Kuis modul C6",
+      "item_key": "kuis-c6",
+      "quiz_kind": "modul",
+      "passScore": 70,
+      "instruction": "<p>Lima pertanyaan tentang interaksi dan asesmen formatif.</p>",
+      "questions": [
+        { "id": "c6q1", "question": "Kuis formatif paling bermanfaat ketika…", "options": ["Nilai dipakai untuk mempermalukan peserta", "Jawaban disimpan tanpa dibahas", "Disertai umpan balik dan kesempatan memperbaiki miskonsepsi", "Hanya untuk menentukan pemenang"], "correct": 2, "rationale": "Feedback membantu peserta memahami alasan dan menentukan langkah berikutnya." },
+        { "id": "c6q2", "question": "Jika jaringan internet tidak tersedia, trainer sebaiknya…", "options": ["Membatalkan aktivitas", "Mengganti tujuan belajar", "Menggunakan kartu jawaban, kertas, atau diskusi berpasangan", "Meminta peserta membeli paket data"], "correct": 2, "rationale": "Tujuan aktivitas tetap dapat dicapai melalui alternatif low-tech." },
+        { "id": "c6q3", "question": "Manakah contoh umpan balik yang paling berguna?", "options": ["Bagus!", "Slide Anda jelek", "Pada slide 3, label sumbu tidak ada sehingga pembaca tidak dapat menafsirkan angka; tambahkan unit dan sumber", "Saya lebih suka warna biru"], "correct": 2, "rationale": "Umpan balik yang berguna spesifik, berbasis bukti, dan dapat ditindaklanjuti." },
+        { "id": "c6q4", "question": "Mengapa peer review perlu rubrik?", "options": ["Agar semua produk tampak sama", "Agar komentar fokus pada kriteria dan bukti, bukan selera", "Agar fasilitator tidak perlu hadir", "Agar penilaian lebih cepat tanpa membaca"], "correct": 1, "rationale": "Rubrik memberi bahasa bersama untuk mutu dan revisi." },
+        { "id": "c6q5", "question": "Urutan keputusan yang benar saat merancang aktivitas interaktif adalah…", "options": ["Pilih aplikasi populer → desain aktivitas → cari tujuan yang cocok", "Tentukan tujuan aktivitas → rancang aktivitas & debrief → baru pilih teknologi (atau low-tech)", "Beli lisensi dulu → latih peserta → tentukan tujuan", "Tiru sesi dari internet → sesuaikan nanti"], "correct": 1, "rationale": "Teknologi adalah kendaraan; tujuan dan debrief adalah perjalanan. Kajian respons teknologi kelas juga menuntut perhatian pada akses dan privasi." }
+      ]
+    },
+    {
+      "type": "reflect",
+      "item_key": "refleksi-c6",
+      "prompt": "<p>Aktivitas interaktif apa yang selama ini Anda kaitkan dengan aplikasi tertentu? Bagaimana mencapai tujuan yang sama tanpa aplikasi itu?</p>",
+      "placeholder": "Tulis di sini…"
+    }
+  ]
+}

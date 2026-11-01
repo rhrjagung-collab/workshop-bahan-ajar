@@ -1,0 +1,86 @@
+{
+  "code": "c3",
+  "judul": "Alur Sesi & Storyboard",
+  "menit": 25,
+  "tenggat_tampil": "6 Nov 2026, 21.00 WIB",
+  "deskripsi": "Menyusun urutan sesi yang membawa peserta dari masalah ke penerapan, lalu memetakan fungsi tiap slide.",
+  "penutup": "Draf alur dan headline slide Anda menjadi bahan sesi storyboard (M3) di Hari 1.",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<h2>Deck yang hilang arahnya</h2><p>Coba ingat presentasi terakhir yang membingungkan: materi melompat, tidak jelas mana contoh dan mana latihan, dan penutupnya hanya <em>“Terima kasih”</em>. Masalahnya biasanya bukan isi — tetapi <strong>urutan dan fungsi</strong> yang tidak direncanakan.</p><p>Alur desain yang memandu peserta bergerak dari masalah ke penerapan:</p><p><strong>Pemantik/masalah → tujuan → konsep inti → contoh → latihan → umpan balik → rangkuman/transfer</strong></p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/alur-pembelajaran.svg",
+      "alt": "Tujuh chevron alur desain pembelajaran: kenali peserta dan gap, tetapkan hasil terukur, tentukan bukti asesmen, rancang aktivitas dan alur, pilih media, praktikkan, telaah dan revisi — dengan garis umpan balik siklus perbaikan",
+      "caption": "Alur kerja desain pembelajaran dari kebutuhan sampai revisi — siklus, bukan garis lurus.",
+      "credit": "Ilustrasi tim modul (2026), diadaptasi dari materi ToT Workshop Jaminan Sosial — bebas lisensi."
+    },
+    {
+      "type": "sort",
+      "item_key": "c3-sort1",
+      "instruction": "<p>Urutkan tahapan sebuah sesi 30 menit yang baik — dari yang pertama terjadi hingga terakhir.</p>",
+      "items": [
+        "Pemantik: kasus nyata yang membuat masalah terasa",
+        "Tujuan: apa yang akan mampu dilakukan peserta",
+        "Konsep inti: penjelasan ringkas 5–7 menit",
+        "Contoh: demonstrasi penerapan pada kasus nyata",
+        "Latihan: peserta mencoba sendiri dengan bantuan",
+        "Umpan balik: bahas jawaban dan miskonsepsi",
+        "Rangkuman & transfer: satu langkah penerapan di pekerjaan"
+      ],
+      "rationale": "Alur ini menjaga beban kognitif: input singkat, lalu pemrosesan, lalu penguatan. Latihan dan umpan balik adalah bagian yang paling sering terpotong saat waktu mepet — lindungi keduanya."
+    },
+    {
+      "type": "text",
+      "html": "<h2>Headline pesan, bukan judul topik</h2><p>Setiap slide butuh satu alasan untuk hadir. Judul slide yang baik <strong>menyatakan pesannya</strong>, bukan hanya menamai topik:</p><ul><li>Judul topik: <em>“Jenis-jenis Klaim”</em></li><li>Headline pesan: <em>“Klaim rawat jalan hanya sah bila faskes pertama menerbitkan rujukan”</em></li></ul><p>Storyboard kemudian memetakan fungsi tiap slide: pesan, isi minimum, visual, dan interaksinya — sebelum satu pun slide dibuat di PowerPoint. Dengan begitu yang diuji dulu adalah <em>alurnya</em>, bukan hiasannya.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c3-mcq1",
+      "question": "Apa fungsi utama storyboard?",
+      "options": ["Menghias deck", "Mengganti lesson plan", "Merencanakan pesan, urutan, visual, dan aktivitas tiap slide", "Menentukan jumlah animasi"],
+      "correct": 2,
+      "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi — murah untuk direvisi, berbeda dengan slide jadi."
+    },
+    {
+      "type": "form",
+      "label": "LK3+LK4 — Alur & storyboard draf",
+      "item_key": "lk3",
+      "instruction": "<p>Bagian 1: satu baris alignment dari tujuan Anda di C2. Bagian 2: tuliskan <strong>headline pesan</strong> (bukan judul topik) untuk 6 slide bahan ajar Anda. Boleh dikosongkan sebagian — dilengkapi di workshop.</p>",
+      "fields": [
+        { "key": "tujuan", "label": "1. Salah satu tujuan Anda (dari LK2)", "type": "input", "placeholder": "…" },
+        { "key": "bukti", "label": "1a. Bukti asesmennya", "type": "input", "placeholder": "…" },
+        { "key": "aktivitas", "label": "1b. Aktivitas belajarnya", "type": "input", "placeholder": "…" },
+        { "key": "media", "label": "1c. Materi/media pendukung", "type": "input", "placeholder": "…" },
+        { "key": "slide1", "label": "Slide 1 — headline pesan (pemantik/masalah)", "type": "input", "placeholder": "…" },
+        { "key": "slide2", "label": "Slide 2 — headline pesan (tujuan)", "type": "input", "placeholder": "…" },
+        { "key": "slide3", "label": "Slide 3 — headline pesan (konsep inti)", "type": "input", "placeholder": "…" },
+        { "key": "slide4", "label": "Slide 4 — headline pesan (contoh)", "type": "input", "placeholder": "…" },
+        { "key": "slide5", "label": "Slide 5 — headline pesan (latihan)", "type": "input", "placeholder": "…" },
+        { "key": "slide6", "label": "Slide 6 — headline pesan (rangkuman/transfer)", "type": "input", "placeholder": "…" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "label": "Kuis modul C3",
+      "item_key": "kuis-c3",
+      "quiz_kind": "modul",
+      "passScore": 70,
+      "instruction": "<p>Empat pertanyaan tentang alur dan storyboard.</p>",
+      "questions": [
+        { "id": "c3q1", "question": "Apa fungsi utama storyboard?", "options": ["Menghias deck", "Mengganti lesson plan", "Merencanakan pesan, urutan, visual, dan aktivitas tiap slide", "Menentukan jumlah animasi"], "correct": 2, "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi dimulai." },
+        { "id": "c3q2", "question": "Uji “so what / now what” pada satu slide bertujuan mengecek…", "options": ["Apakah slide cukup indah", "Apa yang harus dipahami dan dilakukan peserta setelah slide itu — kelanjutan alur", "Apakah font konsisten", "Jumlah kata per bullet"], "correct": 1, "rationale": "Setiap slide harus punya konsekuensi pada pemahaman dan langkah berikutnya; bila tidak, slide itu dipotong." },
+        { "id": "c3q3", "question": "Manakah headline slide yang paling baik?", "options": ["“Prosedur Verifikasi”", "“Verifikasi Gagal Bila Dokumen Pendukung Tidak Terbaca — Periksa Sebelum Kirim”", "“Slide 7”", "“Lampiran 2: Prosedur”"], "correct": 1, "rationale": "Headline menyatakan pesan lengkap sehingga peserta yang hanya membaca judul tetap menangkap intinya." },
+        { "id": "c3q4", "question": "Bila waktu sesi terpotong setengahnya, bagian yang paling terlindungi seharusnya…", "options": ["Penjelasan konsep, karena paling penting", "Latihan dan umpan balik, karena di situ terjadi pembelajaran", "Slide pembuka dan sambutan", "Rangkuman teoretis"], "correct": 1, "rationale": "Input dapat diringkas lebih jauh; latihan dan umpan balik adalah tempat peserta memproses materi — yang membuat sesi bernilai." }
+      ]
+    },
+    {
+      "type": "reflect",
+      "item_key": "refleksi-c3",
+      "prompt": "<p>Baca ulang enam headline Anda: apakah urutannya membawa peserta <strong>dari masalah ke penerapan</strong>? Tuliskan satu slide yang mungkin tidak perlu ada, dan alasannya.</p>",
+      "placeholder": "Contoh: slide sejarah program ternyata tidak mengubah apa pun yang peserta lakukan…"
+    }
+  ]
+}

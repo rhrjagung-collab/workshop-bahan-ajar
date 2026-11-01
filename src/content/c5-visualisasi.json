@@ -1,0 +1,82 @@
+{
+  "code": "c5",
+  "judul": "Visualisasi & Infografis",
+  "menit": 25,
+  "tenggat_tampil": "7 Nov 2026, 21.00 WIB",
+  "deskripsi": "Memilih bentuk visual sesuai relasi pesan dan memeriksa anatomi infografis yang baik.",
+  "penutup": "Rencana visual Anda (LK6) menjadi bahan sesi M5 — peserta akan menguji interpretasi visual satu sama lain.",
+  "blocks": [
+    {
+      "type": "text",
+      "html": "<h2>Dari tabel padat ke diagram yang bisa dibaca</h2><p>Visual dibuat bukan untuk mempercantik, melainkan untuk <strong>menunjukkan relasi</strong> yang sulit dibaca dari teks. Pilih bentuk sesuai struktur pesan:</p><ul><li><strong>Urutan/proses</strong> → flowchart atau timeline</li><li><strong>Perbandingan</strong> → tabel ringkas atau bar chart dengan skala jelas</li><li><strong>Hierarki/struktur</strong> → pohon atau diagram bertingkat</li><li><strong>Siklus</strong> → diagram melingkar dengan panah arah</li><li><strong>Sebab-akibat</strong> → diagram hubungan atau fishbone</li><li><strong>Distribusi</strong> → histogram/peta dengan skala</li></ul><p>Bila pesan utamanya bukan relasi — hanya daftar — maka bullet singkat sudah cukup, dan diagram justru jadi kebisingan.</p>"
+    },
+    {
+      "type": "hotspot",
+      "item_key": "c5-hotspot1",
+      "image": "figures/anatomi-infografis.svg",
+      "alt": "Contoh infografis proses klaim dengan enam penanda anatomi: judul berisi pesan, subtitle konteks, flow empat langkah, tiga angka kunci dengan unit, catatan batas data, dan sumber",
+      "aspect": "16 / 9",
+      "instruction": "<p>Klik keenam penanda pada contoh infografis berikut untuk membedah anatominya.</p>",
+      "hotspots": [
+        { "x": 8, "y": 16, "label": "Judul yang menyatakan pesan", "text": "Judul bukan nama topik, melainkan kesimpulan yang ingin dibaca audiens: 'Alur Klaim JKN: dari faskes ke penyelesaian' langsung memberi kerangka berpikir." },
+        { "x": 70, "y": 18, "label": "Konteks singkat", "text": "Satu baris menjelaskan apa yang ditampilkan dan untuk siapa — audiens tidak perlu menebak." },
+        { "x": 16, "y": 26, "label": "Bentuk sesuai relasi", "text": "Pesannya proses berurutan, maka bentuknya flow empat langkah dengan panah arah — bukan bullet, bukan pie chart." },
+        { "x": 18, "y": 55, "label": "Angka dengan unit & konteks", "text": "Setiap angka punya satuan dan penjelasan singkat. Angka tanpa unit menuntun pembaca menafsirkan salah." },
+        { "x": 8, "y": 72, "label": "Catatan batas data", "text": "Infografis jujur menyebut batasannya: 'angka ilustratif' ditandai eksplisit agar tidak disalahartikan sebagai data resmi." },
+        { "x": 8, "y": 76, "label": "Sumber & tahun", "text": "Sumber, tahun, dan pihak pengolah data dicantumkan — akurasi dan keterlacakan mengalahkan dekorasi." }
+      ]
+    },
+    {
+      "type": "mcq",
+      "item_key": "c5-mcq1",
+      "question": "Diagram paling tepat digunakan ketika…",
+      "options": ["Ingin membuat slide lebih ramai", "Ada relasi, urutan, struktur, atau proses yang perlu dipahami", "Tidak ada data atau konsep", "Semua informasi harus masuk satu halaman"],
+      "correct": 1,
+      "rationale": "Bentuk visual dipilih berdasarkan struktur pesan — diagram yang tidak menunjukkan relasi hanyalah dekorasi."
+    },
+    {
+      "type": "mcq",
+      "item_key": "c5-mcq2",
+      "question": "Satu kelompok membuat infografis tanpa sumber data. Revisi pertama yang paling penting adalah…",
+      "options": ["Menambah ikon", "Mengganti font", "Menambahkan sumber, tahun, unit, dan konteks data", "Mengubah latar menjadi gradasi"],
+      "correct": 2,
+      "rationale": "Tanpa sumber dan konteks, pembaca tidak dapat menilai keandalan infografis — dan infografis tanpa sumber mudah menjadi misinformasi."
+    },
+    {
+      "type": "text",
+      "html": "<h2>Uji interpretasi</h2><p>Cara tercepat menguji kualitas visual: minta <strong>orang lain menjelaskan visual itu tanpa Anda menemani</strong>. Bila penjelasannya meleset dari pesan utama, masalahnya ada pada visual — bukan pada pembaca. Ulangi uji setelah revisi, dan ingat: hindari chart dekoratif, ikon tanpa makna, skala yang menyesatkan (mis. sumbu tidak mulai dari nol tanpa alasan), serta warna sebagai satu-satunya pembeda.</p>"
+    },
+    {
+      "type": "form",
+      "label": "LK6 — Rencana diagram/infografis",
+      "item_key": "lk6",
+      "instruction": "<p>Rencanakan satu visual untuk bahan ajar Anda. Data boleh ilustratif selama ditandai demikian; sumber tetap wajib.</p>",
+      "fields": [
+        { "key": "pesan", "label": "Satu pesan utama visual ini", "type": "textarea", "rows": 2, "placeholder": "Contoh: verifikasi ulang memotong waktu penyelesaian klaim…" },
+        { "key": "relasi", "label": "Jenis relasi pesan (urutan/perbandingan/hierarki/siklus/sebab-akibat/distribusi)", "type": "input", "placeholder": "…" },
+        { "key": "bentuk", "label": "Bentuk visual yang dipilih + alasannya", "type": "textarea", "rows": 2, "placeholder": "Contoh: flowchart 4 langkah karena pesannya proses…" },
+        { "key": "data", "label": "Data/fakta + sumber + status (resmi / ilustratif)", "type": "textarea", "rows": 2, "placeholder": "Contoh: data keluhan unit 2026 (internal, resmi)…" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "label": "Kuis modul C5",
+      "item_key": "kuis-c5",
+      "quiz_kind": "modul",
+      "passScore": 70,
+      "instruction": "<p>Empat pertanyaan tentang visual dan infografis.</p>",
+      "questions": [
+        { "id": "c5q1", "question": "Diagram paling tepat digunakan ketika…", "options": ["Ingin membuat slide lebih ramai", "Ada relasi, urutan, struktur, atau proses yang perlu dipahami", "Tidak ada data atau konsep", "Semua informasi harus masuk satu halaman"], "correct": 1, "rationale": "Bentuk visual dipilih berdasarkan struktur pesan." },
+        { "id": "c5q2", "question": "Data tentang tren bulanan paling tepat ditampilkan dengan…", "options": ["Pie chart", "Garis waktu/grafik garis dengan sumbu dan unit jelas", "Daftar bullet panjang", "Ikon berderet tanpa skala"], "correct": 1, "rationale": "Relasi waktu memanggil bentuk garis/timeline; pie chart untuk komposisi, bukan tren." },
+        { "id": "c5q3", "question": "Revisi pertama untuk infografis tanpa sumber data adalah…", "options": ["Menambah ikon", "Mengganti font", "Menambahkan sumber, tahun, unit, dan konteks data", "Mengubah latar"], "correct": 2, "rationale": "Keterlacakan data adalah syarat infografis layak pakai." },
+        { "id": "c5q4", "question": "“Uji pembaca” yang paling menantang dan paling berguna untuk visual Anda adalah…", "options": ["Membaca ulang sendiri setelah satu hari", "Minta rekan menjelaskan visual tanpa narasi pembuat, lalu catat di mana penjelasannya meleset", "Menghitung jumlah kata pada label", "Memeriksa bahwa warna sesuai brand"], "correct": 1, "rationale": "Interpretasi tanpa bantuan pembuat adalah uji sesungguhnya keterbacaan visual." }
+      ]
+    },
+    {
+      "type": "reflect",
+      "item_key": "refleksi-c5",
+      "prompt": "<p>Visual apa yang selama ini Anda pakai hanya sebagai <em>dekorasi</em>? Bila diganti dengan visual yang menjelaskan relasi, pesan apa yang menjadi lebih mudah?</p>",
+      "placeholder": "Tulis di sini…"
+    }
+  ]
+}

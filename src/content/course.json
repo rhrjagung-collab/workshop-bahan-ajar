@@ -1,0 +1,34 @@
+{
+  "judul": "Modul Persiapan Daring — Workshop Inovasi Bahan Ajar Digital Jaminan Sosial",
+  "judul_pendek": "Modul Persiapan Daring: Merancang Bahan Ajar yang Efektif",
+  "penyelenggara": "Corporate University BPJS Kesehatan",
+  "kolaborasi": "Kolaborasi akademik UPN Veteran Jakarta",
+  "tempat_tanggal": "Workshop tatap muka: Swiss-belhotel Bogor, 9–10 November 2026",
+  "deskripsi": "Delapan modul mandiri (±3,5 jam total) untuk menyiapkan Anda sebelum workshop. Anda akan mengenal pembelajaran aktif, merumuskan tujuan terukur, menyusun alur dan storyboard, mendesain slide yang membantu pemahaman, memilih visual dan interaksi yang tepat, serta menyiapkan topik bahan ajar Anda sendiri — sehingga kedua hari workshop langsung dipakai untuk praktik, telaah, dan perbaikan.",
+  "audiens": "Peserta Workshop Inovasi Bahan Ajar Digital Jaminan Sosial (±25 orang, 4 kelompok) — tenaga pendidik, trainer, dan fasilitator internal.",
+  "prasyarat": [
+    "Membawa satu topik bahan ajar nyata dari pekerjaan Anda (akan dipakai untuk seluruh latihan).",
+    "Perangkat apa pun dengan peramban modern; progres tersimpan otomatis.",
+    "Waktu 20–30 menit per modul; tidak perlu menyelesaikan semuanya sekaligus."
+  ],
+  "outcomes": [
+    "Menganalisis kebutuhan belajar dan karakteristik sasaran berdasarkan tugas dan kesenjangan kompetensi.",
+    "Menulis 2–3 tujuan belajar dengan perilaku teramati, kondisi, dan kriteria keberhasilan.",
+    "Menyusun alur sesi dan storyboard slide yang selaras dengan tujuan, aktivitas, dan asesmen.",
+    "Mendesain slide dengan hierarki visual yang jelas, visualisasi yang relevan, dan aksesibilitas dasar.",
+    "Merancang satu aktivitas interaktif dan asesmen formatif beserta kunci dan rasionalnya.",
+    "Menelaah dan merevisi bahan ajar menggunakan rubrik dan bukti umpan balik."
+  ],
+  "total_menit": 205,
+  "credits": "<p>Disusun berdasarkan paket ToT <em>Pembelajaran Aktif, Desain Slide, Visual, Interaksi, dan Bahan Ajar</em> (2026). Rujukan inti: Freeman et al. (2014) PNAS; Mayer (2024) <em>Educational Psychology Review</em>; Trumble et al. (2024); Morris et al. (2021); Alam et al. (2025); Jurado-Castro et al. (2023); Güngör et al. (2026); Jaleniauskiene &amp; Kasperiuniene (2023); Kepmenaker No. 333 Tahun 2020 (SKKNI Bidang Standardisasi, Pelatihan Kerja dan Sertifikasi).</p><p>Setiap figur mencantumkan sumber dan lisensinya masing-masing. Panduan WHO dan ITCILO hanya ditautkan, tidak disalin. Materi modul ini bebas digunakan untuk kebutuhan pelatihan internal BPJS Kesehatan dan mitra akademiknya.</p>",
+  "modules": [
+    { "code": "c0" },
+    { "code": "c1" },
+    { "code": "c2" },
+    { "code": "c3" },
+    { "code": "c4" },
+    { "code": "c5" },
+    { "code": "c6" },
+    { "code": "c7" }
+  ]
+}
