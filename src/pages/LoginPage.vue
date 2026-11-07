@@ -97,7 +97,7 @@ async function google() {
       </form>
       <p class="footnote">
         Akun dibagikan oleh panitia kegiatan. Mengalami kendala akses?
-        Hubungi administrasi: Sri Gunda Fahriana Fahruddin.
+        Hubungi administrasi kegiatan.
       </p>
     </div>
   </div>
