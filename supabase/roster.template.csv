@@ -1,6 +1,4 @@
-nama,email,kelompok,peran
-Contoh Peserta Satu,peserta1@contoh.id,Kelompok 1,peserta
-Contoh Peserta Dua,peserta2@contoh.id,Kelompok 1,peserta
-Contoh Peserta Tiga,peserta3@contoh.id,Kelompok 2,peserta
-Contoh Fasilitator,fasilitator@contoh.id,Tim,fasilitator
-Contoh Narasumber,narasumber@contoh.id,Tim,narasumber
+nama,email,username,kelompok,peran
+Agung Raharjo,aguenghh@gmail.com,agung.raharjo,Tim,admin
+Contoh Peserta Satu,peserta1@contoh.id,peserta01,Kelompok 1,peserta
+Contoh Peserta Dua,peserta2@contoh.id,peserta02,Kelompok 1,peserta

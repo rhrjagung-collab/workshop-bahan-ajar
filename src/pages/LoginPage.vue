@@ -1,5 +1,5 @@
 <script setup>
-// Login: Google (Gmail) ATAU email + kata sandi yang dibuat administrasi.
+// Login: Google (Gmail) ATAU nama pengguna/email + kata sandi dari administrasi.
 // Ketersediaan login Google dibaca dari /auth/v1/settings — bila provider
 // belum diaktifkan di proyek Supabase, tombolnya disembunyikan otomatis.
 import { ref, onMounted } from 'vue'
@@ -7,7 +7,7 @@ import { login, loginGoogle } from '../lib/store.js'
 import { go } from '../lib/router.js'
 import { DEMO_MODE, SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/config.js'
 
-const email = ref('')
+const identifier = ref('')
 const sandi = ref('')
 const err = ref('')
 const busy = ref(false)
@@ -31,7 +31,7 @@ async function submit() {
   err.value = ''
   busy.value = true
   try {
-    await login(email.value, sandi.value)
+    await login(identifier.value, sandi.value)
     go('/')
   } catch (e) {
     err.value = e.message || 'Login gagal.'
@@ -56,11 +56,13 @@ async function google() {
 <template>
   <div class="login-wrap">
     <div class="card login-card">
-      <h1>Masuk</h1>
-      <p class="muted">
-        Gunakan akun Gmail Anda atau email + kata sandi yang dibuat oleh administrasi kegiatan
-        (Sri Gunda Fahriana Fahruddin). Tidak ada pendaftaran mandiri.
-      </p>
+      <div class="login-brand" aria-hidden="true">
+        <img src="../assets/bpjs-kesehatan.png" alt="" />
+        <span>×</span>
+        <img class="brand-upn" src="../assets/upnvj.png" alt="" />
+      </div>
+      <h1>Selamat datang kembali</h1>
+      <p class="muted">Masuk untuk melanjutkan modul persiapan Anda.</p>
 
       <button v-if="googleEnabled === true" class="btn btn-google" type="button" :disabled="gBusy" @click="google">
         <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
@@ -69,42 +71,48 @@ async function google() {
           <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
           <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
         </svg>
-        {{ gBusy ? 'Mengalihkan ke Google…' : 'Masuk dengan akun Google' }}
+        {{ gBusy ? 'Mengalihkan ke Google…' : 'Lanjutkan dengan Google' }}
       </button>
       <p v-else-if="googleEnabled === false" class="g-off">
-        Login Google belum diaktifkan pada proyek Supabase — gunakan email &amp; kata sandi di bawah.
+        Login dengan akun Google belum tersedia — gunakan nama pengguna di bawah.
       </p>
 
       <div class="divider"><span>atau</span></div>
 
       <form @submit.prevent="submit">
         <div class="field">
-          <label for="email">Email</label>
-          <input id="email" v-model="email" type="email" required placeholder="nama@perusahaan" autocomplete="email" />
+          <label for="identifier">Nama pengguna atau email</label>
+          <input id="identifier" v-model="identifier" type="text" required
+                 placeholder="mis. agus.raharjo" autocomplete="username" />
         </div>
         <div class="field">
           <label for="sandi">Kata sandi</label>
-          <input id="sandi" v-model="sandi" type="password" required placeholder="Dibuat oleh administrasi" autocomplete="current-password" />
+          <input id="sandi" v-model="sandi" type="password" required
+                 placeholder="Kata sandi Anda" autocomplete="current-password" />
         </div>
         <p v-if="err" class="error" role="alert">{{ err }}</p>
         <button class="btn btn-primary" type="submit" :disabled="busy">
           {{ busy ? 'Memproses…' : 'Masuk' }}
         </button>
       </form>
-      <p v-if="DEMO_MODE" class="demo">
-        Mode demo lokal: email apa pun + sandi ≥ 4 karakter. Email berawalan
-        <code>admin</code> melihat kontrol admin, berawalan <code>fasilitator</code> melihat dashboard.
+      <p class="footnote">
+        Akun dibagikan oleh panitia kegiatan. Mengalami kendala akses?
+        Hubungi administrasi: Sri Gunda Fahriana Fahruddin.
       </p>
     </div>
   </div>
 </template>
 
 <style scoped>
-.login-wrap { display: flex; justify-content: center; padding: 30px 0; }
-.login-card { width: 100%; max-width: 460px; }
-h1 { margin-top: 0; }
-.muted { color: var(--ink-soft); font-size: var(--fs-small); }
-.field { margin: 14px 0; }
+.login-wrap { display: flex; justify-content: center; padding: 40px 0; }
+.login-card { width: 100%; max-width: 440px; text-align: center; }
+.login-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 18px; }
+.login-brand img { height: 30px; }
+.login-brand .brand-upn { height: 32px; border-radius: 50%; background: #fff; }
+.login-brand span { color: var(--ink-faint); font-weight: 700; }
+h1 { margin: 0 0 6px; }
+.muted { color: var(--ink-soft); font-size: var(--fs-small); margin: 0 0 18px; }
+.field { margin: 14px 0; text-align: left; }
 .btn-google {
   width: 100%; justify-content: center; gap: 10px;
   background: #fff; color: var(--ink);
@@ -116,7 +124,7 @@ h1 { margin-top: 0; }
 .g-off {
   background: var(--bpjs-indigo-soft); color: var(--bpjs-indigo-dark);
   padding: 10px 12px; border-radius: var(--radius-sm); font-size: var(--fs-small);
-  text-align: center; margin: 0;
+  margin: 0;
 }
 .divider {
   display: flex; align-items: center; gap: 12px;
@@ -127,9 +135,10 @@ h1 { margin-top: 0; }
   background: var(--upn-red-soft); color: var(--upn-red);
   padding: 10px 12px; border-radius: var(--radius-sm); font-size: var(--fs-small);
 }
-.demo {
-  margin-top: 16px; font-size: 13px; color: var(--upn-gold-dark);
-  background: var(--upn-gold-soft); padding: 10px 12px; border-radius: var(--radius-sm);
+form .btn-primary { width: 100%; justify-content: center; margin-top: 6px; }
+.footnote {
+  margin-top: 18px; font-size: 12.5px; color: var(--ink-faint);
+  border-top: 1px solid var(--line); padding-top: 12px;
 }
 code { background: rgba(0,0,0,.06); padding: 1px 5px; border-radius: 4px; }
 </style>

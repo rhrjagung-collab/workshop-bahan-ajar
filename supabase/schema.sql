@@ -5,11 +5,13 @@
 -- Cara pakai: Supabase Dashboard > SQL Editor > New query >
 -- tempel SELURUH file ini > Run (aman dijalankan ulang).
 --
--- Model auth (v2):
---  - Login via Supabase Auth: Google (Gmail) ATAU email + kata sandi
+-- Model auth (v3):
+--  - Login via Supabase Auth: Google (Gmail) ATAU nama pengguna/email + kata sandi
 --    yang dibuat administrasi (Dashboard > Authentication > Add user,
 --    centang Auto Confirm; matikan "Allow new users to sign up" agar
 --    hanya admin yang bisa membuat akun).
+--  - Nama pengguna (kolom username, diatur admin) diterjemahkan ke email
+--    lewat lookup_login_email sebelum signInWithPassword.
 --  - Saat pertama kali login, RPC bind_and_get_me menghubungkan akun
 --    auth dengan baris roster (berdasarkan auth_user_id atau email).
 --    Bila email belum terdaftar di roster (mis. login Gmail), baris
@@ -24,12 +26,16 @@ create table if not exists public.participants (
   id           uuid primary key default gen_random_uuid(),
   nama         text not null,
   email        text not null unique,
+  username     text unique,                        -- login alternatif selain email
   kelompok     text not null default '-',
   kode_access  text,                              -- warisan v1, tidak dipakai lagi
   peran        text not null default 'peserta',   -- peserta | fasilitator | narasumber | admin
   auth_user_id uuid unique,                       -- auth.users.id, diisi saat login pertama
   created_at   timestamptz not null default now()
 );
+
+-- v3: kolom username (aman untuk instalasi lama)
+alter table public.participants add column if not exists username text;
 
 -- 2) Progres per item (blok interaktif, LK, refleksi) --------------------
 create table if not exists public.item_progress (
@@ -191,10 +197,43 @@ begin
 end;
 $$;
 
+-- Atur nama pengguna peserta (admin saja) — dipakai untuk login tanpa email
+create or replace function public.admin_set_username(p_participant_id uuid, p_username text)
+returns void
+language plpgsql security definer set search_path = public
+as $$
+begin
+  if not public.is_admin() then
+    raise exception 'Hanya admin yang dapat mengatur nama pengguna.';
+  end if;
+  p_username := lower(trim(p_username));
+  if p_username is null or length(p_username) < 3 then
+    raise exception 'Nama pengguna minimal 3 karakter.';
+  end if;
+  if p_username ~ '[^a-z0-9._-]' then
+    raise exception 'Nama pengguna hanya boleh huruf kecil, angka, titik, garis bawah, dan tanda hubung.';
+  end if;
+  update public.participants set username = p_username where id = p_participant_id;
+end;
+$$;
+
+-- Terjemahkan nama pengguna menjadi email untuk login (publik, tanpa data sensitif)
+create or replace function public.lookup_login_email(p_username text)
+returns text
+language sql stable security definer set search_path = public
+as $$
+  select lower(email) from public.participants
+   where lower(username) = lower(trim(p_username))
+     and email is not null
+   limit 1;
+$$;
+
 grant execute on function public.bind_and_get_me() to authenticated;
 grant execute on function public.admin_set_peran(text, text) to authenticated;
 grant execute on function public.admin_set_module_progress(uuid, text, int, text) to authenticated;
 grant execute on function public.admin_reset_all_progress(uuid) to authenticated;
+grant execute on function public.admin_set_username(uuid, text) to authenticated;
+grant execute on function public.lookup_login_email(text) to anon, authenticated;
 
 -- 8) Hapus RPC lama v1 (sesi anonim + kode akses) -------------------------
 drop function if exists public.claim_participant(text, text);

@@ -37,15 +37,16 @@ function localWrite(key, value) {
 
 const localBackend = {
   mode: 'local',
-  async signIn(email, sandi) {
-    if (!email || !sandi || sandi.length < 4) throw new Error('Email dan kata sandi (min. 4 karakter) wajib diisi.')
-    const nama = email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  async signIn(identifier, sandi) {
+    if (!identifier || !sandi || sandi.length < 4) throw new Error('Nama pengguna/email dan kata sandi (min. 4 karakter) wajib diisi.')
+    const key = identifier.includes('@') ? identifier.toLowerCase() : 'demo-' + identifier.toLowerCase()
+    const nama = identifier.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
     const participant = {
-      id: 'demo-' + email.toLowerCase(),
+      id: 'demo-' + key,
       nama,
-      email: email.toLowerCase(),
+      email: key.includes('@') ? key : key + '@demo.local',
       kelompok: 'Demo',
-      peran: email.toLowerCase().startsWith('admin') ? 'admin' : email.toLowerCase().startsWith('fasilitator') ? 'fasilitator' : 'peserta'
+      peran: key.startsWith('admin') || identifier.toLowerCase().startsWith('admin') ? 'admin' : identifier.toLowerCase().startsWith('fasilitator') ? 'fasilitator' : 'peserta'
     }
     localWrite(LS.session, participant)
     return participant
@@ -92,8 +93,19 @@ const localBackend = {
 const supabaseBackend = {
   mode: 'supabase',
 
-  async signIn(email, sandi) {
-    const { error } = await sb.auth.signInWithPassword({ email: email.trim(), password: sandi })
+  async signIn(identifier, sandi) {
+    // Identifier dapat berupa email ATAU nama pengguna (diterjemahkan ke email).
+    let email = identifier.trim()
+    if (!email.includes('@')) {
+      const { data: resolved, error: rpcErr } = await sb.rpc('lookup_login_email', { p_username: email })
+      if (rpcErr) throw new Error('Gagal memeriksa nama pengguna: ' + rpcErr.message)
+      const list = Array.isArray(resolved) ? resolved : (resolved ? [resolved] : [])
+      if (!list.length || !list[0]) {
+        throw new Error('Nama pengguna tidak ditemukan. Gunakan nama pengguna dari administrasi atau login Google.')
+      }
+      email = String(list[0]).trim()
+    }
+    const { error } = await sb.auth.signInWithPassword({ email, password: sandi })
     if (error) throw new Error(this._authErr(error))
     return this.restoreSession()
   },
@@ -168,7 +180,7 @@ const supabaseBackend = {
 
   async loadDashboard() {
     const [p, m, it, q] = await Promise.all([
-      sb.from('participants').select('id,nama,email,kelompok,peran').order('kelompok').order('nama'),
+      sb.from('participants').select('id,nama,email,username,kelompok,peran').order('kelompok').order('nama'),
       sb.from('module_progress').select('*'),
       sb.from('item_progress').select('*'),
       sb.from('quiz_responses').select('*')
@@ -178,6 +190,11 @@ const supabaseBackend = {
       participants: p.data || [], modules: m.data || [],
       items: it.data || [], quiz: q.data || []
     }
+  },
+
+  async setUsername(participantId, username) {
+    const { error } = await sb.rpc('admin_set_username', { p_participant_id: participantId, p_username: username })
+    if (error) throw new Error(error.message)
   },
 
   async setModuleProgress(participantId, moduleCode, percent, status) {

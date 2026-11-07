@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { route, go } from './lib/router.js'
 import { store, isFacilitator, logout } from './lib/store.js'
 import SiteHeader from './components/SiteHeader.vue'
@@ -12,8 +12,20 @@ import DashboardPage from './pages/DashboardPage.vue'
 
 const path = computed(() => route.path)
 
+// Pengalaman UX: pengunjung tanpa sesi selalu disambut halaman Masuk;
+// pengguna yang sudah masuk tidak perlu melihat halaman Masuk lagi.
+watch(
+  [() => store.ready, () => store.session, () => path.value],
+  () => {
+    if (!store.ready) return
+    if (!store.session && path.value !== '/login') go('/login')
+    else if (store.session && path.value === '/login') go('/')
+  },
+  { immediate: true }
+)
+
 function onLogout() {
-  logout().then(() => go('/'))
+  logout().then(() => go('/login'))
 }
 </script>
 

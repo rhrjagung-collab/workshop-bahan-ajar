@@ -165,6 +165,14 @@ function applyPeran(p) {
     `Peran ${p.nama} diubah menjadi ${peranSel[p.id]}.`
   )
 }
+
+function setUsername(p, value) {
+  if (!value || value.trim() === (p.username || '')) return
+  adminRun(
+    () => adminActions.setUsername(p.id, value),
+    `Nama pengguna ${p.nama} disimpan — dapat dipakai untuk login.`
+  )
+}
 </script>
 
 <template>
@@ -245,21 +253,30 @@ function applyPeran(p) {
         <section v-if="isAdmin" class="card admin-card">
           <h2>Kontrol admin — kelola peserta</h2>
           <p class="muted">
-            Membuka modul (tandai selesai) untuk peserta yang terkendala, mengulang progres,
-            dan mengatur peran. Perubahan langsung berpengaruh pada akses peserta.
+            Atur nama pengguna untuk login, membuka modul (tandai selesai) bagi peserta yang
+            terkendala, mengulang progres, dan mengatur peran. Perubahan langsung berpengaruh.
           </p>
           <p v-if="adminMsg" class="admin-msg" role="status">{{ adminMsg }}</p>
           <div class="scroll">
             <table class="table">
               <thead>
                 <tr>
-                  <th>Peserta</th><th>Peran</th>
+                  <th>Peserta</th><th>Nama pengguna (login)</th><th>Peran</th>
                   <th>Buka kunci / ulang modul</th><th>Aksi lain</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="r in rows" :key="r.p.id">
                   <td><strong>{{ r.p.nama }}</strong><br /><span class="muted">{{ r.p.email }}</span></td>
+                  <td>
+                    <input
+                      class="sel" type="text" style="max-width:160px"
+                      :value="r.p.username || ''"
+                      :placeholder="'belum ada'"
+                      :disabled="adminBusy || r.p.id === store.session.id"
+                      @change="setUsername(r.p, $event.target.value)"
+                    />
+                  </td>
                   <td>
                     <select v-model="peranSel[r.p.id]" class="sel" :disabled="adminBusy || r.p.id === store.session.id">
                       <option value="peserta">peserta</option>

@@ -42,7 +42,8 @@ export async function loginGoogle() {
 export const adminActions = {
   setModuleProgress: (...a) => backend.setModuleProgress(...a),
   resetParticipantProgress: (...a) => backend.resetParticipantProgress(...a),
-  setPeran: (...a) => backend.setPeran(...a)
+  setPeran: (...a) => backend.setPeran(...a),
+  setUsername: (...a) => backend.setUsername(...a)
 }
 
 export async function logout() {

@@ -5,8 +5,8 @@ Aplikasi web modular (8 modul, C0–C7) untuk persiapan peserta sebelum Workshop
 - **Frontend**: Vue 3 + Vite (SPA, hash routing), konten modul berupa file JSON
 - **Backend**: Supabase — Auth (Google/Gmail **atau** email + kata sandi buatan admin), Postgres + RLS
 - **Hosting**: Vercel (statis)
-- **Peran**: `peserta` • `fasilitator`/`narasumber` (dashboard pemantauan) • `admin` (dashboard + buka kunci progres + atur peran)
-- **Mode demo**: tanpa konfigurasi apa pun, aplikasi berjalan lokal dengan penyimpanan peramban
+- **Peran**: `peserta` • `fasilitator`/`narasumber` (dashboard pemantauan) • `admin` (dashboard + buka kunci progres + atur peran + atur nama pengguna)
+- **Login**: akun Google (Gmail) **atau** nama pengguna/email + kata sandi buatan admin; halaman Masuk tampil otomatis bagi pengunjung yang belum masuk
 
 ---
 
@@ -49,6 +49,9 @@ Proyek: **oltafrxhkzojbdowcydc** (URL: `https://oltafrxhkzojbdowcydc.supabase.co
    isi email + kata sandi → centang **Auto Confirm User**. Email harus sama dengan roster.
    Lalu **matikan pendaftaran mandiri**: Authentication → Sign In / Providers → Email →
    nonaktifkan *Allow new users to sign up* (akun hanya dibuat admin).
+   **Nama pengguna (opsional)**: setelah peserta login pertama kali (barisnya dibuat otomatis),
+   admin mengisi kolom *Nama pengguna* di Dashboard → Kontrol admin. Peserta pun bisa
+   login dengan nama pengguna itu sebagai ganti email (huruf kecil/angka/titik/garis bawah).
 5. **Jadikan diri Anda admin** (sekali saja, di SQL Editor):
    ```sql
    update public.participants set peran = 'admin' where lower(email) = 'email.and@gmail.com';
