@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Contoh storyboard 3 slide mengikuti format ID profesional -->
+  <rect width="1100" height="540" fill="#FFFFFF"/>
+  <text x="550" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#2B3078">Contoh storyboard: satu slide, satu baris rencana</text>
+
+  <g>
+    <!-- header kolom -->
+    <g font-size="13.5" font-weight="800" text-anchor="middle">
+      <rect x="30" y="52" width="340" height="30" rx="6" fill="#2B3078"/><text x="200" y="72" fill="#fff">SLIDE 1 — Pemantik</text>
+      <rect x="380" y="52" width="340" height="30" rx="6" fill="#2B3078"/><text x="550" y="72" fill="#fff">SLIDE 2 — Konsep inti</text>
+      <rect x="730" y="52" width="340" height="30" rx="6" fill="#2B3078"/><text x="900" y="72" fill="#fff">SLIDE 3 — Latihan</text>
+    </g>
+
+    <!-- sketsa visual tiap slide -->
+    <g>
+      <rect x="30" y="92" width="340" height="130" fill="#F7F8FA" stroke="#E3E6EC"/>
+      <!-- slide 1 sketsa: foto kasus + headline -->
+      <rect x="45" y="105" width="130" height="104" fill="#C9CEE6"/>
+      <circle cx="110" cy="145" r="24" fill="#8A8FB0"/>
+      <path d="M86 190 q24 -26 48 0 v20 h-48 z" fill="#8A8FB0"/>
+      <text x="185" y="130" font-size="13" font-weight="700" fill="#1F2430">"Berkas klaim Anda</text>
+      <text x="185" y="148" font-size="13" font-weight="700" fill="#1F2430">ditolak. Mengapa?"</text>
+      <text x="185" y="176" font-size="11" fill="#7A8090">kasus: 4 berkas ditolak</text>
+      <text x="185" y="192" font-size="11" fill="#7A8090">oleh sistem verifikasi</text>
+
+      <rect x="380" y="92" width="340" height="130" fill="#F7F8FA" stroke="#E3E6EC"/>
+      <!-- slide 2 sketsa: flowchart 3 langkah -->
+      <rect x="395" y="135" width="88" height="44" rx="8" fill="#2B3078"/>
+      <text x="439" y="162" font-size="11" fill="#fff" text-anchor="middle">Periksa</text>
+      <rect x="506" y="135" width="88" height="44" rx="8" fill="#009F3C"/>
+      <text x="550" y="162" font-size="11" fill="#fff" text-anchor="middle">Konfirmasi</text>
+      <rect x="617" y="135" width="88" height="44" rx="8" fill="#009F3C"/>
+      <text x="661" y="162" font-size="11" fill="#fff" text-anchor="middle">Catat</text>
+      <path d="M483 157 h23 M594 157 h23" stroke="#7A8090" stroke-width="2.5"/>
+      <text x="550" y="115" font-size="12.5" font-weight="700" fill="#1F2430" text-anchor="middle">Dokumen tidak terbaca = penyebab #1 penolakan</text>
+
+      <rect x="730" y="92" width="340" height="130" fill="#F7F8FA" stroke="#E3E6EC"/>
+      <!-- slide 3 sketsa: latihan -->
+      <rect x="745" y="108" width="180" height="100" rx="8" fill="#FFF7D6" stroke="#EBD98A"/>
+      <text x="835" y="140" font-size="12" font-weight="700" fill="#8A6D00" text-anchor="middle">Kartu kasus:</text>
+      <text x="835" y="160" font-size="11.5" fill="#4A5060" text-anchor="middle">putuskan — layak / kembali /</text>
+      <text x="835" y="178" font-size="11.5" fill="#4A5060" text-anchor="middle">tolak? Tulis satu alasan.</text>
+      <text x="965" y="140" font-size="11" fill="#7A8090">⏱ 3 menit</text>
+      <text x="965" y="160" font-size="11" fill="#7A8090">berpasangan</text>
+    </g>
+
+    <!-- baris teks di layar -->
+    <g font-size="12">
+      <rect x="30" y="232" width="340" height="72" rx="6" fill="#EEF0F8"/>
+      <text x="42" y="252" font-weight="800" fill="#2B3078" font-size="11.5">TEKS DI LAYAR</text>
+      <text x="42" y="270" fill="#4A5060">4 dari 10 berkas ditolak bulan ini.</text>
+      <text x="42" y="288" fill="#4A5060">Semua karena satu hal yang sama.</text>
+
+      <rect x="380" y="232" width="340" height="72" rx="6" fill="#EEF0F8"/>
+      <text x="392" y="252" font-weight="800" fill="#2B3078" font-size="11.5">TEKS DI LAYAR</text>
+      <text x="392" y="270" fill="#4A5060">Periksa keterbacaan sebelum kirim;</text>
+      <text x="392" y="288" fill="#4A5060">konfirmasi lewat kanal resmi; catat kode status.</text>
+
+      <rect x="730" y="232" width="340" height="72" rx="6" fill="#EEF0F8"/>
+      <text x="742" y="252" font-weight="800" fill="#2B3078" font-size="11.5">TEKS DI LAYAR</text>
+      <text x="742" y="270" fill="#4A5060">Instruksi latihan + kriteria keputusan</text>
+      <text x="742" y="288" fill="#4A5060">tanpa kunci jawaban (dibahas setelah).</text>
+    </g>
+
+    <!-- baris narasi -->
+    <g font-size="12">
+      <rect x="30" y="314" width="340" height="88" rx="6" fill="#E7F6EC"/>
+      <text x="42" y="334" font-weight="800" fill="#007A2E" font-size="11.5">NARASI PRESENTER</text>
+      <text x="42" y="352" fill="#4A5060">"Rekan-rekan, bulan ini penolakan naik.</text>
+      <text x="42" y="370" fill="#4A5060">Sebutkan satu dugaan penyebabnya —</text>
+      <text x="42" y="388" fill="#4A5060">tulis di kertas, 1 menit."</text>
+
+      <rect x="380" y="314" width="340" height="88" rx="6" fill="#E7F6EC"/>
+      <text x="392" y="334" font-weight="800" fill="#007A2E" font-size="11.5">NARASI PRESENTER</text>
+      <text x="392" y="352" fill="#4A5060">"Tiga langkah menutup 80% kasus penolakan.</text>
+      <text x="392" y="370" fill="#4A5060">Yang pertama paling sering dilewati —</text>
+      <text x="392" y="388" fill="#4A5060">perhatikan contohnya."</text>
+
+      <rect x="730" y="314" width="340" height="88" rx="6" fill="#E7F6EC"/>
+      <text x="742" y="334" font-weight="800" fill="#007A2E" font-size="11.5">NARASI PRESENTER</text>
+      <text x="742" y="352" fill="#4A5060">"Bandingkan keputusan Anda dengan</text>
+      <text x="742" y="370" fill="#4A5060">pasangan lain. Bentuk yang berbeda:</text>
+      <text x="742" y="388" fill="#4A5060">jelaskan alasan masing-masing."</text>
+    </g>
+
+    <!-- baris interaksi -->
+    <g font-size="12">
+      <rect x="30" y="412" width="340" height="60" rx="6" fill="#FFF7D6" stroke="#EBD98A"/>
+      <text x="42" y="432" font-weight="800" fill="#8A6D00" font-size="11.5">INTERAKSI</text>
+      <text x="42" y="450" fill="#4A5060">Quick-write 1 menit + poll tangan</text>
+
+      <rect x="380" y="412" width="340" height="60" rx="6" fill="#FFF7D6" stroke="#EBD98A"/>
+      <text x="392" y="432" font-weight="800" fill="#8A6D00" font-size="11.5">INTERAKSI</text>
+      <text x="392" y="450" fill="#4A5060">Predict-error: tebak langkah yang paling sering dilupakan</text>
+
+      <rect x="730" y="412" width="340" height="60" rx="6" fill="#FFF7D6" stroke="#EBD98A"/>
+      <text x="742" y="432" font-weight="800" fill="#8A6D00" font-size="11.5">INTERAKSI</text>
+      <text x="742" y="450" fill="#4A5060">Think–pair–share keputusan kasus + debrief</text>
+    </g>
+  </g>
+
+  <text x="550" y="502" text-anchor="middle" font-size="12.5" fill="#7A8090" font-style="italic">Format mengikuti praktik storyboard desain instruksional profesional (visual • teks di layar • narasi • interaksi).</text>
+  <text x="550" y="522" text-anchor="middle" font-size="12.5" fill="#7A8090" font-style="italic">Ilustrasi tim modul (2026), contoh topik internal — bebas lisensi.</text>
+</svg>

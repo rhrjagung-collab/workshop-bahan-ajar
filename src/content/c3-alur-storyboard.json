@@ -13,10 +13,10 @@
     },
     {
       "type": "figure",
-      "src": "figures/alur-pembelajaran.svg",
-      "alt": "Tujuh chevron alur desain pembelajaran: kenali peserta dan gap, tetapkan hasil terukur, tentukan bukti asesmen, rancang aktivitas dan alur, pilih media, praktikkan, telaah dan revisi — dengan garis umpan balik siklus perbaikan",
-      "caption": "Alur kerja desain pembelajaran — siklus, bukan garis lurus.",
-      "credit": "Ilustrasi tim modul (2026), diadaptasi dari materi ToT Workshop Jaminan Sosial — bebas lisensi."
+      "src": "figures/fig-alur-kebutuhan-cd.png",
+      "alt": "Tujuh chevron alur desain berbasis kebutuhan: kenali peserta dan gap, tetapkan hasil terukur, tentukan bukti asesmen, rancang aktivitas dan alur, pilih media dan teknologi, praktikkan dan ajarkan, telaah dan revisi — dengan garis umpan balik siklus perbaikan",
+      "caption": "Alur desain dimulai dari kebutuhan, bukan dari PowerPoint — siklus, bukan garis lurus.",
+      "credit": "Sumber: materi Workshop Bahan Ajar BPJS 2026 (internal)."
     },
     {
       "type": "sort",
@@ -45,6 +45,45 @@
       "options": ["Menghias deck", "Mengganti lesson plan", "Merencanakan pesan, urutan, visual, dan aktivitas tiap slide", "Menentukan jumlah animasi"],
       "correct": 2,
       "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi dimulai."
+    },
+    { "type": "section", "num": "3", "title": "Bagaimana wujud storyboard yang benar", "sub": "Kolom visual • teks di layar • narasi • interaksi — dipakai desainer instruksional profesional" },
+    {
+      "type": "text",
+      "html": "<p>Storyboard desain instruksional yang baik bukan sekadar deretan kotak gambar. Setiap baris slide memuat <strong>empat keputusan yang harus dijawab sebelum buka PowerPoint</strong>: sketsa visualnya apa, teks apa yang tampil di layar, apa yang <em>diucapkan</em> fasilitator (narasi), dan interaksi apa yang memaksa peserta berpikir. Perhatikan bahwa teks di layar dan narasi <strong>tidak boleh sama</strong> — itu prinsip redundancy dari modul C4 yang sudah diantisipasi sejak storyboard.</p><p>Contoh berikut memakai format tiga kolom seperti yang dipakai desainer instruksional profesional (mis. format storyboard video/kursus ala Peck): sketsa + teks di layar + narasi + interaksi, satu blok per slide.</p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/contoh-storyboard.svg",
+      "alt": "Contoh storyboard tiga slide: slide pemantik, konsep inti, dan latihan — masing-masing dengan sketsa visual, teks di layar, narasi presenter, dan interaksi",
+      "caption": "Contoh storyboard sesi 20 menit 'mengurangi penolakan klaim': perhatikan narasi ≠ teks di layar, dan setiap slide punya interaksi.",
+      "credit": "Ilustrasi tim modul (2026), format storyboard desain instruksional profesional — bebas lisensi."
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-harvard-storyboard-outline.png",
+      "alt": "Slide Harvard Communications Lab: storyboard langkah 1 — draf outline dengan pesan kunci, tujuan pembelajaran, detail pendukung, dan teks di layar",
+      "caption": "Langkah 1 menurut Harvard Communications Lab: draf outline — pesan kunci → tujuan pembelajaran → detail pendukung → teks di layar.",
+      "credit": "Harvard GSE Communications Lab (2019), PowerPoint Basics — digunakan utuh dengan atribusi untuk pendidikan internal."
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-harvard-storyboard-sticky.png",
+      "alt": "Slide Harvard Communications Lab: storyboard langkah 2 — menggambar sketsa slide dengan sticky notes di dinding sebelum pindah ke PowerPoint",
+      "caption": "Langkah 2: gambar sketsa slide dengan sticky notes di dinding. Revisi di dinding jauh lebih murah daripada revisi di PowerPoint.",
+      "credit": "Harvard GSE Communications Lab (2019), PowerPoint Basics — digunakan utuh dengan atribusi untuk pendidikan internal."
+    },
+    {
+      "type": "mcq",
+      "item_key": "c3-mcq-storyboard",
+      "question": "Dalam contoh storyboard, mengapa kolom 'NARASI PRESENTER' tidak boleh mengulang persis kolom 'TEKS DI LAYAR'?",
+      "options": [
+        "Agar presenter punya lebih banyak bahan bacaan",
+        "Karena saluran visual dan auditori memproses hal yang sama secara berulang — pembelajaran menurun (prinsip redundancy)",
+        "Karena narasi selalu lebih panjang dari teks",
+        "Agar peserta tidak hanya membaca slide"
+      ],
+      "correct": 1,
+      "rationale": "Prinsip redundancy (Mayer): teks di layar menyatakan inti; narasi mengembangkan, memberi contoh, dan memandu aktivitas — keduanya saling melengkapi, bukan menduplikasi." 
     },
     { "type": "section", "num": "3", "title": "Metode fishbone: mengalokasikan tujuan ke minggu", "sub": "Contoh riset: struktur tulang ikan menyambungkan tujuan–minggu–asesmen" },
     {

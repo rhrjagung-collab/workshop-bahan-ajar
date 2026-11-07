@@ -1,9 +1,9 @@
 {
   "code": "c1",
   "judul": "Pembelajaran Aktif & Analisis Kebutuhan Belajar",
-  "menit": 40,
+  "menit": 50,
   "tenggat_tampil": "5 Nov 2026, 21.00 WIB",
-  "deskripsi": "Evidensi meta-analisis pembelajaran aktif, anatomi gap kompetensi vs hambatan sistem, dan analisis kebutuhan untuk topik Anda.",
+  "deskripsi": "Konsep pembelajaran aktif dan student-centered learning, ragam metode (PBL, PjBL, studi kasus, cooperative learning) beserta bukti risetnya, lalu analisis kebutuhan untuk topik Anda.",
   "penutup": "LK1 Anda menjadi bahan diskusi Hari 1. Modul C2 (Tujuan & Alignment) terbuka setelah modul ini 100% selesai.",
   "blocks": [
     { "type": "section", "num": "1", "title": "Kasus pembuka: sesi 90 menit yang sunyi", "sub": "Mengapa sesi yang 'lancar' bisa gagal mengubah perilaku" },
@@ -24,10 +24,10 @@
       "correct": 1,
       "rationale": "Masalah intinya bukan durasi atau jumlah slide, melainkan peserta pasif: tidak ada tugas pemrosesan. Ceramah panjang tanpa pemrosesan menghasilkan pengetahuan yang cepat memudar."
     },
-    { "type": "section", "num": "2", "title": "Apa yang sebenarnya terjadi ketika peserta 'aktif'", "sub": "Tiga lapis aktivasi: kognitif, sosial, performatif" },
+    { "type": "section", "num": "2", "title": "Student-centered learning: peran Anda berubah, bukan hilang", "sub": "Dari penyampai materi menjadi perancang pengalaman dan fasilitator" },
     {
       "type": "text",
-      "html": "<p>Pembelajaran aktif berarti peserta <strong>melakukan proses kognitif atau sosial yang terarah dengan materi</strong> — bukan sekadar ruangan ramai atau memakai aplikasi. Tiga lapis aktivasi:</p><ul><li><strong>Aktif secara kognitif</strong> — mengingat kembali, menjelaskan, membandingkan, memecahkan masalah.</li><li><strong>Aktif secara sosial</strong> — berdiskusi, menguji alasan, memberi umpan balik.</li><li><strong>Aktif secara performatif</strong> — membuat, mempraktikkan, mensimulasikan.</li></ul><p>Ceramah tetap berperan sebagai <em>input</em> singkat; yang wajib ada adalah tugas pemrosesan setelahnya. Karena itu satu jam ceramah yang diselingi tiga latihan kecil biasanya lebih baik daripada tiga jam mendengarkan tanpa jeda.</p>"
+      "html": "<p><strong>Student-centered learning (SCL)</strong> menempatkan peserta sebagai pusat proses belajar; fasilitator merancang pengalaman, mendorong partisipasi, dan memfasilitasi penemuan — bukan mendominasi. Rangkuman pelatihan PAPT Universitas Indonesia merangkum karakteristik pembelajaran aktif di jenjang dewasa:</p><ul><li>Kegiatan bervariasi dan disesuaikan dengan <strong>karakteristik serta kebutuhan peserta</strong> — titik temu dengan analisis kebutuhan di akhir modul ini.</li><li>Proses menekankan <strong>keterampilan berpikir analitis</strong>: menganalisis, menyintesis, mengenali dan memecahkan masalah, menyimpulkan, mengevaluasi (Angelo, 1995).</li><li>Fasilitator <strong>tidak mendominasi</strong> dan memberi rangkuman serta arah, bukan seluruh jawaban.</li><li>Ada ruang eksplorasi <strong>nilai dan sikap</strong> terkait materi — penting untuk topik layanan publik.</li></ul><p>Perlu jujur: SCL menuntut lebih dari ceramah. Bonwell dan Eison (1991) mencatat tantangannya — alokasi waktu, persiapan lebih lama, kelas besar, keterbatasan sumber daya, dan risiko peserta tidak berpartisipasi. Semuanya bisa dimitigasi dengan perencanaan (bagian 4 dan modul C6), bukan dengan kembali ke ceramah satu arah.</p>"
     },
     {
       "type": "dragwords",
@@ -38,10 +38,10 @@
       "answers": ["memproses", "tujuan", "permainan"],
       "rationale": "SKKNI 333/2020 menegaskan metode dipilih untuk menciptakan suasana belajar aktif — bukan untuk hiburan. Alat seperti proyektor hanyalah media."
     },
-    { "type": "section", "num": "3", "title": "Bukti: apa kata meta-analisis 225 studi", "sub": "Freeman et al. (2014) — performa naik, tingkat kegagalan turun" },
+    { "type": "section", "num": "3", "title": "Bukti: pembelajaran aktif vs ceramah", "sub": "Freeman et al. (2014) — 225 studi, performa naik, kegagalan turun" },
     {
       "type": "text",
-      "html": "<p>Meta-analisis Freeman dan kolega (2014) merangkum <strong>225 studi</strong> pendidikan tinggi STEM yang membandingkan pembelajaran aktif dengan ceramah tradisional. Temuan utamanya:</p><ul><li>Nilai ujian naik <strong>±6%</strong> pada kelas aktif (ukuran efek rata-rata <strong>0,47 standar deviasi</strong>).</li><li>Peserta kelas ceramah tradisional <strong>1,5× lebih mungkin gagal</strong>: tingkat kegagalan ±34% (ceramah) menjadi ±22% (aktif).</li></ul>"
+      "html": "<p>Meta-analisis Freeman dan kolega (2014) merangkum <strong>225 studi</strong> pendidikan tinggi STEM yang membandingkan pembelajaran aktif dengan ceramah tradisional:</p><ul><li>Nilai ujian naik <strong>±6%</strong> pada kelas aktif (ukuran efek rata-rata <strong>0,47 standar deviasi</strong>).</li><li>Peserta kelas ceramah tradisional <strong>1,5× lebih mungkin gagal</strong>: tingkat kegagalan ±34% (ceramah) menjadi ±22% (aktif).</li></ul>"
     },
     {
       "type": "figure",
@@ -76,37 +76,102 @@
       "correct": 1,
       "rationale": "Itulah angka meta-analisisnya: rata-rata g = 0,47 (±6 poin nilai), kegagalan 33,8% → 21,8%. Efeknya justru konsisten di semua disiplin."
     },
-    { "type": "section", "num": "4", "title": "Bacaan wajib C1", "sub": "±15 menit membaca — jadi dasar kuis di bawah" },
+    { "type": "section", "num": "4", "title": "Ragam metode aktif — dan cara menjalankannya", "sub": "Cooperative learning, studi kasus, problem-based, project-based: satu keluarga, karakter berbeda" },
+    {
+      "type": "text",
+      "html": "<h3>a) Cooperative learning: think–pair–share, jigsaw, role-play</h3><p>Dalam <strong>cooperative learning</strong>, anggota kelompok memiliki peran yang jelas dan saling membutuhkan. Tiga bentuk yang paling mudah dipakai di sesi pelatihan:</p><ul><li><strong>Think–pair–share</strong> — berpikir mandiri dulu (semua orang punya draf jawaban), uji alasan dengan pasangan, lalu bagikan ke forum. Paling aman untuk kelas besar karena tidak ada yang bisa 'sembunyi'.</li><li><strong>Jigsaw</strong> — setiap anggota menguasai satu bagian materi, lalu mengajarkannya ke anggota lain; setiap orang <em>wajib</em> aktif karena bagian kelompok bergantung padanya.</li><li><strong>Role-play</strong> — memainkan peran (mis. petugas vs peserta layanan) untuk melatih komunikasi dan empati pada situasi nyata.</li></ul><p>Syarat efeknya menurut meta-meta-analisis Güngör et al. (2026): <strong>akuntabilitas individual, interdependensi positif, dan refleksi kelompok</strong> — tanpa tiga hal itu, kerja kelompok berubah menjadi penumpangan kerja.</p>"
+    },
+    {
+      "type": "text",
+      "html": "<h3>b) Studi kasus (case-based learning)</h3><p><strong>Studi kasus</strong> membahas isu kompleks yang autentik: peserta menganalisis kasus nyata (atau disamarkan dari kasus nyata), mengambil keputusan, lalu membandingkannya dengan keputusan aktual dan konsekuensinya. Format sederhana yang sering berhasil: kasus 1 halaman → kelompok memutuskan → bandingkan antar kelompok → fasilitator membuka prinsip dari perbandingan itu. Meta-analisis pendidikan kedokteran (antara lain Cen et al., 2021) menemukan CBL meningkatkan performa ujian dan kemampuan analisis kasus dibanding ceramah tradisional — kekuatannya memang pada <em>pengambilan keputusan berkonteks</em>.</p>"
+    },
+    {
+      "type": "text",
+      "html": "<h3>c) Problem-based learning (PBL)</h3><p><strong>PBL</strong> menempatkan <em>masalah yang belum dijawab materi</em> sebagai titik awal: peserta merumuskan apa yang perlu diketahui, mencarinya, lalu mengusulkan solusi. Enam langkah penerapan di kelas (Barret, 2005, dirangkum dalam pelatihan PAPT UI):</p><ol><li><strong>Penetapan masalah</strong> — masalah autentik, tidak terjawab oleh slide.</li><li><strong>Identifikasi pengetahuan</strong> — apa yang sudah diketahui, apa yang belum.</li><li><strong>Penetapan tujuan dan rencana kerja</strong>.</li><li><strong>Bertukar informasi, ide, dan pengetahuan</strong> — peserta mencari dan berbagi.</li><li><strong>Penyajian solusi beserta rasionalisasinya</strong>.</li><li><strong>Evaluasi</strong> — proses dan hasil dinilai bersama.</li></ol><p>Telaah menyeluruh pada pendidikan kedokteran (Trullàs et al., 2022 — bacaan wajib di bawah) menyimpulkan PBL <strong>lebih efektif daripada ceramah untuk keterampilan sosial-komunikasi, pemecahan masalah, dan belajar mandiri</strong>, dengan retensi pengetahuan dan performa akademik yang tidak lebih buruk — bahkan di banyak studi lebih baik. Catatan jujurnya: PBL menuntut persiapan dan waktu lebih besar, dan kurang cocok untuk materi yang benar-benar baru bagi semua peserta.</p>"
+    },
+    {
+      "type": "text",
+      "html": "<h3>d) Project-based learning (PjBL)</h3><p><strong>PjBL</strong> mengarahkan peserta menghasilkan <em>karya nyata</em> — laporan, prototipe, media sosialisasi — melalui proses bertahap: menetapkan proyek → menyelesaikannya → mempresentasikan hasil. Kebetulan yang bermanfaat: <strong>workshop ini sendiri adalah PjBL</strong> — Anda merancang bahan ajar 8–12 slide, mempresentasikannya, dan merevisinya berdasar peer review.</p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-zhangma-kerangka.png",
+      "alt": "Kerangka penelitian Zhang dan Ma 2023: project-based learning sebagai variabel independen dengan moderator jenis mata pelajaran dan periode belajar, menghasilkan efek pada capaian akademik, keterampilan berpikir, dan sikap emosional",
+      "caption": "Model riset Zhang dan Ma (2023): efek PjBL diukur pada tiga dimensi hasil — capaian akademik, keterampilan berpikir, sikap.",
+      "credit": "Zhang & Ma (2023), Frontiers in Psychology 14:1202728 — CC BY 4.0."
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-zhangma-proses.png",
+      "alt": "Tabel desain proses PjBL dari Zhang dan Ma 2023: tahap menginstruksikan proyek, penyelesaian proyek, dan pembagian hasil, dipetakan ke keterampilan berpikir kritis, kreatif, pemecahan masalah, dan pengambilan keputusan",
+      "caption": "Desain proses PjBL per tahap (instruksi → pengerjaan → pembagian hasil) dan keterampilan berpikir yang dilatih di tiap tahap.",
+      "credit": "Zhang & Ma (2023), Frontiers in Psychology 14:1202728 — CC BY 4.0."
+    },
+    {
+      "type": "text",
+      "html": "<p>Bukti kuantitatifnya (Zhang & Ma, 2023 — meta-analisis 66 studi, 190 nilai efek): PjBL meningkatkan hasil belajar dengan efek gabungan <strong>SMD = 0,441</strong> (95% CI 0,371–0,551), paling kuat pada <strong>capaian akademik</strong>, diikuti sikap emosional (0,389) dan keterampilan berpikir (0,386).</p>"
+    },
+    {
+      "type": "matching",
+      "item_key": "c1-match-metode",
+      "instruction": "<p>Pasangkan tujuan pembelajaran dengan metode yang paling cocok.</p>",
+      "pairs": [
+        { "left": "Mengolah alasan secara aman di kelas besar, semua peserta ikut", "right": "Think–pair–share" },
+        { "left": "Melatih keputusan berkonteks pada kasus nyata yang sudah terjadi", "right": "Studi kasus (case-based)" },
+        { "left": "Menuntut peserta mencari pengetahuan untuk menjawab masalah yang belum dijelaskan", "right": "Problem-based learning" },
+        { "left": "Menghasilkan karya nyata melalui proses bertahap hingga presentasi", "right": "Project-based learning" }
+      ],
+      "rationale": "Metode dipilih dari tujuan dan konteks — bukan dari kepopuleran. PBL untuk penemuan, PjBL untuk produk, kasus untuk keputusan, TPS untuk mengolah alasan."
+    },
+    { "type": "section", "num": "5", "title": "Metode mana yang terbaik? Tidak ada — dan itu temuan riset", "sub": "Wijnia et al. (2024) + pedagogi post-method" },
+    {
+      "type": "text",
+      "html": "<p>Meta-analisis Wijnia et al. (2024) membandingkan langsung ketiga keluarga metode berpusat-pada-peserta (83 subsampel PBL, 37 PjBL, 19 CBL) terhadap motivasi: efek gabungan <strong>d = 0,498</strong> (positif, heterogen), dan <strong>tidak ada perbedaan signifikan antar ketiganya</strong>. Efek lebih besar pada keyakinan, nilai, dan sikap peserta daripada pada alasan mereka belajar.</p><p>Kesimpulan praktisnya sejalan dengan <strong>pedagogi post-method</strong> (particularity, practicality, possibility — dirangkum dalam PAPT UI): <em>tidak ada satu model pembelajaran yang efektif untuk semua konteks</em>. Pilih dari kombinasi tujuan, karakteristik peserta, waktu, dan sumber daya Anda — persis kerja yang kita lakukan di analisis kebutuhan di bawah ini. Ceramah singkat tetap sah sebagai input; yang wajib ada adalah pemrosesannya.</p>"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c1-mcq-wijnia",
+      "question": "Berdasarkan Wijnia et al. (2024), manakah kesimpulan yang benar?",
+      "options": [
+        "PBL selalu lebih baik daripada PjBL dan studi kasus",
+        "Ketiga metode berpusat-pada-peserta ber efek positif pada motivasi tanpa perbedaan signifikan antar mereka",
+        "Semua metode aktif menurunkan motivasi peserta dewasa",
+        "Metode terbaik adalah yang paling banyak memakai aplikasi"
+      ],
+      "correct": 1,
+      "rationale": "d = 0,498 untuk semuanya, tanpa perbedaan antar metode — artinya konteks dan desain yang menentukan, bukan 'metode juara'."
+    },
+    { "type": "section", "num": "6", "title": "Bacaan wajib C1", "sub": "±15 menit — dua sumber riset, langsung dari sumbernya" },
     {
       "type": "callout",
       "variant": "key",
-      "title": "Tugas baca (dua sumber)",
-      "html": "<p><strong>1. Freeman et al. (2014)</strong> — baca <em>Abstract</em> dan bagian <em>Results</em> awal (±2 halaman): <a href=\"https://doi.org/10.1073/pnas.1319030111\" target=\"_blank\" rel=\"noopener\">doi.org/10.1073/pnas.1319030111</a> (salinan PDF juga tersedia via <a href=\"https://serc.carleton.edu/download/files/298690/freeman_2014_pnas_active_le.pdf.pdf\" target=\"_blank\" rel=\"noopener\">SERC Carleton</a>).</p><p><strong>2. Güngör et al. (2026)</strong> — baca <em>Abstract</em> saja (±1 halaman): <a href=\"bacaan/gungor-2026-cooperative.pdf\" target=\"_blank\" rel=\"noopener\">buka PDF (CC BY 4.0)</a>. Catat: meta-meta-analisis pembelajaran kooperatif menemukan efek positif pada capaian, berpikir tingkat tinggi, dan aspek afektif — dengan heterogenitas tinggi, sehingga <em>desain</em> kerja kelompok (akuntabilitas individual, interdependensi positif, refleksi) menentukan hasil.</p>"
+      "title": "Tugas baca",
+      "html": "<p><strong>1. Trullàs et al. (2022)</strong> — baca <em>Abstract</em> penuh (±1 halaman): <a href=\"bacaan/trullas-2022-pbl.pdf\" target=\"_blank\" rel=\"noopener\">buka PDF (CC BY 4.0)</a>. Catat pada aspek apa PBL lebih baik, dan pada aspek apa 'tidak lebih buruk'.</p><p><strong>2. Wijnia et al. (2024)</strong> — baca <em>Abstract</em> (±1 halaman): <a href=\"bacaan/wijnia-2024-pbl-pjbl-cbl.pdf\" target=\"_blank\" rel=\"noopener\">buka PDF (CC BY 4.0)</a>. Catat ukuran efek gabungan dan temuan tentang perbedaan antarmetode.</p>"
     },
     {
       "type": "mcq",
       "item_key": "c1-mcq-baca1",
-      "question": "Bacaan Güngör et al. (2026): menurut meta-meta-analisis tersebut, hasil kerja kelompok paling ditentukan oleh…",
+      "question": "Bacaan Trullàs et al. (2022): telaah 124 publikasi itu menyimpulkan PBL paling jelas lebih efektif daripada ceramah untuk…",
       "options": [
-        "Jumlah anggota kelompok yang banyak",
-        "Kualitas desain: akuntabilitas individual, interdependensi positif, dan refleksi kelompok",
-        "Penggunaan aplikasi kolaborasi daring",
-        "Kehadiran seluruh anggota setiap saat"
+        "Menghafal istilah teknis",
+        "Keterampilan sosial-komunikasi, pemecahan masalah, dan belajar mandiri — dengan retensi pengetahuan tidak lebih buruk",
+        "Mengurangi durasi pelatihan",
+        "Mengganti seluruh evaluasi akhir"
       ],
       "correct": 1,
-      "rationale": "Heterogenitas hasil tinggi — yang membedakan kelompok berhasil dan gagal adalah struktur kerja samanya: tanggung jawab individual, ketergantungan positif antaranggota, dan refleksi bersama."
+      "rationale": "Itulah simpulan telaahnya; dan penting dicatat desain studi heterogen dengan sedikit studi berbukti kuat — kekuatan klaim harus proporsional."
     },
-    { "type": "section", "num": "5", "title": "Analisis kebutuhan: dari tugas nyata ke prioritas belajar", "sub": "Memilah gap kompetensi dari hambatan sistem" },
+    { "type": "section", "num": "7", "title": "Analisis kebutuhan: dari tugas nyata ke prioritas belajar", "sub": "Memilah gap kompetensi dari hambatan sistem" },
     {
       "type": "text",
       "html": "<p>Sebelum merancang apa pun, kita perlu tahu <em>untuk siapa</em> dan <em>untuk masalah apa</em>. Analisis kebutuhan belajar menjawab tiga pertanyaan: apa yang harus bisa dilakukan orang (tugas), apa yang terjadi sekarang (bukti), dan mengapa kesenjangannya muncul (penyebab). SKKNI 333/2020 menempatkan langkah ini sebagai unit kompetensi tersendiri (unit 009/010 — <em>Menentukan Kebutuhan Pelatihan Mikro dan Individu</em>).</p>"
     },
     {
       "type": "figure",
-      "src": "figures/analisis-kebutuhan.svg",
+      "src": "figures/fig-analisis-kebutuhan-cd.png",
       "alt": "Diagram alur analisis kebutuhan lima langkah: tugas sasaran, bukti aktual, gap kinerja, pemeriksaan penyebab yang bercabang menjadi gap kompetensi dan hambatan sistem, lalu prioritas kebutuhan belajar",
-      "caption": "Alur analisis kebutuhan: cabang penyebab adalah langkah yang paling sering dilewati — dan paling menentukan.",
-      "credit": "Ilustrasi tim modul (2026), diadaptasi dari Panduan Fasilitator ToT dan SKKNI 333/2020 unit 009/010 — bebas lisensi."
+      "caption": "Alur analisis kebutuhan belajar: cabang penyebab adalah langkah yang paling sering dilewati — dan paling menentukan.",
+      "credit": "Sumber: materi Workshop Bahan Ajar BPJS 2026 (internal)."
     },
     {
       "type": "callout",
@@ -131,18 +196,18 @@
       "type": "form",
       "label": "LK1 — Profil sasaran & analisis kebutuhan",
       "item_key": "lk1",
-      "instruction": "<p>Isi untuk <strong>topik yang Anda tulis di modul C0</strong>. Jawaban ringkas; akan disaring bersama kelompok di workshop.</p>",
+      "instruction": "<p>Isi untuk <strong>topik yang Anda tulis di modul C0</strong>, dan sebutkan metode aktif mana yang paling Anda pertimbangkan beserta alasannya. Jawaban ringkas; akan disaring bersama kelompok di workshop.</p>",
       "fields": [
         { "key": "sasaran", "label": "Siapa peserta sasaran Anda? (peran, pengalaman, konteks kerja)", "type": "textarea", "rows": 2, "placeholder": "Contoh: 15 staf layanan mitra, pengalaman 1–3 tahun, akses ponsel di lok kerja" },
         { "key": "tugas", "label": "Tugas/performa apa yang harus bisa dilakukan setelah pembelajaran?", "type": "textarea", "rows": 2, "placeholder": "Contoh: mengisi formulir klaim tanpa kesalahan administrasi" },
         { "key": "gap", "label": "Bukti kemampuan aktual & kesenjangan yang terlihat", "type": "textarea", "rows": 3, "placeholder": "Observasi, dokumen, data keluhan, hasil kerja…" },
         { "key": "hambatan", "label": "Hambatan non-pelatihan yang mungkin ikut berperan", "type": "textarea", "rows": 2, "placeholder": "SOP, alat, waktu, akses informasi, dukungan atasan…" },
-        { "key": "prioritas", "label": "Dua kebutuhan belajar prioritas + alasan pemilihannya", "type": "textarea", "rows": 3, "placeholder": "1) … 2) … — sertakan alasan singkat" }
+        { "key": "prioritas", "label": "Dua kebutuhan belajar prioritas + metode aktif yang dipertimbangkan", "type": "textarea", "rows": 3, "placeholder": "1) … 2) … — metode: PBL / PjBL / kasus / TPS + alasan" }
       ]
     },
     {
       "type": "quiz",
-      "label": "Kuis modul C1 (6 soal)",
+      "label": "Kuis modul C1 (8 soal)",
       "item_key": "kuis-c1",
       "quiz_kind": "modul",
       "passScore": 70,
@@ -153,14 +218,16 @@
         { "id": "c1q3", "question": "Think–pair–share mengaktifkan peserta terutama melalui…", "options": ["Kompetisi antarindividu dengan papan skor", "Pemikiran mandiri, pengujian alasan dengan rekan, lalu pembagian ke forum", "Menonton video secara mandiri", "Mengisi lembar kerja tanpa diskusi"], "correct": 1, "rationale": "Aktif kognitif (berpikir) sekaligus sosial (menguji alasan, membagikan)." },
         { "id": "c1q4", "question": "Manakah bukti kebutuhan belajar yang paling kuat?", "options": ["Kata atasan bahwa timnya 'kurang paham'", "Data keluhan berulang + observasi pekerjaan + contoh hasil kerja aktual", "Jumlah peserta yang mendaftar", "Ketersediaan materi dari pusat"], "correct": 1, "rationale": "Kebutuhan ditarik dari bukti tugas dan kinerja aktual, bukan asumsi." },
         { "id": "c1q5", "question": "Menurut Freeman et al. (2014), peserta kelas ceramah tradisional berisiko gagal…", "options": ["Sama dengan kelas aktif", "1,5× lebih tinggi daripada kelas aktif", "Setengah dari kelas aktif", "Tidak dapat dibandingkan"], "correct": 1, "rationale": "Tingkat kegagalan 33,8% (ceramah) versus 21,8% (aktif) — risiko gagal 1,5× lebih besar di kelas ceramah." },
-        { "id": "c1q6", "question": "Sebuah tim merancang pelatihan 'kerja kelompok' tanpa pembagian peran dan tanpa refleksi. Berdasarkan Güngör et al. (2026), risiko terbesarnya adalah…", "options": ["Ruangan menjadi bising", "Kerja kelompok berubah menjadi penumpangan kerja tanpa akuntabilitas — efek belajar melemah", "Peserta menjadi terlalu kompak", "Waktu sesi tidak cukup"], "correct": 1, "rationale": "Elemen desain (akuntabilitas individual, interdependensi positif, refleksi) adalah penentu efek kerja kelompok." }
+        { "id": "c1q6", "question": "Sebuah tim merancang pelatihan 'kerja kelompok' tanpa pembagian peran dan tanpa refleksi. Berdasarkan Güngör et al. (2026), risiko terbesarnya adalah…", "options": ["Ruangan menjadi bising", "Kerja kelompok berubah menjadi penumpangan kerja tanpa akuntabilitas — efek belajar melemah", "Peserta menjadi terlalu kompak", "Waktu sesi tidak cukup"], "correct": 1, "rationale": "Elemen desain (akuntabilitas individual, interdependensi positif, refleksi) adalah penentu efek kerja kelompok." },
+        { "id": "c1q7", "question": "Dalam enam langkah PBL (Barret, 2005), kegiatan yang benar pada langkah pertama adalah…", "options": ["Penyajian solusi dan rasionalisasinya", "Penetapan masalah autentik yang belum dijawab materi", "Evaluasi proses dan hasil", "Bertukar informasi dari berbagai sumber"], "correct": 1, "rationale": "PBL dimulai dari masalah — penjelasan materi menyusul sebagai hasil pencarian peserta, bukan pembuka." },
+        { "id": "c1q8", "question": "Wijnia et al. (2024) tidak menemukan perbedaan signifikan antara PBL, PjBL, dan studi kasus. Implikasi paling tepat bagi perancang pelatihan adalah…", "options": ["Semua metode sama, jadi pilih yang paling mudah tanpa analisis", "Tidak ada 'metode juara' — pilih berdasarkan tujuan, konteks peserta, waktu, dan sumber daya", "Efek ketiganya nol, jadi kembali ke ceramah penuh", "Harus menggabungkan ketiganya dalam setiap sesi"], "correct": 1, "rationale": "Semuanya ber efek positif (d = 0,498); pembedanya adalah kesesuaian dengan konteks — konsisten dengan pedagogi post-method (particularity, practicality, possibility)." }
       ]
     },
     {
       "type": "reflect",
       "item_key": "refleksi-c1",
-      "prompt": "<p>Dari analisis Anda: apakah semua masalah yang Anda temukan benar-benar dapat dijawab dengan pembelajaran? Jelaskan satu hal yang <strong>bukan</strong> gap kompetensi dan bagaimana Anda akan menanganinya.</p>",
-      "placeholder": "Contoh: Keterlambatan input ternyata karena akses sistem baru dibuka hari Senin…"
+      "prompt": "<p>Dari analisis Anda: apakah semua masalah yang Anda temukan benar-benar dapat dijawab dengan pembelajaran? Dan metode aktif mana yang paling menantang untuk konteks Anda — apa mitigasinya?</p>",
+      "placeholder": "Contoh: Keterlambatan input ternyata karena akses sistem baru dibuka hari Senin… PBL paling menantang karena waktu — mitigasi: masalah dipotong ke satu sesi…"
     }
   ]
 }

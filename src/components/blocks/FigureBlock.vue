@@ -15,7 +15,8 @@ const props = defineProps({ block: { type: Object, required: true } })
 <style scoped>
 .figure { margin: 0 0 26px; }
 .figure img {
-  display: block; width: 100%;
+  display: block; width: 100%; height: auto; max-height: 620px;
+  object-fit: contain; /* jaga rasio: gambar apa pun tidak melebar/menggulir */
   border: 1px solid var(--line); border-radius: var(--radius);
   background: #fff;
 }

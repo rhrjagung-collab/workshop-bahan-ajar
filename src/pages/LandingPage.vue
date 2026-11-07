@@ -38,7 +38,6 @@ const statusText = s => s === 'selesai' ? 'Selesai' : s === 'mulai' ? 'Berjalan'
       <section class="card">
         <h2>Untuk siapa &amp; prasyarat</h2>
         <p><strong>Audiens:</strong> {{ course.audiens }}</p>
-        <p class="muted">{{ course.tempat_tanggal }}</p>
         <ul class="lo">
           <li v-for="(p, i) in course.prasyarat" :key="i">{{ p }}</li>
         </ul>
@@ -69,11 +68,6 @@ const statusText = s => s === 'selesai' ? 'Selesai' : s === 'mulai' ? 'Berjalan'
           </div>
         </li>
       </ol>
-    </section>
-
-    <section class="card credits">
-      <h2>Kredit &amp; lisensi</h2>
-      <div class="rich" v-html="course.credits"></div>
     </section>
   </div>
 </template>
@@ -111,9 +105,6 @@ const statusText = s => s === 'selesai' ? 'Selesai' : s === 'mulai' ? 'Berjalan'
 .module-meta { margin: 0; font-size: 13px; color: var(--ink-faint); }
 .module-side { text-align: right; flex: none; }
 .pct { font-weight: 800; color: var(--bpjs-indigo); margin-top: 8px; }
-
-.credits { margin-top: 26px; }
-.credits h2 { margin-top: 0; }
 
 @media (max-width: 760px) {
   .grid { grid-template-columns: 1fr; }

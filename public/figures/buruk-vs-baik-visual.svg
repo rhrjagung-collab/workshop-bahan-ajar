@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Pasangan visual yang sama, dua cara: buruk vs baik -->
+  <rect width="1100" height="560" fill="#FFFFFF"/>
+  <text x="550" y="32" text-anchor="middle" font-size="19" font-weight="700" fill="#2B3078">Data yang sama, dua penyajian: mana yang bisa dibaca?</text>
+
+  <!-- ===== KIRI: BURUK ===== -->
+  <g>
+    <rect x="30" y="56" width="510" height="410" rx="10" fill="#FDF2F4" stroke="#F0C4CC"/>
+    <text x="285" y="86" text-anchor="middle" font-size="14" font-weight="800" fill="#C8102E">BURUK</text>
+
+    <!-- pie 3D penuh warna tanpa label -->
+    <g>
+      <ellipse cx="230" cy="235" rx="130" ry="62" fill="#7A1FA2"/>
+      <path d="M230 235 L230 173 A130 62 0 0 1 330 210 Z" fill="#FF3D00"/>
+      <path d="M230 235 L330 210 A130 62 0 0 1 300 282 Z" fill="#00C853"/>
+      <path d="M230 235 L300 282 A130 62 0 0 1 160 288 Z" fill="#FFD600"/>
+      <path d="M230 235 L160 288 A130 62 0 0 1 100 235 Z" fill="#2979FF"/>
+      <path d="M230 235 L100 235 A130 62 0 0 1 230 173 Z" fill="#FF6EC7"/>
+      <ellipse cx="230" cy="222" rx="130" ry="62" fill="#00E5FF" opacity="0.55"/>
+      <text x="230" y="320" text-anchor="middle" font-size="12" fill="#C8102E" font-weight="700">(pie 3D, 7 warna, tanpa persen)</text>
+    </g>
+    <!-- legend kecil tak terbaca -->
+    <g font-size="9" fill="#4A5060">
+      <rect x="400" y="160" width="10" height="10" fill="#FF3D00"/><text x="415" y="169">lain-lain</text>
+      <rect x="400" y="180" width="10" height="10" fill="#00C853"/><text x="415" y="189">kota (dg koreksi twr 3)</text>
+      <rect x="400" y="200" width="10" height="10" fill="#FFD600"/><text x="415" y="209">tp 1-2 (est.)</text>
+      <rect x="400" y="220" width="10" height="10" fill="#2979FF"/><text x="415" y="229">kategori d</text>
+      <rect x="400" y="240" width="10" height="10" fill="#FF6EC7"/><text x="415" y="249">data 2019 s/d skrg*</text>
+      <rect x="400" y="260" width="10" height="10" fill="#7A1FA2"/><text x="415" y="269">misc/misc2</text>
+    </g>
+    <text x="285" y="360" text-anchor="middle" font-size="13" font-weight="700" fill="#1F2430">"Grafik Klaim"</text>
+    <g font-size="12" fill="#C8102E">
+      <text x="285" y="392" text-anchor="middle">✗ Tidak ada judul pesan, persen, atau unit</text>
+      <text x="285" y="412" text-anchor="middle">✗ Legenda tidak bisa dibaca; potongan tak sebanding</text>
+      <text x="285" y="432" text-anchor="middle">✗ Tanpa sumber & tahun — pembaca menebak-nebak</text>
+    </g>
+    <text x="285" y="456" text-anchor="middle" font-size="11" fill="#7A8090" font-style="italic">Contoh disusun tim modul (2026) untuk keperluan latihan — bebas lisensi.</text>
+  </g>
+
+  <!-- ===== KANAN: BAIK ===== -->
+  <g>
+    <rect x="560" y="56" width="510" height="410" rx="10" fill="#F0FDF4" stroke="#BFE5CC"/>
+    <text x="815" y="86" text-anchor="middle" font-size="14" font-weight="800" fill="#007A2E">BAIK</text>
+
+    <text x="585" y="118" font-size="14.5" font-weight="800" fill="#1F2430">Dokumen tidak terbaca menjadi penyebab</text>
+    <text x="585" y="138" font-size="14.5" font-weight="800" fill="#1F2430">penolakan klaim terbanyak (46%)</text>
+
+    <!-- bar chart rapi -->
+    <g>
+      <!-- sumbu -->
+      <line x1="600" y1="170" x2="600" y2="300" stroke="#7A8090" stroke-width="1.5"/>
+      <line x1="600" y1="300" x2="1030" y2="300" stroke="#7A8090" stroke-width="1.5"/>
+      <!-- bars: 46, 22, 14, 10, 8 -->
+      <rect x="620" y="183" width="70" height="117" fill="#C8102E"/>
+      <rect x="712" y="245" width="70" height="55" fill="#2B3078"/>
+      <rect x="804" y="266" width="70" height="34" fill="#2B3078"/>
+      <rect x="896" y="276" width="70" height="24" fill="#2B3078"/>
+      <rect x="988" y="281" width="34" height="19" fill="#2B3078"/>
+      <g font-size="11.5" fill="#1F2430" text-anchor="middle" font-weight="700">
+        <text x="655" y="176">46%</text><text x="747" y="238">22%</text><text x="839" y="259">14%</text><text x="931" y="269">10%</text><text x="1005" y="274">8%</text>
+      </g>
+      <g font-size="10.5" fill="#4A5060" text-anchor="middle">
+        <text x="655" y="315">Dokumen tak terbaca</text>
+        <text x="747" y="315">Data tidak lengkap</text>
+        <text x="839" y="315">Bukan faskes 1</text>
+        <text x="931" y="315">Melewati batas waktu</text>
+        <text x="1005" y="315">Lain</text>
+      </g>
+      <text x="600" y="335" font-size="10" fill="#7A8090">Persen dari seluruh penolakan (n = 1.240), Jan–Jun 2026</text>
+    </g>
+
+    <g font-size="12" fill="#007A2E">
+      <text x="815" y="368" text-anchor="middle">✓ Judul menyatakan pesan; satu sorotan warna</text>
+      <text x="815" y="388" text-anchor="middle">✓ Nilai, kategori, dan penyebut lengkap</text>
+      <text x="815" y="408" text-anchor="middle">✓ Sumber dan periode tercantum</text>
+    </g>
+    <text x="815" y="440" text-anchor="middle" font-size="12" fill="#4A5060">Sumber: ilustrasi contoh unit verifikasi (data fiktif) — tim modul 2026.</text>
+    <text x="815" y="456" text-anchor="middle" font-size="11" fill="#7A8090" font-style="italic">Bentuk disesuaikan relasi pesan: perbandingan → bar chart.</text>
+  </g>
+
+  <text x="550" y="502" text-anchor="middle" font-size="13" fill="#4A5060" font-weight="600">Uji cepat: bila kedua gambar dipasang di dinding tanpa penjelasan, mana yang pesannya tersampaikan?</text>
+  <text x="550" y="524" text-anchor="middle" font-size="12" fill="#7A8090" font-style="italic">Ilustrasi tim modul (2026) untuk latihan keterbacaan visual — bebas lisensi; angka contoh fiktif.</text>
+</svg>

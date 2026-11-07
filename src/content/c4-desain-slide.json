@@ -33,12 +33,39 @@
     {
       "type": "beforeafter",
       "item_key": "c4-ba1",
-      "instruction": "<p>Geser pembanding untuk melihat satu slide yang sama sebelum dan sesudah diperbaiki. Perhatikan apa yang dihilangkan, apa yang ditonjolkan.</p>",
+      "instruction": "<p>Geser pembanding untuk melihat satu slide yang sama sebelum dan sesudah diperbaiki — perhatikan judul yang menjadi pesan, visual yang menjadi bukti, dan sumbernya.</p>",
       "beforeHtml": "<div style='padding:0'><p style='margin:0 0 4px; font-size:11px; font-weight:700; color:#4A5060'>PROSEDUR VERIFIKASI KLAIM</p><p style='margin:0 0 6px; font-size:9.5px; line-height:1.5; color:#1F2430'>• Verifikasi klaim dilakukan oleh petugas verifikator yang telah ditetapkan berdasarkan surat keputusan yang berlaku dan mempertimbangkan beban kerja unit • Dokumen yang diverifikasi meliputi formulir klaim, lampiran bukti layanan, kartu identitas peserta, serta dokumen pendukung lainnya sesuai ketentuan yang berlaku • Bila terdapat ketidaksesuaian data maka petugas wajib melakukan konfirmasi kepada faskes pengirim melalui kanal resmi yang telah ditetapkan • Hasil verifikasi dicatat pada sistem dengan kode status yang telah ditentukan oleh kebijakan yang berlaku saat ini • Rekapitulasi hasil verifikasi dilaporkan secara berkala kepada kepala unit untuk ditindaklanjuti sesuai kebutuhan • Pertanyaan seputar prosedur dapat disampaikan melalui kanal resmi unit verifikasi</p><p style='margin:0; font-size:8.5px; color:#7A8090'>Sumber: rangkuman SOP hal. 4–9 (disalin utuh)</p></div>",
-      "afterHtml": "<div style='padding:0'><p style='margin:0 0 6px; font-size:11.5px; font-weight:800; color:#fff'>Klaim gagal verifikasi paling sering karena satu hal: dokumen pendukung tidak terbaca</p><div style='display:flex; align-items:center; gap:10px; margin:10px 0'><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>PERIKSA</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Keterbacaan dokumen sebelum dikirim</p></div><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>KONFIRMASI</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Ketidaksesuaian lewat kanal resmi</p></div><div style='flex:1; background:rgba(255,255,255,.14); border-radius:6px; padding:8px 10px'><p style='margin:0; font-size:9.5px; font-weight:700; color:#FFD200'>CATAT</p><p style='margin:2px 0 0; font-size:9px; color:#fff'>Kode status sesuai kebijakan</p></div></div><p style='margin:0; font-size:8.5px; color:#C9CEE6'>Detail prosedur lengkap: handout hal. 4–9 — tidak perlu tampil di slide</p></div>",
+      "afterHtml": "<div style='padding:0;background:#fff'><p style='margin:0 0 2px;font-size:8px;font-weight:700;letter-spacing:.08em;color:#009F3C'>PERBAIKAN VERIFIKASI</p><p style='margin:0 0 10px;font-size:12px;font-weight:800;line-height:1.25;color:#1F2430'>Dokumen tidak terbaca adalah penyebab penolakan terbanyak — periksa keterbacaan sebelum kirim</p><div style='display:flex;gap:8px;align-items:flex-end;height:46px;margin:4px 2px 3px'><div style='flex:1.8;background:#C8102E;height:46px;border-radius:3px 3px 0 0'></div><div style='flex:1;background:#2B3078;height:23px;border-radius:3px 3px 0 0'></div><div style='flex:1;background:#2B3078;height:15px;border-radius:3px 3px 0 0'></div></div><div style='display:flex;gap:8px;font-size:7px;color:#4A5060;margin-bottom:8px'><span style='flex:1.8;font-weight:700'>Tak terbaca 46%</span><span style='flex:1'>Data 22%</span><span style='flex:1'>Lain 32%</span></div><p style='margin:0;font-size:7.5px;color:#7A8090'>Langkah pencegahan: konfirmasi lewat kanal resmi; catat kode status. Sumber: contoh ilustratif unit verifikasi (n=1.240), Jan–Jun 2026.</p></div>",
       "labelBefore": "Sebelum — dinding teks",
-      "labelAfter": "Sesudah — satu pesan",
-      "rationale": "Judul menjadi pesan utama (signaling), enam poin disalin-SOP pindah ke handout (coherence), proses dipadatkan menjadi tiga langkah berlabel (segmenting). Narasi Anda mengisi sisanya — bukan teks slide."
+      "labelAfter": "Sesudah — asersi + bukti",
+      "rationale": "Slide hasil mengikuti pola deck akademik: judul menyatakan kesimpulan (assertion), satu visual menjadi bukti (evidence), sumber tercantum, dan enam poin SOP dipindahkan ke handout (coherence). Narasi Anda mengisi sisanya."
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-harvard-slide-buruk.png",
+      "alt": "Contoh slide buruk dari Harvard Communications Lab: judul pertanyaan dengan bullet di tengah tanpa visual — ditandai silang merah",
+      "caption": "Contoh 'sebelum': judul bertanya, bullet di tengah, tanpa visual. Ini bukan slide yang buruk secara teknis — ia hanya tidak melakukan pekerjaan apa pun untuk pembaca.",
+      "credit": "Harvard GSE Communications Lab (2019), PowerPoint Basics hlm. 30 — digunakan utuh dengan atribusi untuk pendidikan internal."
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-harvard-slide-baik.png",
+      "alt": "Contoh slide perbaikan dari Harvard Communications Lab: judul menyatakan kesimpulan (aseri) didampingi visual bunga warna-warni dan tiga label penyebab",
+      "caption": "Contoh 'sesudah': judul menyatakan jawaban (aseri), visual menjadi bukti, tiga label menjelaskan — pola assertions-evidence yang sama dengan slider di atas.",
+      "credit": "Harvard GSE Communications Lab (2019), PowerPoint Basics hlm. 31 — digunakan utuh dengan atribusi untuk pendidikan internal."
+    },
+    {
+      "type": "mcq",
+      "item_key": "c4-mcq-harvard",
+      "question": "Slide perbaikan Harvard memindahkan pertanyaan di judul menjadi pernyataan jawaban ('In diamonds, rare colors come from impurities, defects and irradiation'). Alasan utama perubahan ini adalah…",
+      "options": [
+        "Pernyataan lebih singkat daripada pertanyaan",
+        "Judul pesan menyampaikan kesimpulan sejak slide terbaca — pembaca yang hanya melihat judul pun mendapat inti; pertanyaan bisa ditanyakan lisan oleh presenter",
+        "Pertanyaan tidak boleh dipakai di slide",
+        "Agar slide terlihat lebih penuh"
+      ],
+      "correct": 1,
+      "rationale": "Itu inti pola assertions-evidence: judul = pesan utama. Pertanyaan pemantik tetap berguna — diajarkan secara lisan, bukan dibiarkan menggantikan pesan di slide."
     },
     {
       "type": "callout",

@@ -73,6 +73,26 @@
       "html": "<p>Cara tercepat menguji kualitas visual: minta <strong>orang lain menjelaskannya tanpa Anda menemani</strong>. Bila penjelasannya meleset dari pesan utama, masalahnya pada visual — bukan pada pembaca. Serta hindari: chart dekoratif, ikon tanpa makna, skala menyesatkan (mis. sumbu tidak mulai dari nol tanpa alasan), warna sebagai satu-satunya pembeda, dan infografis tanpa sumber data.</p>"
     },
     {
+      "type": "figure",
+      "src": "figures/buruk-vs-baik-visual.svg",
+      "alt": "Perbandingan dua penyajian data penolakan klaim yang sama: kiri pie chart 3D tujuh warna tanpa label persen dan sumber (buruk), kanan bar chart dengan judul pesan, nilai persen, kategori, penyebut, dan sumber (baik)",
+      "caption": "Data yang sama, dua penyajian. Uji cepatnya: bila dipasang di dinding tanpa penjelasan, mana yang pesannya tersampaikan?",
+      "credit": "Ilustrasi tim modul (2026), angka contoh fiktif untuk latihan — bebas lisensi."
+    },
+    {
+      "type": "mcq",
+      "item_key": "c5-mcq-pasangan",
+      "question": "Pada pasangan visual 'buruk vs baik', perbaikan yang paling menentukan keterbacaan adalah…",
+      "options": [
+        "Mengganti pie chart menjadi bar chart karena pesannya perbandingan antar kategori",
+        "Menambah lebih banyak warna agar menarik",
+        "Membuat pie chart berputar (animasi)",
+        "Memperbesar pie chart menjadi tiga dimensi"
+      ],
+      "correct": 0,
+      "rationale": "Relasi pesannya adalah perbandingan antar kategori — bar chart dengan nilai dan label membuat perbandingan terlihat langsung; pie 3D justru menyulitkan perbandingan ukuran."
+    },
+    {
       "type": "mcq",
       "item_key": "c5-mcq2",
       "question": "Satu kelompok membuat infografis tanpa sumber data. Revisi pertama yang paling penting adalah…",
