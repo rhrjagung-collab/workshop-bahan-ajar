@@ -231,10 +231,12 @@ $$;
 -- Buat akun login lengkap untuk peserta baru (admin saja):
 -- membuat baris auth.users + auth.identities (setara "Add user" di Dashboard)
 -- sekaligus baris roster participants — semuanya dalam satu panggilan.
+-- Email bersifat opsional: bila dikosongkan, dibuat email internal
+-- sintetis <username>@peserta.lokal dan login tetap lewat nama pengguna.
 create extension if not exists pgcrypto with schema extensions;
 
 create or replace function public.admin_create_user(
-  p_nama text, p_email text, p_password text,
+  p_nama text, p_email text default null, p_password text default null,
   p_username text default null, p_kelompok text default '-'
 )
 returns table (ok boolean, message text)
@@ -249,7 +251,8 @@ begin
   end if;
 
   p_email := lower(trim(coalesce(p_email, '')));
-  if p_email !~ '^[^@[:space:]]+@[^@[:space:]]+\.[^@[:space:]]+$' then
+  if p_email = '' then p_email := null; end if;
+  if p_email is not null and p_email !~ '^[^@[:space:]]+@[^@[:space:]]+\.[^@[:space:]]+$' then
     return query select false, 'Format email tidak valid.';
     return;
   end if;
@@ -262,8 +265,8 @@ begin
     return;
   end if;
 
-  if p_username is not null and length(trim(p_username)) >= 3 then
-    p_username := lower(trim(p_username));
+  p_username := lower(trim(coalesce(p_username, '')));
+  if p_username <> '' and length(p_username) >= 3 then
     if p_username ~ '[^a-z0-9._-]' then
       return query select false, 'Nama pengguna hanya boleh huruf kecil, angka, titik, garis bawah, tanda hubung.';
       return;
@@ -274,6 +277,15 @@ begin
     end if;
   else
     p_username := null;
+  end if;
+
+  -- Email opsional: tanpa email, nama pengguna wajib dan email internal dibuat otomatis.
+  if p_email is null then
+    if p_username is null then
+      return query select false, 'Isi email ATAU nama pengguna (tanpa keduanya akun tidak dapat dibuat).';
+      return;
+    end if;
+    p_email := p_username || '@peserta.lokal';
   end if;
 
   if exists (select 1 from auth.users where lower(email) = p_email) then
@@ -294,9 +306,9 @@ begin
     now(), now(), '', '', '', ''
   ) returning id into v_uid;
 
-  insert into auth.identities (id, user_id, provider_id, identity_data, last_sign_in_at, created_at, updated_at)
+  insert into auth.identities (id, user_id, provider, provider_id, identity_data, last_sign_in_at, created_at, updated_at)
   values (
-    gen_random_uuid(), v_uid, 'email',
+    gen_random_uuid(), v_uid, 'email', 'email',
     jsonb_build_object('sub', v_uid::text, 'email', p_email, 'email_verified', true),
     now(), now(), now()
   );
@@ -305,7 +317,7 @@ begin
   values (trim(p_nama), p_email, p_username, coalesce(nullif(trim(p_kelompok), ''), '-'), 'peserta')
   on conflict (email) do update set peran = 'peserta', username = excluded.username;
 
-  return query select true, 'Peserta ' || p_email || ' berhasil dibuat — akun siap dipakai login.';
+  return query select true, 'Peserta ' || coalesce(p_username, p_email) || ' berhasil dibuat — akun siap dipakai login.';
 end;
 $$;
 

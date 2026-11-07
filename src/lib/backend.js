@@ -199,7 +199,7 @@ const supabaseBackend = {
 
   async adminCreateUser(nama, email, password, username, kelompok) {
     const { data, error } = await sb.rpc('admin_create_user', {
-      p_nama: nama, p_email: email, p_password: password,
+      p_nama: nama, p_email: email || null, p_password: password,
       p_username: username || null, p_kelompok: kelompok || '-'
     })
     if (error) throw new Error(error.message)
