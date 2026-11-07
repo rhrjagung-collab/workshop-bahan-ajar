@@ -132,11 +132,23 @@ begin
 
   if v_id is null then
     v_nama := initcap(split_part(v_email, '@', 1));
-    insert into public.participants (nama, email, kelompok, peran, auth_user_id)
-    values (v_nama, v_email, '-', 'peserta', auth.uid())
+    insert into public.participants (nama, email, username, kelompok, peran, auth_user_id)
+    values (
+      v_nama, v_email,
+      case when v_email like '%@peserta.lokal' then lower(split_part(v_email, '@', 1)) end,
+      '-', 'peserta', auth.uid()
+    )
     on conflict (email) do update set auth_user_id = excluded.auth_user_id
     returning id into v_id;
   end if;
+
+  -- Sinkronkan nama pengguna untuk akun internal (@peserta.lokal) yang
+  -- belum memilikinya, agar login nama pengguna selalu tersedia.
+  update public.participants
+     set username = lower(split_part(email, '@', 1))
+   where id = v_id
+     and username is null
+     and email like '%@peserta.lokal';
 
   return query select * from public.participants where id = v_id;
 end;
