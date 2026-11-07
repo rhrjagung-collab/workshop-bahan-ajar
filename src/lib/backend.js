@@ -120,11 +120,17 @@ const supabaseBackend = {
   },
 
   _authErr(error) {
-    const m = (error?.message || '').toLowerCase()
-    if (m.includes('invalid login credentials')) return 'Email atau kata sandi salah. Akun dibuat oleh administrasi kegiatan.'
-    if (m.includes('email not confirmed')) return 'Email belum dikonfirmasi. Hubungi administrasi kegiatan.'
-    if (m.includes('provider is not enabled') || m.includes('unsupported provider')) return 'Login Google belum diaktifkan di Supabase — gunakan email & kata sandi.'
-    return error?.message || 'Login gagal.'
+    const raw = error?.message || ''
+    const code = error?.code || error?.error_code || ''
+    const m = raw.toLowerCase()
+    let msg
+    if (m.includes('invalid login credentials') || m.includes('invalid credentials'))
+      msg = 'Kombinasi akun dan kata sandi tidak cocok. Catatan: akun yang dibuat lewat Google tidak punya kata sandi — masuk lewat tombol Google.'
+    else if (m.includes('email not confirmed')) msg = 'Email belum dikonfirmasi. Hubungi administrasi kegiatan.'
+    else if (m.includes('provider is not enabled') || m.includes('unsupported provider')) msg = 'Login Google belum diaktifkan di Supabase — gunakan nama pengguna/email & kata sandi.'
+    else if (m.includes('signups not allowed')) msg = 'Pendaftaran mandiri dinonaktifkan — akun dibuat oleh administrasi.'
+    else msg = raw || 'Login gagal.'
+    return code ? `${msg} [kode: ${code}]` : msg
   },
 
   async restoreSession() {
