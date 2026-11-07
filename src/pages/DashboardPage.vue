@@ -288,7 +288,7 @@ async function createUser() {
             </div>
             <div class="form-row">
               <div class="form-field"><label>Nama pengguna</label><input v-model="nu.username" type="text" placeholder="mis. agung.raharjo" /></div>
-              <div class="form-field"><label>Kata sandi</label><input v-model="nu.sandi" type="text" required minlength="8" placeholder="min. 8 karakter, huruf + angka" /><p class="hint">Minimal 8 karakter, memuat huruf dan angka — sebaiknya unik, bukan sandi akun lain.</p></div>
+              <div class="form-field"><label>Kata sandi</label><input v-model="nu.sandi" type="text" required minlength="6" placeholder="min. 6 karakter" /><p class="hint">Minimal 6 karakter — buat mudah diingat oleh peserta.</p></div>
               <div class="form-field"><label>Kelompok</label><input v-model="nu.kelompok" type="text" placeholder="mis. Kelompok 1" /></div>
             </div>
             <button class="btn btn-green" type="submit" :disabled="adminBusy">Buat akun peserta</button>

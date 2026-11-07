@@ -9,6 +9,7 @@ import { DEMO_MODE, SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/config.js'
 
 const identifier = ref('')
 const sandi = ref('')
+const showSandi = ref(false)
 const err = ref('')
 const busy = ref(false)
 const gBusy = ref(false)
@@ -87,8 +88,26 @@ async function google() {
         </div>
         <div class="field">
           <label for="sandi">Kata sandi</label>
-          <input id="sandi" v-model="sandi" type="password" required
-                 placeholder="Kata sandi Anda" autocomplete="current-password" />
+          <div class="pass-wrap">
+            <input
+              id="sandi" v-model="sandi" :type="showSandi ? 'text' : 'password'" required
+              placeholder="Kata sandi Anda" autocomplete="current-password"
+            />
+            <button
+              type="button" class="toggle-pass"
+              :aria-label="showSandi ? 'Sembunyikan kata sandi' : 'Tampilkan kata sandi'"
+              :title="showSandi ? 'Sembunyikan kata sandi' : 'Tampilkan kata sandi'"
+              @click="showSandi = !showSandi"
+            >
+              <svg v-if="!showSandi" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg v-else width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
         </div>
         <p v-if="err" class="error" role="alert">{{ err }}</p>
         <button class="btn btn-primary" type="submit" :disabled="busy">
@@ -113,6 +132,15 @@ async function google() {
 h1 { margin: 0 0 6px; }
 .muted { color: var(--ink-soft); font-size: var(--fs-small); margin: 0 0 18px; }
 .field { margin: 14px 0; text-align: left; }
+.pass-wrap { position: relative; }
+.pass-wrap input { padding-right: 44px; }
+.toggle-pass {
+  position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  width: 32px; height: 32px; border: none; background: transparent;
+  color: var(--ink-faint); cursor: pointer; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.toggle-pass:hover { color: var(--bpjs-indigo); background: var(--bpjs-indigo-soft); }
 .btn-google {
   width: 100%; justify-content: center; gap: 10px;
   background: #fff; color: var(--ink);

@@ -256,10 +256,8 @@ begin
     return query select false, 'Format email tidak valid.';
     return;
   end if;
-  if length(coalesce(p_password, '')) < 8
-     or p_password !~ '[A-Za-z]'
-     or p_password !~ '[0-9]' then
-    return query select false, 'Kata sandi minimal 8 karakter dan harus memuat huruf serta angka.';
+  if length(coalesce(p_password, '')) < 6 then
+    return query select false, 'Kata sandi minimal 6 karakter.';
     return;
   end if;
   if length(coalesce(trim(p_nama), '')) < 2 then
