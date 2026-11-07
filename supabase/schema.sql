@@ -229,15 +229,28 @@ begin
 end;
 $$;
 
--- Terjemahkan nama pengguna menjadi email untuk login (publik, tanpa data sensitif)
+-- Terjemahkan nama pengguna menjadi email untuk login (publik, tanpa data sensitif).
+-- Dua sumber: kolom username pada roster; bila kosong, akun internal
+-- @peserta.lokal di auth (sehingga akun tetap bisa login meski baris
+-- roster belum dibuat — barisnya dibuat otomatis saat login berhasil).
 create or replace function public.lookup_login_email(p_username text)
 returns text
-language sql stable security definer set search_path = public
+language plpgsql stable security definer set search_path = public, auth
 as $$
-  select lower(email) from public.participants
-   where lower(username) = lower(trim(p_username))
-     and email is not null
-   limit 1;
+declare
+  v text;
+begin
+  v := (select lower(email) from public.participants
+        where lower(username) = lower(trim(p_username)) and email is not null
+        limit 1);
+  if v is null then
+    v := (select lower(u.email) from auth.users u
+          where lower(u.email) like '%@peserta.lokal'
+            and lower(split_part(u.email, '@', 1)) = lower(trim(p_username))
+          limit 1);
+  end if;
+  return v;
+end;
 $$;
 
 -- Buat akun login lengkap untuk peserta baru (admin saja):
