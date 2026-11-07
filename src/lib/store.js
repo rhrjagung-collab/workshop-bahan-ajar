@@ -43,7 +43,8 @@ export const adminActions = {
   setModuleProgress: (...a) => backend.setModuleProgress(...a),
   resetParticipantProgress: (...a) => backend.resetParticipantProgress(...a),
   setPeran: (...a) => backend.setPeran(...a),
-  setUsername: (...a) => backend.setUsername(...a)
+  setUsername: (...a) => backend.setUsername(...a),
+  createUser: (...a) => backend.adminCreateUser(...a)
 }
 
 export async function logout() {

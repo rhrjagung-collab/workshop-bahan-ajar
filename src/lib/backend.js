@@ -197,6 +197,17 @@ const supabaseBackend = {
     if (error) throw new Error(error.message)
   },
 
+  async adminCreateUser(nama, email, password, username, kelompok) {
+    const { data, error } = await sb.rpc('admin_create_user', {
+      p_nama: nama, p_email: email, p_password: password,
+      p_username: username || null, p_kelompok: kelompok || '-'
+    })
+    if (error) throw new Error(error.message)
+    const row = Array.isArray(data) ? data[0] : data
+    if (!row?.ok) throw new Error(row?.message || 'Pembuatan akun gagal.')
+    return row.message
+  },
+
   async setModuleProgress(participantId, moduleCode, percent, status) {
     const { error } = await sb.rpc('admin_set_module_progress', {
       p_participant_id: participantId, p_module_code: moduleCode, p_percent: percent, p_status: status

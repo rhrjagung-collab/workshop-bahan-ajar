@@ -16,6 +16,7 @@ const adminMsg = ref('')
 const adminBusy = ref(false)
 const sel = reactive({})        // participantId -> module code terpilih
 const peranSel = reactive({})   // participantId -> peran terpilih
+const nu = reactive({ nama: '', email: '', username: '', sandi: '', kelompok: '' })
 
 if (!store.session) go('/login')
 
@@ -173,6 +174,22 @@ function setUsername(p, value) {
     `Nama pengguna ${p.nama} disimpan — dapat dipakai untuk login.`
   )
 }
+
+async function createUser() {
+  if (DEMO_MODE) { adminMsg.value = 'Penambahan peserta hanya tersedia pada versi daring (Supabase).'; return }
+  adminBusy.value = true
+  adminMsg.value = ''
+  try {
+    const msg = await adminActions.createUser(nu.nama, nu.email, nu.sandi, nu.username, nu.kelompok)
+    adminMsg.value = msg
+    nu.nama = ''; nu.email = ''; nu.sandi = ''; nu.username = ''; nu.kelompok = ''
+    await refresh()
+  } catch (e) {
+    adminMsg.value = 'Gagal: ' + (e.message || 'kesalahan tidak diketahui')
+  } finally {
+    adminBusy.value = false
+  }
+}
 </script>
 
 <template>
@@ -248,6 +265,23 @@ function setUsername(p, value) {
               </tr>
             </tbody>
           </table>
+        </section>
+
+        <section v-if="isAdmin" class="card admin-card">
+          <h2>Tambah peserta baru</h2>
+          <p class="muted">Membuat akun login lengkap (email + kata sandi + baris roster) sekaligus. Kata sandi minimal 6 karakter.</p>
+          <form class="add-form" @submit.prevent="createUser">
+            <div class="form-row">
+              <div class="form-field"><label>Nama lengkap</label><input v-model="nu.nama" type="text" required placeholder="mis. Agung Raharjo" /></div>
+              <div class="form-field"><label>Email</label><input v-model="nu.email" type="email" required placeholder="mis. agung@bpjs.co.id" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field"><label>Nama pengguna (opsional)</label><input v-model="nu.username" type="text" placeholder="mis. agung.raharjo" /></div>
+              <div class="form-field"><label>Kata sandi</label><input v-model="nu.sandi" type="text" required minlength="6" placeholder="min. 6 karakter" /></div>
+              <div class="form-field"><label>Kelompok</label><input v-model="nu.kelompok" type="text" placeholder="mis. Kelompok 1" /></div>
+            </div>
+            <button class="btn btn-green" type="submit" :disabled="adminBusy">Buat akun peserta</button>
+          </form>
         </section>
 
         <section v-if="isAdmin" class="card admin-card">
@@ -336,6 +370,9 @@ h1, h2 { margin-top: 0; }
 .bad { color: var(--upn-red); }
 code { background: var(--bpjs-indigo-soft); padding: 1px 6px; border-radius: 5px; font-size: 12px; }
 .sel { max-width: 200px; font-size: var(--fs-small); padding: 7px 8px; margin-bottom: 4px; }
+.add-form { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.form-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.form-field { flex: 1; min-width: 180px; text-align: left; }
 .btn-danger { background: var(--upn-red); color: #fff; }
 .btn-danger:hover { filter: brightness(1.1); }
 td .btn { margin: 2px 4px 2px 0; }

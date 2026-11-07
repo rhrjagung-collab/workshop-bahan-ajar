@@ -228,11 +228,93 @@ as $$
    limit 1;
 $$;
 
+-- Buat akun login lengkap untuk peserta baru (admin saja):
+-- membuat baris auth.users + auth.identities (setara "Add user" di Dashboard)
+-- sekaligus baris roster participants — semuanya dalam satu panggilan.
+create extension if not exists pgcrypto with schema extensions;
+
+create or replace function public.admin_create_user(
+  p_nama text, p_email text, p_password text,
+  p_username text default null, p_kelompok text default '-'
+)
+returns table (ok boolean, message text)
+language plpgsql security definer set search_path = public, auth, extensions
+as $$
+declare
+  v_uid uuid;
+begin
+  if not public.is_admin() then
+    return query select false, 'Hanya admin yang dapat menambah peserta.';
+    return;
+  end if;
+
+  p_email := lower(trim(coalesce(p_email, '')));
+  if p_email !~ '^[^@[:space:]]+@[^@[:space:]]+\.[^@[:space:]]+$' then
+    return query select false, 'Format email tidak valid.';
+    return;
+  end if;
+  if length(coalesce(p_password, '')) < 6 then
+    return query select false, 'Kata sandi minimal 6 karakter.';
+    return;
+  end if;
+  if length(coalesce(trim(p_nama), '')) < 2 then
+    return query select false, 'Nama minimal 2 karakter.';
+    return;
+  end if;
+
+  if p_username is not null and length(trim(p_username)) >= 3 then
+    p_username := lower(trim(p_username));
+    if p_username ~ '[^a-z0-9._-]' then
+      return query select false, 'Nama pengguna hanya boleh huruf kecil, angka, titik, garis bawah, tanda hubung.';
+      return;
+    end if;
+    if exists (select 1 from public.participants where username = p_username) then
+      return query select false, 'Nama pengguna "' || p_username || '" sudah dipakai.';
+      return;
+    end if;
+  else
+    p_username := null;
+  end if;
+
+  if exists (select 1 from auth.users where lower(email) = p_email) then
+    return query select false, 'Email "' || p_email || '" sudah terdaftar.';
+    return;
+  end if;
+
+  insert into auth.users (
+    instance_id, id, aud, role, email, encrypted_password,
+    email_confirmed_at, raw_app_meta_data, raw_user_meta_data,
+    created_at, updated_at, confirmation_token, recovery_token,
+    email_change, email_change_token_new
+  ) values (
+    '00000000-0000-0000-0000-000000000000',
+    gen_random_uuid(), 'authenticated', 'authenticated',
+    p_email, crypt(p_password, gen_salt('bf')), now(),
+    '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb,
+    now(), now(), '', '', '', ''
+  ) returning id into v_uid;
+
+  insert into auth.identities (id, user_id, provider_id, identity_data, last_sign_in_at, created_at, updated_at)
+  values (
+    gen_random_uuid(), v_uid, 'email',
+    jsonb_build_object('sub', v_uid::text, 'email', p_email, 'email_verified', true),
+    now(), now(), now()
+  );
+
+  insert into public.participants (nama, email, username, kelompok, peran)
+  values (trim(p_nama), p_email, p_username, coalesce(nullif(trim(p_kelompok), ''), '-'), 'peserta')
+  on conflict (email) do update set peran = 'peserta', username = excluded.username;
+
+  return query select true, 'Peserta ' || p_email || ' berhasil dibuat — akun siap dipakai login.';
+end;
+$$;
+
 grant execute on function public.bind_and_get_me() to authenticated;
 grant execute on function public.admin_set_peran(text, text) to authenticated;
 grant execute on function public.admin_set_module_progress(uuid, text, int, text) to authenticated;
 grant execute on function public.admin_reset_all_progress(uuid) to authenticated;
 grant execute on function public.admin_set_username(uuid, text) to authenticated;
+grant execute on function public.admin_create_user(text, text, text, text, text) to authenticated;
 grant execute on function public.lookup_login_email(text) to anon, authenticated;
 
 -- 8) Hapus RPC lama v1 (sesi anonim + kode akses) -------------------------
