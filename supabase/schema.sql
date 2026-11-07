@@ -1,18 +1,22 @@
 -- ============================================================
--- Skema Supabase — Modul Persiapan Daring
+-- Skema Supabase v2 — Modul Persiapan Daring
 -- Workshop Inovasi Bahan Ajar Digital Jaminan Sosial
 --
 -- Cara pakai: Supabase Dashboard > SQL Editor > New query >
--- tempel seluruh file ini > Run.
+-- tempel SELURUH file ini > Run (aman dijalankan ulang).
 --
--- Model keamanan:
---  - Peserta login TANPA registrasi publik: masukkan email + kode akses
---    (RPC claim_participant, SECURITY DEFINER, hanya mengklaim baris roster).
---  - Sesi memakai Supabase Auth anonymous; identitas peserta disambungkan
---    lewat participants.auth_user_id.
---  - RLS: peserta hanya melihat/mengubah baris miliknya.
---    Fasilitator/narasumber/admin (peran di roster) dapat membaca semua
---    untuk kebutuhan dashboard.
+-- Model auth (v2):
+--  - Login via Supabase Auth: Google (Gmail) ATAU email + kata sandi
+--    yang dibuat administrasi (Dashboard > Authentication > Add user,
+--    centang Auto Confirm; matikan "Allow new users to sign up" agar
+--    hanya admin yang bisa membuat akun).
+--  - Saat pertama kali login, RPC bind_and_get_me menghubungkan akun
+--    auth dengan baris roster (berdasarkan auth_user_id atau email).
+--    Bila email belum terdaftar di roster (mis. login Gmail), baris
+--    peserta baru dibuat otomatis (peran 'peserta').
+--  - Peran: peserta | fasilitator | narasumber | admin.
+--    Dashboard dibuka untuk admin/fasilitator/narasumber; kontrol
+--    buka-kunci progres hanya untuk admin.
 -- ============================================================
 
 -- 1) Tabel roster peserta -----------------------------------------------
@@ -21,9 +25,9 @@ create table if not exists public.participants (
   nama         text not null,
   email        text not null unique,
   kelompok     text not null default '-',
-  kode_access  text not null,
-  peran        text not null default 'peserta', -- peserta | fasilitator | narasumber | admin
-  auth_user_id uuid unique,                      -- diisi oleh claim_participant
+  kode_access  text,                              -- warisan v1, tidak dipakai lagi
+  peran        text not null default 'peserta',   -- peserta | fasilitator | narasumber | admin
+  auth_user_id uuid unique,                       -- auth.users.id, diisi saat login pertama
   created_at   timestamptz not null default now()
 );
 
@@ -63,11 +67,17 @@ create index if not exists idx_quiz_participant on public.quiz_responses (partic
 create index if not exists idx_quiz_question   on public.quiz_responses (module_code, question_id);
 
 -- 5) Helper: peserta milik sesi saat ini ---------------------------------
+-- Murni pembacaan (pengikatan email→akun hanya terjadi di bind_and_get_me):
+-- cocokkan auth_user_id; bila belum terikat, cocokkan email tanpa mengubah.
 create or replace function public.current_participant_id()
 returns uuid
 language sql stable security definer set search_path = public
 as $$
-  select id from public.participants where auth_user_id = auth.uid();
+  select id from public.participants
+   where auth_user_id = auth.uid()
+      or (auth_user_id is null
+          and lower(email) = lower(coalesce(auth.jwt() ->> 'email', '')))
+   limit 1;
 $$;
 
 create or replace function public.is_faculty()
@@ -81,85 +91,176 @@ as $$
   );
 $$;
 
--- 6) RPC login: klaim baris roster dengan email + kode -------------------
--- Mengembalikan baris peserta bila cocok; kosong bila tidak.
-create or replace function public.claim_participant(p_email text, p_kode text)
+create or replace function public.is_admin()
+returns boolean
+language sql stable security definer set search_path = public
+as $$
+  select exists (
+    select 1 from public.participants
+    where auth_user_id = auth.uid() and peran = 'admin'
+  );
+$$;
+
+-- 6) RPC: ikat + ambil profil sesi (dipanggil frontend setelah login) -----
+-- Bila belum terikat: cari roster berdasarkan email; bila tidak ada, buat
+-- baris peserta baru (login Gmail di luar roster).
+create or replace function public.bind_and_get_me()
 returns setof public.participants
 language plpgsql security definer set search_path = public
 as $$
+declare
+  v_email text;
+  v_id uuid;
+  v_nama text;
 begin
-  update public.participants
-     set auth_user_id = auth.uid()
-   where lower(email) = lower(p_email)
-     and kode_access = p_kode
-     and (auth_user_id is null or auth_user_id = auth.uid());
-  if not found then
-    return;
+  if auth.uid() is null then return; end if;
+  v_email := lower(coalesce(auth.jwt() ->> 'email', ''));
+
+  select id into v_id from public.participants where auth_user_id = auth.uid();
+  if v_id is null and v_email <> '' then
+    select id into v_id from public.participants where lower(email) = v_email;
+    if v_id is not null then
+      update public.participants set auth_user_id = auth.uid() where id = v_id;
+    end if;
   end if;
-  return query
-    select * from public.participants
-     where auth_user_id = auth.uid();
+
+  if v_id is null then
+    v_nama := initcap(split_part(v_email, '@', 1));
+    insert into public.participants (nama, email, kelompok, peran, auth_user_id)
+    values (v_nama, v_email, '-', 'peserta', auth.uid())
+    on conflict (email) do update set auth_user_id = excluded.auth_user_id
+    returning id into v_id;
+  end if;
+
+  return query select * from public.participants where id = v_id;
 end;
 $$;
 
-create or replace function public.get_me()
-returns setof public.participants
-language sql stable security definer set search_path = public
+-- 7) RPC admin: kelola peran dan buka-kunci progres peserta ---------------
+
+-- Ubah peran peserta (admin saja)
+create or replace function public.admin_set_peran(p_email text, p_peran text)
+returns void
+language plpgsql security definer set search_path = public
 as $$
-  select * from public.participants where auth_user_id = auth.uid();
+begin
+  if not public.is_admin() then
+    raise exception 'Hanya admin yang dapat mengubah peran.';
+  end if;
+  if p_peran not in ('peserta','fasilitator','narasumber','admin') then
+    raise exception 'Peran tidak valid.';
+  end if;
+  update public.participants set peran = p_peran where lower(email) = lower(p_email);
+end;
 $$;
 
-grant execute on function public.claim_participant(text, text) to anon, authenticated;
-grant execute on function public.get_me() to anon, authenticated;
+-- Set progres satu modul peserta (admin saja) — dipakai untuk membuka
+-- (tandai 100/selesai) atau mengulang (0/belum) modul seorang peserta.
+create or replace function public.admin_set_module_progress(
+  p_participant_id uuid, p_module_code text, p_percent int, p_status text
+)
+returns void
+language plpgsql security definer set search_path = public
+as $$
+begin
+  if not public.is_admin() then
+    raise exception 'Hanya admin yang dapat mengubah progres peserta.';
+  end if;
+  if p_status not in ('belum','mulai','selesai') then
+    raise exception 'Status tidak valid.';
+  end if;
+  insert into public.module_progress (participant_id, module_code, percent, status, updated_at)
+  values (p_participant_id, p_module_code, p_percent, p_status, now())
+  on conflict (participant_id, module_code) do update
+    set percent = excluded.percent, status = excluded.status, updated_at = now();
+end;
+$$;
 
--- 7) Row Level Security ---------------------------------------------------
+-- Reset seluruh progres seorang peserta (admin saja)
+create or replace function public.admin_reset_all_progress(p_participant_id uuid)
+returns void
+language plpgsql security definer set search_path = public
+as $$
+begin
+  if not public.is_admin() then
+    raise exception 'Hanya admin yang dapat mereset progres peserta.';
+  end if;
+  delete from public.item_progress where participant_id = p_participant_id;
+  delete from public.module_progress where participant_id = p_participant_id;
+  delete from public.quiz_responses where participant_id = p_participant_id;
+end;
+$$;
+
+grant execute on function public.bind_and_get_me() to authenticated;
+grant execute on function public.admin_set_peran(text, text) to authenticated;
+grant execute on function public.admin_set_module_progress(uuid, text, int, text) to authenticated;
+grant execute on function public.admin_reset_all_progress(uuid) to authenticated;
+
+-- 8) Hapus RPC lama v1 (sesi anonim + kode akses) -------------------------
+drop function if exists public.claim_participant(text, text);
+drop function if exists public.get_me();
+
+-- 9) Row Level Security ---------------------------------------------------
 alter table public.participants    enable row level security;
 alter table public.item_progress   enable row level security;
 alter table public.module_progress enable row level security;
 alter table public.quiz_responses  enable row level security;
 
--- participants: lihat baris sendiri; tim fasilitator boleh melihat semua
+-- participants: lihat baris sendiri; tim boleh melihat semua
+drop policy if exists "baca diri sendiri" on public.participants;
 create policy "baca diri sendiri" on public.participants
-  for select using (auth_user_id = auth.uid());
+  for select using (auth_user_id = auth.uid() or (current_participant_id() = id and auth.uid() is not null));
+drop policy if exists "fasilitator baca semua" on public.participants;
 create policy "fasilitator baca semua" on public.participants
   for select using (public.is_faculty());
 
 -- item_progress
+drop policy if exists "tulis baca milik sendiri" on public.item_progress;
 create policy "tulis baca milik sendiri" on public.item_progress
   for all using (participant_id = public.current_participant_id())
   with check (participant_id = public.current_participant_id());
+drop policy if exists "fasilitator baca semua" on public.item_progress;
 create policy "fasilitator baca semua" on public.item_progress
   for select using (public.is_faculty());
 
 -- module_progress
+drop policy if exists "tulis baca milik sendiri" on public.module_progress;
 create policy "tulis baca milik sendiri" on public.module_progress
   for all using (participant_id = public.current_participant_id())
   with check (participant_id = public.current_participant_id());
+drop policy if exists "fasilitator baca semua" on public.module_progress;
 create policy "fasilitator baca semua" on public.module_progress
   for select using (public.is_faculty());
 
 -- quiz_responses
+drop policy if exists "tulis baca milik sendiri" on public.quiz_responses;
 create policy "tulis baca milik sendiri" on public.quiz_responses
   for all using (participant_id = public.current_participant_id())
   with check (participant_id = public.current_participant_id());
+drop policy if exists "fasilitator baca semua" on public.quiz_responses;
 create policy "fasilitator baca semua" on public.quiz_responses
   for select using (public.is_faculty());
 
 -- ============================================================
--- 8) Contoh isi roster — GANTI dengan data peserta asli!
---    Peran: 'peserta' untuk peserta; gunakan 'fasilitator'/'narasumber'
---    untuk tim agar bisa membuka dashboard.
+-- 10) Contoh isi roster — GANTI dengan data peserta asli!
+--     Peserta dibuat di sini (atau Table Editor) dengan email yang
+--     SAMA dengan akun Auth yang dibuat administrasi; pengikatan
+--     terjadi otomatis saat login pertama.
 -- ============================================================
-insert into public.participants (nama, email, kelompok, kode_access, peran) values
-  ('Contoh Peserta Satu',   'peserta1@contoh.id', 'Kelompok 1', 'MJS-DEMO-01', 'peserta'),
-  ('Contoh Peserta Dua',    'peserta2@contoh.id', 'Kelompok 1', 'MJS-DEMO-02', 'peserta'),
-  ('Contoh Fasilitator',    'fasilitator@contoh.id', 'Tim', 'MJS-FASIL-01', 'fasilitator'),
-  ('Contoh Narasumber',     'narasumber@contoh.id', 'Tim', 'MJS-NARA-01', 'narasumber')
+insert into public.participants (nama, email, kelompok, peran) values
+  ('Contoh Peserta Satu',   'peserta1@contoh.id', 'Kelompok 1', 'peserta'),
+  ('Contoh Fasilitator',    'fasilitator@contoh.id', 'Tim', 'fasilitator'),
+  ('Contoh Admin',          'admin@contoh.id', 'Tim', 'admin')
 on conflict (email) do nothing;
 
+-- Menjadikan seseorang admin (jalankan dengan email Anda sendiri):
+-- update public.participants set peran = 'admin' where lower(email) = 'nama.anda@gmail.com';
+
 -- Catatan operasional:
--- - Kode akses sebaiknya unik per orang dan dikirim via kanal resmi (email/WA).
--- - Untuk menonaktifkan peserta: delete barisnya atau kosongkan auth_user_id.
--- - claim_participant hanya bisa dipanggil sekali per baris (kode sekali pakai
---   per akun peramban) — bila peserta ganti perangkat, hubungi admin untuk
---   mengosongkan auth_user_id pada baris tersebut.
+-- - Buat akun login di Dashboard > Authentication > Add user (email + sandi,
+--   centang Auto Confirm) dengan email yang sama dengan roster di atas.
+-- - Login Google: aktifkan di Authentication > Sign In / Providers > Google
+--   (isi Client ID + Client Secret dari Google Cloud Console; ikuti panduan
+--   README bagian deployment).
+-- - Kontrol admin (ubah peran, buka kunci, reset progres) tersedia di
+--   halaman Dashboard setelah login sebagai admin.

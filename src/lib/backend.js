@@ -1,13 +1,15 @@
 // Adapter penyimpanan: Supabase (produksi) atau Local (demo/tanpa backend).
 // Antarmuka yang dipakai aplikasi:
-//   signIn(email, kode) -> participant
-//   restoreSession()    -> participant | null
+//   signIn(email, sandi)   -> participant (email + kata sandi dari admin)
+//   signInGoogle()         -> participant (redirect OAuth Google)
+//   restoreSession()       -> participant | null
 //   signOut()
-//   loadMyData()        -> { items: {}, modules: {}, quiz: [] }
-//   saveItem(moduleCode, itemKey, state)
-//   saveModuleProgress(moduleCode, percent, status)
-//   saveQuizResponse(row)
-//   loadDashboard()     -> { participants, items, modules, quiz }
+//   loadMyData()           -> { items: {}, modules: {}, quiz: [] }
+//   saveItem / saveModuleProgress / saveQuizResponse
+//   loadDashboard()        -> { participants, items, modules, quiz }
+//   setModuleProgress(participantId, moduleCode, percent, status)  [admin]
+//   resetParticipantProgress(participantId)                        [admin]
+//   setPeran(email, peran)                                         [admin]
 
 import { createClient } from '@supabase/supabase-js'
 import { SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_ENABLED } from './config.js'
@@ -15,7 +17,7 @@ import { SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_ENABLED } from './config.js'
 let sb = null
 if (SUPABASE_ENABLED) {
   sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-    auth: { persistSession: true, autoRefreshToken: true }
+    auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
   })
 }
 
@@ -35,19 +37,21 @@ function localWrite(key, value) {
 
 const localBackend = {
   mode: 'local',
-  async signIn(email, kode) {
-    // Demo: roster contoh; kode akses bebas (min. 4 karakter).
-    if (!email || !kode || kode.length < 4) throw new Error('Email dan kode akses (min. 4 karakter) wajib diisi.')
+  async signIn(email, sandi) {
+    if (!email || !sandi || sandi.length < 4) throw new Error('Email dan kata sandi (min. 4 karakter) wajib diisi.')
     const nama = email.split('@')[0].replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
     const participant = {
       id: 'demo-' + email.toLowerCase(),
       nama,
       email: email.toLowerCase(),
       kelompok: 'Demo',
-      peran: email.toLowerCase().endsWith('@fasilitator.id') ? 'fasilitator' : 'peserta'
+      peran: email.toLowerCase().startsWith('admin') ? 'admin' : email.toLowerCase().startsWith('fasilitator') ? 'fasilitator' : 'peserta'
     }
     localWrite(LS.session, participant)
     return participant
+  },
+  async signInGoogle() {
+    throw new Error('Login Google hanya tersedia pada versi daring (Supabase).')
   },
   async restoreSession() { return localRead(LS.session, null) },
   async signOut() { localStorage.removeItem(LS.session) },
@@ -77,7 +81,10 @@ const localBackend = {
   },
   async loadDashboard() {
     return { participants: [], items: {}, modules: {}, quiz: [], empty: true }
-  }
+  },
+  async setModuleProgress() { /* demo: tidak tersedia */ },
+  async resetParticipantProgress() { /* demo: tidak tersedia */ },
+  async setPeran() { /* demo: tidak tersedia */ }
 }
 
 /* ---------------- Mode Supabase ---------------- */
@@ -85,27 +92,35 @@ const localBackend = {
 const supabaseBackend = {
   mode: 'supabase',
 
-  async signIn(email, kode) {
-    // 1) sesi anonim  2) klaim baris roster via RPC SECURITY DEFINER
-    const { error: anonErr } = await sb.auth.signInAnonymously()
-    if (anonErr) throw new Error('Gagal memulai sesi: ' + anonErr.message)
-    const { data, error } = await sb.rpc('claim_participant', { p_email: email.trim(), p_kode: kode.trim() })
-    if (error) { await sb.auth.signOut(); throw new Error('Login gagal: ' + error.message) }
-    if (!data || data.length === 0) {
-      await sb.auth.signOut()
-      throw new Error('Email atau kode akses tidak cocok dengan daftar peserta. Hubungi administrasi kegiatan.')
-    }
-    const p = Array.isArray(data) ? data[0] : data
-    const participant = { id: p.id, nama: p.nama, email: p.email, kelompok: p.kelompok, peran: p.peran }
-    return participant
+  async signIn(email, sandi) {
+    const { error } = await sb.auth.signInWithPassword({ email: email.trim(), password: sandi })
+    if (error) throw new Error(this._authErr(error))
+    return this.restoreSession()
+  },
+
+  async signInGoogle() {
+    const { error } = await sb.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.origin + window.location.pathname }
+    })
+    if (error) throw new Error(this._authErr(error))
+    // Peramban dialihkan ke Google; sesi dibaca ulang setelah kembali.
+  },
+
+  _authErr(error) {
+    const m = (error?.message || '').toLowerCase()
+    if (m.includes('invalid login credentials')) return 'Email atau kata sandi salah. Akun dibuat oleh administrasi kegiatan.'
+    if (m.includes('email not confirmed')) return 'Email belum dikonfirmasi. Hubungi administrasi kegiatan.'
+    if (m.includes('provider is not enabled') || m.includes('unsupported provider')) return 'Login Google belum diaktifkan di Supabase — gunakan email & kata sandi.'
+    return error?.message || 'Login gagal.'
   },
 
   async restoreSession() {
     const { data: { session } } = await sb.auth.getSession()
     if (!session) return null
-    const { data, error } = await sb.rpc('get_me')
+    const { data, error } = await sb.rpc('bind_and_get_me')
     if (error || !data || (Array.isArray(data) ? data.length : 0) === 0) {
-      await sb.auth.signOut()
+      // Tidak bisa memastikan profil — perlakukan sebagai belum login.
       return null
     }
     const p = Array.isArray(data) ? data[0] : data
@@ -158,11 +173,28 @@ const supabaseBackend = {
       sb.from('item_progress').select('*'),
       sb.from('quiz_responses').select('*')
     ])
-    if (p.error) throw new Error('Dashboard hanya untuk fasilitator/narasumber: ' + p.error.message)
+    if (p.error) throw new Error('Dashboard hanya untuk admin/fasilitator/narasumber: ' + p.error.message)
     return {
       participants: p.data || [], modules: m.data || [],
       items: it.data || [], quiz: q.data || []
     }
+  },
+
+  async setModuleProgress(participantId, moduleCode, percent, status) {
+    const { error } = await sb.rpc('admin_set_module_progress', {
+      p_participant_id: participantId, p_module_code: moduleCode, p_percent: percent, p_status: status
+    })
+    if (error) throw new Error(error.message)
+  },
+
+  async resetParticipantProgress(participantId) {
+    const { error } = await sb.rpc('admin_reset_all_progress', { p_participant_id: participantId })
+    if (error) throw new Error(error.message)
+  },
+
+  async setPeran(email, peran) {
+    const { error } = await sb.rpc('admin_set_peran', { p_email: email, p_peran: peran })
+    if (error) throw new Error(error.message)
   },
 
   async _meId() {

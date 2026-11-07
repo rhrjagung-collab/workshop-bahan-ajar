@@ -26,11 +26,23 @@ export async function loadMyData() {
   store.quiz = data.quiz || []
 }
 
-export async function login(email, kode) {
-  const p = await backend.signIn(email, kode)
+export async function login(email, sandi) {
+  const p = await backend.signIn(email, sandi)
+  if (!p) throw new Error('Login gagal — coba lagi.')
   store.session = p
   await loadMyData()
   return p
+}
+
+export async function loginGoogle() {
+  await backend.signInGoogle()
+}
+
+// Aksi admin (hanya berpengaruh bila sesi berperan admin di Supabase)
+export const adminActions = {
+  setModuleProgress: (...a) => backend.setModuleProgress(...a),
+  resetParticipantProgress: (...a) => backend.resetParticipantProgress(...a),
+  setPeran: (...a) => backend.setPeran(...a)
 }
 
 export async function logout() {

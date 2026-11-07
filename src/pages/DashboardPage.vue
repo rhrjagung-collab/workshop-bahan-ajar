@@ -1,15 +1,21 @@
 <script setup>
-// Dashboard fasilitator/narasumber: kelengkapan per peserta, agregat per modul,
-// soal tersulit, dan ekspor CSV.
-import { ref, computed, onMounted } from 'vue'
+// Dashboard: admin/fasilitator/narasumber memantau kelengkapan peserta.
+// Admin tambahan: membuka (tandai selesai) / mengulang progres peserta
+// dan mengubah peran — dieksekusi lewat RPC SECURITY DEFINER di Supabase.
+import { ref, computed, reactive, onMounted } from 'vue'
 import { backend } from '../lib/backend.js'
 import { modules } from '../lib/course.js'
-import { isFacilitator, store } from '../lib/store.js'
+import { isFacilitator, store, adminActions } from '../lib/store.js'
 import { go } from '../lib/router.js'
+import { DEMO_MODE } from '../lib/config.js'
 
 const data = ref(null)
 const err = ref('')
 const loading = ref(true)
+const adminMsg = ref('')
+const adminBusy = ref(false)
+const sel = reactive({})        // participantId -> module code terpilih
+const peranSel = reactive({})   // participantId -> peran terpilih
 
 if (!store.session) go('/login')
 
@@ -18,6 +24,10 @@ async function refresh() {
   err.value = ''
   try {
     data.value = await backend.loadDashboard()
+    for (const p of (data.value?.participants || [])) {
+      if (!sel[p.id]) sel[p.id] = 'c0'
+      if (!peranSel[p.id]) peranSel[p.id] = p.peran
+    }
   } catch (e) {
     err.value = e.message
   } finally {
@@ -26,6 +36,8 @@ async function refresh() {
 }
 
 onMounted(refresh)
+
+const isAdmin = computed(() => store.session?.peran === 'admin')
 
 // Matriks peserta x modul
 const rows = computed(() => {
@@ -75,8 +87,8 @@ const hardest = computed(() => {
     .slice(0, 10)
 })
 
-function downloadCsv(name, rows) {
-  const csv = rows.map(r => r.map(c => `"${String(c ?? '').replaceAll('"', '""')}"`).join(';')).join('\n')
+function downloadCsv(name, rowsOut) {
+  const csv = rowsOut.map(r => r.map(c => `"${String(c ?? '').replaceAll('"', '""')}"`).join(';')).join('\n')
   const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' })
   const a = document.createElement('a')
   a.href = URL.createObjectURL(blob)
@@ -105,19 +117,67 @@ function exportQuiz() {
   ])
   downloadCsv('respons-kuis.csv', [header, ...body])
 }
+
+/* ---------- Aksi admin ---------- */
+
+async function adminRun(fn, okMsg) {
+  if (DEMO_MODE) { adminMsg.value = 'Aksi admin hanya tersedia pada versi daring (Supabase).' ; return }
+  adminBusy.value = true
+  adminMsg.value = ''
+  try {
+    await fn()
+    adminMsg.value = okMsg
+    await refresh()
+  } catch (e) {
+    adminMsg.value = 'Gagal: ' + (e.message || 'kesalahan tidak diketahui')
+  } finally {
+    adminBusy.value = false
+  }
+}
+
+function unlockModule(p) {
+  const code = sel[p.id]
+  adminRun(
+    () => adminActions.setModuleProgress(p.id, code, 100, 'selesai'),
+    `Modul ${code.toUpperCase()} atas nama ${p.nama} ditandai selesai (terbuka).`
+  )
+}
+
+function resetModule(p) {
+  const code = sel[p.id]
+  adminRun(
+    () => adminActions.setModuleProgress(p.id, code, 0, 'belum'),
+    `Progres ${code.toUpperCase()} atas nama ${p.nama} dikembalikan ke awal.`
+  )
+}
+
+function resetAll(p) {
+  if (!confirm(`Reset SELURUH progres ${p.nama}? Tindakan ini tidak dapat dibatalkan.`)) return
+  adminRun(
+    () => adminActions.resetParticipantProgress(p.id),
+    `Seluruh progres ${p.nama} telah direset.`
+  )
+}
+
+function applyPeran(p) {
+  adminRun(
+    () => adminActions.setPeran(p.email, peranSel[p.id]),
+    `Peran ${p.nama} diubah menjadi ${peranSel[p.id]}.`
+  )
+}
 </script>
 
 <template>
   <div class="dash">
     <div v-if="!isFacilitator && !loading" class="card warn-card">
       <h1>Akses terbatas</h1>
-      <p>Dashboard hanya untuk fasilitator, narasumber, dan administrasi. Peran Anda saat ini: <strong>{{ store.session?.peran }}</strong>.</p>
+      <p>Dashboard hanya untuk admin, fasilitator, dan narasumber. Peran Anda saat ini: <strong>{{ store.session?.peran }}</strong>.</p>
       <a class="btn btn-ghost" href="#/">Kembali</a>
     </div>
 
     <template v-else>
       <div class="card head-card">
-        <h1>Dashboard fasilitator</h1>
+        <h1>Dashboard {{ isAdmin ? 'admin' : 'fasilitator' }}</h1>
         <p class="muted">Kelengkapan modul peserta sebelum workshop 9–10 November 2026. Data diperbarui otomatis setiap kali peserta menyelesaikan aktivitas.</p>
         <div class="actions">
           <button class="btn btn-primary btn-small" @click="exportMatrix">Ekspor kelengkapan (CSV)</button>
@@ -181,6 +241,50 @@ function exportQuiz() {
             </tbody>
           </table>
         </section>
+
+        <section v-if="isAdmin" class="card admin-card">
+          <h2>Kontrol admin — kelola peserta</h2>
+          <p class="muted">
+            Membuka modul (tandai selesai) untuk peserta yang terkendala, mengulang progres,
+            dan mengatur peran. Perubahan langsung berpengaruh pada akses peserta.
+          </p>
+          <p v-if="adminMsg" class="admin-msg" role="status">{{ adminMsg }}</p>
+          <div class="scroll">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Peserta</th><th>Peran</th>
+                  <th>Buka kunci / ulang modul</th><th>Aksi lain</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="r in rows" :key="r.p.id">
+                  <td><strong>{{ r.p.nama }}</strong><br /><span class="muted">{{ r.p.email }}</span></td>
+                  <td>
+                    <select v-model="peranSel[r.p.id]" class="sel" :disabled="adminBusy || r.p.id === store.session.id">
+                      <option value="peserta">peserta</option>
+                      <option value="fasilitator">fasilitator</option>
+                      <option value="narasumber">narasumber</option>
+                      <option value="admin">admin</option>
+                    </select>
+                    <button class="btn btn-ghost btn-small" :disabled="adminBusy || r.p.id === store.session.id" @click="applyPeran(r.p)">Terapkan</button>
+                  </td>
+                  <td>
+                    <select v-model="sel[r.p.id]" class="sel" :disabled="adminBusy">
+                      <option v-for="m in modules" :key="m.code" :value="m.code">{{ m.code.toUpperCase() }} — {{ m.judul }}</option>
+                    </select>
+                    <button class="btn btn-green btn-small" :disabled="adminBusy" @click="unlockModule(r.p)">Tandai selesai</button>
+                    <button class="btn btn-ghost btn-small" :disabled="adminBusy" @click="resetModule(r.p)">Ulang modul</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger btn-small" :disabled="adminBusy" @click="resetAll(r.p)">Reset semua progres</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p v-if="DEMO_MODE" class="hint">Mode demo: kontrol admin aktif hanya pada versi daring dengan Supabase.</p>
+        </section>
       </template>
     </template>
   </div>
@@ -192,6 +296,11 @@ h1, h2 { margin-top: 0; }
 .muted { color: var(--ink-soft); font-size: var(--fs-small); }
 .actions { display: flex; gap: 10px; flex-wrap: wrap; }
 .warn-card, .error-card { border-left: 6px solid var(--upn-red); }
+.admin-card { border-left: 6px solid var(--upn-gold); }
+.admin-msg {
+  background: var(--bpjs-green-soft); color: var(--bpjs-green-dark);
+  padding: 10px 12px; border-radius: var(--radius-sm); font-size: var(--fs-small);
+}
 .mod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
 .mod-cell { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 10px 12px; }
 .mod-code { font-weight: 800; color: var(--bpjs-indigo); margin-bottom: 6px; }
@@ -201,7 +310,7 @@ h1, h2 { margin-top: 0; }
 .mod-cell p { font-size: 12px; color: var(--ink-faint); margin: 6px 0 0; }
 .scroll { overflow-x: auto; }
 .table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); }
-.table th, .table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+.table th, .table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: middle; }
 .table th { color: var(--ink-faint); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
 .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 5px; }
 .st-selesai { background: var(--bpjs-green); }
@@ -209,4 +318,8 @@ h1, h2 { margin-top: 0; }
 .st-belum { background: #C9CEDA; }
 .bad { color: var(--upn-red); }
 code { background: var(--bpjs-indigo-soft); padding: 1px 6px; border-radius: 5px; font-size: 12px; }
+.sel { max-width: 200px; font-size: var(--fs-small); padding: 7px 8px; margin-bottom: 4px; }
+.btn-danger { background: var(--upn-red); color: #fff; }
+.btn-danger:hover { filter: brightness(1.1); }
+td .btn { margin: 2px 4px 2px 0; }
 </style>
