@@ -46,28 +46,28 @@
       "correct": 2,
       "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi dimulai."
     },
-    { "type": "section", "num": "3", "title": "Bagaimana wujud storyboard yang benar", "sub": "Contoh nyata dari portofolio desainer instruksional profesional, lalu adaptasinya" },
+    { "type": "section", "num": "3", "title": "Bagaimana wujud storyboard yang benar", "sub": "Templat standar industri produksi visual, lalu adaptasinya untuk pelatihan" },
     {
       "type": "text",
-      "html": "<p>Storyboard desain instruksional yang baik bukan sekadar deretan kotak gambar. Lihat contoh nyata berikut dari <strong>portofolio publik Devlin Peck</strong>, desainer instruksional e-learning yang karyanya banyak dipakai sebagai rujukan industri: satu blok per slide dengan kolom <strong>Title — On-screen text — Voiceover — Animation notes — Programming notes</strong>, plus placeholder gambar. Perhatikan hal terpenting: <strong>teks di layar (OST) dan narasi (VO) ditulis berbeda sejak storyboard</strong> — saluran layar dan saluran lisan tidak boleh menduplikasi satu sama lain (prinsip redundancy yang akan kita dalami di modul C4).</p>"
+      "html": "<p>Storyboard lahir dari industri produksi visual — film, animasi, iklan — sebagai alat merencanakan <strong>sebelum</strong> produksi mahal dimulai. Templat standarnya sederhana dan langsung terasa familier: satu halaman per <strong>scene</strong>, satu panel per <strong>shot</strong>, dan di bawah setiap panel tiga kolom keputusan: <strong>Action</strong> (apa yang terjadi/tampil), <strong>Dialogue</strong> (apa yang diucapkan), <strong>FX</strong> (efek/animasi yang menyertai).</p><p>Untuk pembelajaran, pemetaannya satu-satu: <strong>scene → sesi, shot → slide</strong>, Action → isi dan aktivitas slide, Dialogue → <em>narasi yang diucapkan fasilitator</em>, FX → interaksi atau animasi. Perhatikan sejak sekarang: kolom yang diucapkan <strong>tidak boleh mengulang</strong> teks yang tampil di layar — prinsip redundancy yang akan kita dalami di modul C4.</p>"
     },
     {
       "type": "figure",
-      "src": "figures/fig-peck-storyboard-storyline.jpg",
-      "alt": "Contoh storyboard nyata dari portofolio Devlin Peck: satu blok Slide 1.1 Introduction dengan kolom Title, On-screen text, Voiceover berisi nama file audio dan teks narasi, Animation notes, Programming notes, dan placeholder gambar",
-      "caption": "Satu blok storyboard profesional: judul slide, teks di layar (OST), narasi suara (VO) beserta nama file audionya, catatan animasi, catatan pemrograman, dan placeholder gambar.",
-      "credit": "© Devlin Peck (devlinpeck.com) — 'How to Create a Storyboard for eLearning'; digunakan utuh dengan atribusi untuk pendidikan internal."
+      "src": "figures/fig-storyboard-template-commons.jpg",
+      "alt": "Templat storyboard standar industri: satu halaman SCENE berisi tiga panel SHOT # dengan kotak gambar di atas dan baris ACTION, DIALOGUE, FX di bawah setiap panel",
+      "caption": "Templat storyboard standar industri: SCENE/PAGE di atas, tiga panel SHOT dengan kotak visual, dan kolom Action–Dialogue–FX di bawah setiap panel.",
+      "credit": "Wikimedia Commons, 'Storyboard Template' oleh 70Jack90 — CC BY-SA 3.0."
     },
     {
       "type": "text",
-      "html": "<p>Untuk pelatihan tatap muka klasik seperti milik Anda, format yang sama diterjemahkan menjadi empat kolom yang lebih ringkas: <strong>sketsa visual • teks di layar • narasi presenter • interaksi</strong>. Isi seluruh formatnya dengan topik internal, sehingga tim dapat meninjau alur dan fungsi tiap slide <em>sebelum</em> produksi dimulai.</p>"
+      "html": "<p>Untuk sesi pelatihan tatap muka, format yang sama diterjemahkan menjadi empat kolom yang lebih ringkas dan berbahasa fasilitasi: <strong>sketsa visual • teks di layar • narasi presenter • interaksi</strong>. Contoh di bawah mengisi seluruh formatnya dengan topik internal, sehingga tim dapat meninjau alur dan fungsi tiap slide <em>sebelum</em> satu pun slide dibuat di PowerPoint.</p>"
     },
     {
       "type": "figure",
       "src": "figures/contoh-storyboard.svg",
       "alt": "Contoh storyboard tiga slide: slide pemantik, konsep inti, dan latihan — masing-masing dengan sketsa visual, teks di layar, narasi presenter, dan interaksi",
-      "caption": "Adaptasi format profesional untuk sesi pelatihan tatap muka: satu blok per slide, empat keputusan yang harus dijawab sebelum buka PowerPoint.",
-      "credit": "Ilustrasi tim modul (2026), mengikuti format storyboard desain instruksional profesional — bebas lisensi."
+      "caption": "Adaptasi templat industri untuk sesi pelatihan tatap muka: satu blok per slide, empat keputusan yang harus dijawab sebelum produksi.",
+      "credit": "Ilustrasi tim modul (2026), mengikuti format storyboard industri — bebas lisensi."
     },
     {
       "type": "figure",
