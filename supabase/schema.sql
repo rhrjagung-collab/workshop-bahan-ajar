@@ -306,9 +306,11 @@ begin
     now(), now(), '', '', '', ''
   ) returning id into v_uid;
 
+  -- provider_id untuk identitas email = email pengguna (bukan string 'email'),
+  -- constraint unik (provider_id, provider) menuntut satu baris per email.
   insert into auth.identities (id, user_id, provider, provider_id, identity_data, last_sign_in_at, created_at, updated_at)
   values (
-    gen_random_uuid(), v_uid, 'email', 'email',
+    gen_random_uuid(), v_uid, 'email', p_email,
     jsonb_build_object('sub', v_uid::text, 'email', p_email, 'email_verified', true),
     now(), now(), now()
   );
@@ -318,6 +320,12 @@ begin
   on conflict (email) do update set peran = 'peserta', username = excluded.username;
 
   return query select true, 'Peserta ' || coalesce(p_username, p_email) || ' berhasil dibuat — akun siap dipakai login.';
+
+exception
+  when unique_violation then
+    return query select false, 'Gagal: identitas/email sudah terdaftar pada sistem autentikasi.';
+  when foreign_key_violation then
+    return query select false, 'Gagal: referensi pengguna tidak valid.';
 end;
 $$;
 
@@ -352,6 +360,17 @@ grant execute on function public.admin_set_username(uuid, text) to authenticated
 grant execute on function public.admin_create_user(text, text, text, text, text) to authenticated;
 grant execute on function public.admin_delete_user(uuid) to authenticated;
 grant execute on function public.lookup_login_email(text) to anon, authenticated;
+
+-- Perbaikan otomatis (idempoten): identitas email lama yang provider_id-nya
+-- salah (mis. 'email' alih-alih alamat email) diselaraskan dengan auth.users.
+-- Tanpa ini, akun yang dibuat sebelum perbaikan tidak dapat login.
+update auth.identities i
+set provider_id = lower(u.email),
+    identity_data = jsonb_build_object('sub', u.id::text, 'email', lower(u.email), 'email_verified', true)
+from auth.users u
+where i.user_id = u.id
+  and i.provider = 'email'
+  and i.provider_id <> lower(u.email);
 
 -- 8) Hapus RPC lama v1 (sesi anonim + kode akses) -------------------------
 drop function if exists public.claim_participant(text, text);
