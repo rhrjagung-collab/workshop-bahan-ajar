@@ -6,7 +6,12 @@
   "deskripsi": "Memilih bentuk visual sesuai relasi pesan, membedah anatomi infografis, dan merencanakan proses desain dari tujuan dan audiens.",
   "penutup": "Rencana visual Anda (LK6) menjadi bahan sesi M5 — peserta akan saling menguji interpretasi visual. Modul C6 terbuka setelah modul ini 100% selesai.",
   "blocks": [
-    { "type": "section", "num": "1", "title": "Visual menjelaskan relasi, bukan menghias", "sub": "Pilih bentuk sesuai struktur pesan" },
+    {
+      "type": "section",
+      "num": "1",
+      "title": "Visual menjelaskan relasi, bukan menghias",
+      "sub": "Pilih bentuk sesuai struktur pesan"
+    },
     {
       "type": "text",
       "html": "<p>Visual dibuat untuk <strong>menunjukkan relasi</strong> yang sulit dibaca dari teks. Pilih bentuk sesuai struktur pesan:</p><ul><li><strong>Urutan/proses</strong> → flowchart atau timeline</li><li><strong>Perbandingan</strong> → tabel ringkas atau bar chart dengan skala jelas</li><li><strong>Hierarki/struktur</strong> → pohon atau diagram bertingkat</li><li><strong>Siklus</strong> → diagram melingkar dengan panah arah</li><li><strong>Sebab-akibat</strong> → diagram hubungan atau fishbone</li><li><strong>Distribusi</strong> → histogram/peta dengan skala</li></ul><p>Bila pesan utamanya bukan relasi — hanya daftar — bullet singkat sudah cukup, dan diagram justru menjadi kebisingan.</p>"
@@ -19,23 +24,63 @@
       "aspect": "16 / 9",
       "instruction": "<p>Klik keenam penanda pada contoh infografis berikut untuk membedah anatominya.</p>",
       "hotspots": [
-        { "x": 8, "y": 16, "label": "Judul yang menyatakan pesan", "text": "Judul bukan nama topik, melainkan kesimpulan yang ingin dibaca audiens: 'Alur Klaim JKN: dari faskes ke penyelesaian' langsung memberi kerangka berpikir." },
-        { "x": 70, "y": 18, "label": "Konteks singkat", "text": "Satu baris menjelaskan apa yang ditampilkan dan untuk siapa — audiens tidak perlu menebak." },
-        { "x": 16, "y": 26, "label": "Bentuk sesuai relasi", "text": "Pesannya proses berurutan, maka bentuknya flow empat langkah dengan panah arah — bukan bullet, bukan pie chart." },
-        { "x": 18, "y": 55, "label": "Angka dengan unit & konteks", "text": "Setiap angka punya satuan dan penjelasan singkat. Angka tanpa unit menuntun pembaca menafsirkan salah." },
-        { "x": 8, "y": 72, "label": "Catatan batas data", "text": "Infografis jujur menyebut batasannya: 'angka ilustratif' ditandai eksplisit agar tidak disalahartikan sebagai data resmi." },
-        { "x": 8, "y": 76, "label": "Sumber & tahun", "text": "Sumber, tahun, dan pihak pengolah data dicantumkan — akurasi dan keterlacakan mengalahkan dekorasi." }
+        {
+          "x": 8,
+          "y": 16,
+          "label": "Judul yang menyatakan pesan",
+          "text": "Judul bukan nama topik, melainkan kesimpulan yang ingin dibaca audiens: 'Alur Klaim JKN: dari faskes ke penyelesaian' langsung memberi kerangka berpikir."
+        },
+        {
+          "x": 70,
+          "y": 18,
+          "label": "Konteks singkat",
+          "text": "Satu baris menjelaskan apa yang ditampilkan dan untuk siapa — audiens tidak perlu menebak."
+        },
+        {
+          "x": 16,
+          "y": 26,
+          "label": "Bentuk sesuai relasi",
+          "text": "Pesannya proses berurutan, maka bentuknya flow empat langkah dengan panah arah — bukan bullet, bukan pie chart."
+        },
+        {
+          "x": 18,
+          "y": 55,
+          "label": "Angka dengan unit & konteks",
+          "text": "Setiap angka punya satuan dan penjelasan singkat. Angka tanpa unit menuntun pembaca menafsirkan salah."
+        },
+        {
+          "x": 8,
+          "y": 72,
+          "label": "Catatan batas data",
+          "text": "Infografis jujur menyebut batasannya: 'angka ilustratif' ditandai eksplisit agar tidak disalahartikan sebagai data resmi."
+        },
+        {
+          "x": 8,
+          "y": 76,
+          "label": "Sumber & tahun",
+          "text": "Sumber, tahun, dan pihak pengolah data dicantumkan — akurasi dan keterlacakan mengalahkan dekorasi."
+        }
       ]
     },
     {
       "type": "mcq",
       "item_key": "c5-mcq1",
       "question": "Diagram paling tepat digunakan ketika…",
-      "options": ["Ingin membuat slide lebih ramai", "Ada relasi, urutan, struktur, atau proses yang perlu dipahami", "Tidak ada data atau konsep", "Semua informasi harus masuk satu halaman"],
+      "options": [
+        "Ingin membuat slide lebih ramai",
+        "Ada relasi, urutan, struktur, atau proses yang perlu dipahami",
+        "Tidak ada data atau konsep",
+        "Semua informasi harus masuk satu halaman"
+      ],
       "correct": 1,
       "rationale": "Bentuk visual dipilih berdasarkan struktur pesan — diagram yang tidak menunjukkan relasi hanyalah dekorasi."
     },
-    { "type": "section", "num": "2", "title": "Proses desain dimulai dari tujuan dan audiens", "sub": "Riset: kesalahan umum adalah langsung membuka aplikasi desain" },
+    {
+      "type": "section",
+      "num": "2",
+      "title": "Proses desain dimulai dari tujuan dan audiens",
+      "sub": "Riset: kesalahan umum adalah langsung membuka aplikasi desain"
+    },
     {
       "type": "text",
       "html": "<p>Telaah desain infografis (Traboco et al., 2022) menegaskan urutannya: <strong>definisikan tujuan infografis dan target audiensnya lebih dulu</strong>, baru pertimbangkan tata letak, warna, huruf, dan konteks. Alat desain (Canva, PowerPoint, perangkat data) adalah kendaraan — masing-masing kuat pada kebutuhan yang berbeda, dan pilihan yang salah membuat pesan terkalahkan oleh template.</p>"
@@ -45,14 +90,16 @@
       "src": "figures/fig-traboco-venn.png",
       "alt": "Diagram Venn dari Traboco et al. 2022: tiga lingkaran kemampuan alat desain infografis — teks polos (PowerPoint), grafik dan angka (tabel data), serta templat siap pakai (Canva, Vengage, Adobe) — dengan irisan grafis-ikon, grafik-grafik, kustomisasi desain, dan saran AI kontekstual",
       "caption": "Peta kemampuan alat: pilih dari kebutuhan pesan (teks? angka? template?), bukan dari kepopuleran aplikasi.",
-      "credit": "Traboco et al. (2022), Journal of Korean Medical Science 37:e214, Gambar 1 — CC BY-NC 4.0, penggunaan non-komersial dengan atribusi."
+      "credit": "Traboco et al. (2022), Journal of Korean Medical Science 37:e214, Gambar 1 — CC BY-NC 4.0, penggunaan non-komersial dengan atribusi.",
+      "link": "https://doi.org/10.3346/jkms.2022.37.e214"
     },
     {
       "type": "figure",
       "src": "figures/fig-li-fishbone-mingguan.png",
       "alt": "Contoh 2 dari Li et al. 2024: fishbone dengan blok-blok berwarna per minggu menampilkan distribusi konten, aktivitas, dan penilaian formatif mingguan sampai penilaian akhir",
       "caption": "Contoh kedua dari Li et al. (2024): visual struktural yang memetakan konten dan penilaian per periode — perhatikan bagaimana warna dan blok mempermudah pemindaian, bukan menghias.",
-      "credit": "Li et al. (2024), Education and Information Technologies 29:25281–25306, Contoh 2 — CC BY 4.0."
+      "credit": "Li et al. (2024), Education and Information Technologies 29:25281–25306, Contoh 2 — CC BY 4.0.",
+      "link": "https://doi.org/10.1007/s10639-024-12799-5"
     },
     {
       "type": "mcq",
@@ -67,7 +114,12 @@
       "correct": 1,
       "rationale": "Artikel menegaskan: untuk desain berdampak, tujuan dan target audiens harus didefinisikan lebih dulu — tata letak, warna, huruf menyusul."
     },
-    { "type": "section", "num": "3", "title": "Uji interpretasi & kejujuran data", "sub": "Visual yang baik lolos dibaca tanpa penjelasan pembuatnya" },
+    {
+      "type": "section",
+      "num": "3",
+      "title": "Uji interpretasi & kejujuran data",
+      "sub": "Visual yang baik lolos dibaca tanpa penjelasan pembuatnya"
+    },
     {
       "type": "text",
       "html": "<p>Cara tercepat menguji kualitas visual: minta <strong>orang lain menjelaskannya tanpa Anda menemani</strong>. Bila penjelasannya meleset dari pesan utama, masalahnya pada visual — bukan pada pembaca. Serta hindari: chart dekoratif, ikon tanpa makna, skala menyesatkan (mis. sumbu tidak mulai dari nol tanpa alasan), warna sebagai satu-satunya pembeda, dan infografis tanpa sumber data.</p>"
@@ -96,11 +148,21 @@
       "type": "mcq",
       "item_key": "c5-mcq2",
       "question": "Satu kelompok membuat infografis tanpa sumber data. Revisi pertama yang paling penting adalah…",
-      "options": ["Menambah ikon", "Mengganti font", "Menambahkan sumber, tahun, unit, dan konteks data", "Mengubah latar menjadi gradasi"],
+      "options": [
+        "Menambah ikon",
+        "Mengganti font",
+        "Menambahkan sumber, tahun, unit, dan konteks data",
+        "Mengubah latar menjadi gradasi"
+      ],
       "correct": 2,
       "rationale": "Tanpa sumber dan konteks, pembaca tidak dapat menilai keandalan — infografis tanpa sumber mudah menjadi misinformasi."
     },
-    { "type": "section", "num": "3", "title": "Contoh nyata: infografis publikasi resmi", "sub": "Seri Lancet tentang pangan ultra-proses dan infografik CDC — perhatikan judul, alur, dan sumbernya" },
+    {
+      "type": "section",
+      "num": "3",
+      "title": "Contoh nyata: infografis publikasi resmi",
+      "sub": "Seri Lancet tentang pangan ultra-proses dan infografik CDC — perhatikan judul, alur, dan sumbernya"
+    },
     {
       "type": "text",
       "html": "<p>Infografis terbaik di publikasi kesehatan punya pola yang konsisten: <strong>judul menyatakan pesan utama, narasi mengalir dari kiri ke kanan/atas ke bawah, setiap angka ada konteks dan sumbernya</strong>. Perhatikan tiga panel pertama dari infografik seri <em>The Lancet</em> tentang pangan ultra-proses (UPF) dan kesehatan manusia — infografik sains yang dirilis penerbit sebagai ringkasan visual seri penelitian:</p>"
@@ -110,28 +172,32 @@
       "src": "figures/lancet_upf_1.png",
       "alt": "Panel pertama infografik The Lancet tentang pangan ultra-proses: definisi NOVA, contoh produk UPF, dan pergeseran pola diet global",
       "caption": "Panel 1 — definisi dan konteks: judul seri di atas, poin bernomor, ilustrasi pendukung. Layar pembuka yang membingungkan pesan tidak ditemukan di sini.",
-      "credit": "© The Lancet (2025), 'Ultra-Processed Foods and Human Health' — infografik seri; digunakan dengan atribusi untuk pendidikan internal. Sumber lengkap: thelancet.com/infographics-do/ultra-processed-food-2025"
+      "credit": "© The Lancet (2025), 'Ultra-Processed Foods and Human Health' — infografik seri; digunakan dengan atribusi untuk pendidikan internal. Sumber lengkap: thelancet.com/infographics-do/ultra-processed-food-2025",
+      "link": "https://www.thelancet.com/infographics-do/ultra-processed-food-2025"
     },
     {
       "type": "figure",
       "src": "figures/lancet_upf_2.png",
       "alt": "Panel kedua infografik The Lancet: grafik tren konsumsi UPF per kelompok negara berpendapatan dan temuan studi kohort",
       "caption": "Panel 2 — bukti kuantitatif: grafik tren berlabel lengkap dengan legenda, periode, dan satuan; setiap klaim mengacu studi.",
-      "credit": "© The Lancet (2025), infografik seri UPF — digunakan dengan atribusi untuk pendidikan internal."
+      "credit": "© The Lancet (2025), infografik seri UPF — digunakan dengan atribusi untuk pendidikan internal.",
+      "link": "https://www.thelancet.com/infographics-do/ultra-processed-food-2025"
     },
     {
       "type": "figure",
       "src": "figures/lancet_upf_3.png",
       "alt": "Panel ketiga infografik The Lancet: mekanisme, implikasi kebijakan pangan, dan respons kesehatan global",
       "caption": "Panel 3 — implikasi dan ajakan: bagian kebijakan ditutup pernyataan tindakan; identitas penerbit dan sumber tercantum di kaki infografik.",
-      "credit": "© The Lancet (2025), infografik seri UPF — digunakan dengan atribusi untuk pendidikan internal. PDF lengkap: bacaan/lancet-2025-upf-infografik.pdf"
+      "credit": "© The Lancet (2025), infografik seri UPF — digunakan dengan atribusi untuk pendidikan internal. PDF lengkap: bacaan/lancet-2025-upf-infografik.pdf",
+      "link": "https://www.thelancet.com/infographics-do/ultra-processed-food-2025"
     },
     {
       "type": "figure",
       "src": "figures/fig-cdc-dental-care.png",
       "alt": "Infografik CDC National Center for Health Statistics tentang akses perawatan gigi: peta distribusi dokter gigi, kesenjangan berdasarkan pendapatan, dan grafik batang kunjungan perawatan gigi",
       "caption": "Contoh dari CDC (NCHS, seri Health, United States): satu topik, tiga potongan data, masing-masing dengan judul mini dan sumber tahun — karya milik pemerintah AS (domain publik).",
-      "credit": "CDC / National Center for Health Statistics, 'Health, United States' infographics — karya pemerintah Amerika Serikat, domain publik; cdc.gov/nchs/hus/resources/infographics.htm"
+      "credit": "CDC / National Center for Health Statistics, 'Health, United States' infographics — karya pemerintah Amerika Serikat, domain publik; cdc.gov/nchs/hus/resources/infographics.htm",
+      "link": "https://www.cdc.gov/nchs/hus/resources/infographics.htm"
     },
     {
       "type": "mcq",
@@ -158,10 +224,33 @@
       "item_key": "lk6",
       "instruction": "<p>Rencanakan satu visual untuk bahan ajar Anda. Data boleh ilustratif selama ditandai demikian; sumber tetap wajib.</p>",
       "fields": [
-        { "key": "pesan", "label": "Satu pesan utama visual ini", "type": "textarea", "rows": 2, "placeholder": "Contoh: verifikasi ulang memotong waktu penyelesaian klaim…" },
-        { "key": "relasi", "label": "Jenis relasi pesan (urutan/perbandingan/hierarki/siklus/sebab-akibat/distribusi)", "type": "input", "placeholder": "…" },
-        { "key": "bentuk", "label": "Bentuk visual yang dipilih + alasannya", "type": "textarea", "rows": 2, "placeholder": "Contoh: flowchart 4 langkah karena pesannya proses…" },
-        { "key": "data", "label": "Data/fakta + sumber + status (resmi / ilustratif)", "type": "textarea", "rows": 2, "placeholder": "Contoh: data keluhan unit 2026 (internal, resmi)…" }
+        {
+          "key": "pesan",
+          "label": "Satu pesan utama visual ini",
+          "type": "textarea",
+          "rows": 2,
+          "placeholder": "Contoh: verifikasi ulang memotong waktu penyelesaian klaim…"
+        },
+        {
+          "key": "relasi",
+          "label": "Jenis relasi pesan (urutan/perbandingan/hierarki/siklus/sebab-akibat/distribusi)",
+          "type": "input",
+          "placeholder": "…"
+        },
+        {
+          "key": "bentuk",
+          "label": "Bentuk visual yang dipilih + alasannya",
+          "type": "textarea",
+          "rows": 2,
+          "placeholder": "Contoh: flowchart 4 langkah karena pesannya proses…"
+        },
+        {
+          "key": "data",
+          "label": "Data/fakta + sumber + status (resmi / ilustratif)",
+          "type": "textarea",
+          "rows": 2,
+          "placeholder": "Contoh: data keluhan unit 2026 (internal, resmi)…"
+        }
       ]
     },
     {
@@ -172,12 +261,78 @@
       "passScore": 70,
       "instruction": "<p>Nilai minimal 70; boleh diulang.</p>",
       "questions": [
-        { "id": "c5q1", "question": "Diagram paling tepat digunakan ketika…", "options": ["Ingin membuat slide lebih ramai", "Ada relasi, urutan, struktur, atau proses yang perlu dipahami", "Tidak ada data atau konsep", "Semua informasi harus masuk satu halaman"], "correct": 1, "rationale": "Bentuk visual mengikuti struktur pesan." },
-        { "id": "c5q2", "question": "Data tentang tren bulanan paling tepat ditampilkan dengan…", "options": ["Pie chart", "Garis waktu/grafik garis dengan sumbu dan unit jelas", "Daftar bullet panjang", "Ikon berderet tanpa skala"], "correct": 1, "rationale": "Relasi waktu memanggil bentuk garis/timeline; pie chart untuk komposisi." },
-        { "id": "c5q3", "question": "Revisi pertama untuk infografis tanpa sumber data adalah…", "options": ["Menambah ikon", "Mengganti font", "Menambahkan sumber, tahun, unit, dan konteks data", "Mengubah latar"], "correct": 2, "rationale": "Keterlacakan data adalah syarat infografis layak pakai." },
-        { "id": "c5q4", "question": "“Uji pembaca” yang paling menantang dan paling berguna untuk visual Anda adalah…", "options": ["Membaca ulang sendiri setelah satu hari", "Minta rekan menjelaskan visual tanpa narasi pembuat, lalu catat di mana penjelasannya meleset", "Menghitung jumlah kata pada label", "Memeriksa warna sesuai brand"], "correct": 1, "rationale": "Interpretasi tanpa bantuan pembuat adalah uji sesungguhnya keterbacaan." },
-        { "id": "c5q5", "question": "Menurut Traboco et al. (2022), keputusan yang harus selesai sebelum menyentuh aplikasi desain adalah…", "options": ["Pilihan font dan ukuran kanvas", "Tujuan infografis dan target audiens", "Daftar stiker dan ikon", "Jumlah warna maksimal"], "correct": 1, "rationale": "Tujuan dan audiens lebih dulu; tata letak, warna, dan huruf menyusul." },
-        { "id": "c5q6", "question": "Contoh fishbone mingguan (Li et al., 2024) menunjukkan visual struktural yang baik karena…", "options": ["Warnanya banyak sehingga menarik", "Blok per periode memudahkan pemindaian konten-aktivitas-asesmen — struktur membantu pembaca, bukan menghias", "Menggunakan ikon penuh warna di setiap baris", "Semua informasi ditumpuk dalam satu blok"], "correct": 1, "rationale": "Visual struktural yang baik mengurangi usaha memindai — itu fungsinya, bukan dekorasi." }
+        {
+          "id": "c5q1",
+          "question": "Diagram paling tepat digunakan ketika…",
+          "options": [
+            "Ingin membuat slide lebih ramai",
+            "Ada relasi, urutan, struktur, atau proses yang perlu dipahami",
+            "Tidak ada data atau konsep",
+            "Semua informasi harus masuk satu halaman"
+          ],
+          "correct": 1,
+          "rationale": "Bentuk visual mengikuti struktur pesan."
+        },
+        {
+          "id": "c5q2",
+          "question": "Data tentang tren bulanan paling tepat ditampilkan dengan…",
+          "options": [
+            "Pie chart",
+            "Garis waktu/grafik garis dengan sumbu dan unit jelas",
+            "Daftar bullet panjang",
+            "Ikon berderet tanpa skala"
+          ],
+          "correct": 1,
+          "rationale": "Relasi waktu memanggil bentuk garis/timeline; pie chart untuk komposisi."
+        },
+        {
+          "id": "c5q3",
+          "question": "Revisi pertama untuk infografis tanpa sumber data adalah…",
+          "options": [
+            "Menambah ikon",
+            "Mengganti font",
+            "Menambahkan sumber, tahun, unit, dan konteks data",
+            "Mengubah latar"
+          ],
+          "correct": 2,
+          "rationale": "Keterlacakan data adalah syarat infografis layak pakai."
+        },
+        {
+          "id": "c5q4",
+          "question": "“Uji pembaca” yang paling menantang dan paling berguna untuk visual Anda adalah…",
+          "options": [
+            "Membaca ulang sendiri setelah satu hari",
+            "Minta rekan menjelaskan visual tanpa narasi pembuat, lalu catat di mana penjelasannya meleset",
+            "Menghitung jumlah kata pada label",
+            "Memeriksa warna sesuai brand"
+          ],
+          "correct": 1,
+          "rationale": "Interpretasi tanpa bantuan pembuat adalah uji sesungguhnya keterbacaan."
+        },
+        {
+          "id": "c5q5",
+          "question": "Menurut Traboco et al. (2022), keputusan yang harus selesai sebelum menyentuh aplikasi desain adalah…",
+          "options": [
+            "Pilihan font dan ukuran kanvas",
+            "Tujuan infografis dan target audiens",
+            "Daftar stiker dan ikon",
+            "Jumlah warna maksimal"
+          ],
+          "correct": 1,
+          "rationale": "Tujuan dan audiens lebih dulu; tata letak, warna, dan huruf menyusul."
+        },
+        {
+          "id": "c5q6",
+          "question": "Contoh fishbone mingguan (Li et al., 2024) menunjukkan visual struktural yang baik karena…",
+          "options": [
+            "Warnanya banyak sehingga menarik",
+            "Blok per periode memudahkan pemindaian konten-aktivitas-asesmen — struktur membantu pembaca, bukan menghias",
+            "Menggunakan ikon penuh warna di setiap baris",
+            "Semua informasi ditumpuk dalam satu blok"
+          ],
+          "correct": 1,
+          "rationale": "Visual struktural yang baik mengurangi usaha memindai — itu fungsinya, bukan dekorasi."
+        }
       ]
     },
     {
