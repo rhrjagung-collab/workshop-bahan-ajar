@@ -44,7 +44,8 @@ export const adminActions = {
   resetParticipantProgress: (...a) => backend.resetParticipantProgress(...a),
   setPeran: (...a) => backend.setPeran(...a),
   setUsername: (...a) => backend.setUsername(...a),
-  createUser: (...a) => backend.adminCreateUser(...a)
+  createUser: (...a) => backend.adminCreateUser(...a),
+  deleteParticipant: (...a) => backend.deleteParticipant(...a)
 }
 
 export async function logout() {

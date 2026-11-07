@@ -160,6 +160,14 @@ function resetAll(p) {
   )
 }
 
+function deleteParticipant(p) {
+  if (!confirm(`Hapus ${p.nama} beserta akun login dan seluruh progresnya?\nTindakan ini PERMANEN dan tidak dapat dibatalkan.`)) return
+  adminRun(
+    () => adminActions.deleteParticipant(p.id),
+    `${p.nama} telah dihapus beserta akun dan progresnya.`
+  )
+}
+
 function applyPeran(p) {
   adminRun(
     () => adminActions.setPeran(p.email, peranSel[p.id]),
@@ -329,6 +337,11 @@ async function createUser() {
                   </td>
                   <td>
                     <button class="btn btn-danger btn-small" :disabled="adminBusy" @click="resetAll(r.p)">Reset semua progres</button>
+                    <button
+                      class="btn btn-danger btn-small" :disabled="adminBusy || r.p.id === store.session.id"
+                      title="Hapus peserta beserta akun login dan seluruh progresnya"
+                      @click="deleteParticipant(r.p)"
+                    >Hapus peserta</button>
                   </td>
                 </tr>
               </tbody>

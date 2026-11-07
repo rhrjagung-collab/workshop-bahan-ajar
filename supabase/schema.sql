@@ -309,12 +309,36 @@ begin
 end;
 $$;
 
+-- Hapus peserta (admin saja): baris roster + seluruh progres terhapus
+-- (rantai on-delete-cascade), termasuk akun login auth terkait bila ada.
+create or replace function public.admin_delete_user(p_participant_id uuid)
+returns void
+language plpgsql security definer set search_path = public, auth
+as $$
+declare
+  v_auth uuid;
+begin
+  if not public.is_admin() then
+    raise exception 'Hanya admin yang dapat menghapus peserta.';
+  end if;
+  if p_participant_id = public.current_participant_id() then
+    raise exception 'Tidak dapat menghapus akun Anda sendiri.';
+  end if;
+  select auth_user_id into v_auth from public.participants where id = p_participant_id;
+  delete from public.participants where id = p_participant_id;
+  if v_auth is not null then
+    delete from auth.users where id = v_auth;
+  end if;
+end;
+$$;
+
 grant execute on function public.bind_and_get_me() to authenticated;
 grant execute on function public.admin_set_peran(text, text) to authenticated;
 grant execute on function public.admin_set_module_progress(uuid, text, int, text) to authenticated;
 grant execute on function public.admin_reset_all_progress(uuid) to authenticated;
 grant execute on function public.admin_set_username(uuid, text) to authenticated;
 grant execute on function public.admin_create_user(text, text, text, text, text) to authenticated;
+grant execute on function public.admin_delete_user(uuid) to authenticated;
 grant execute on function public.lookup_login_email(text) to anon, authenticated;
 
 -- 8) Hapus RPC lama v1 (sesi anonim + kode akses) -------------------------

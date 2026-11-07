@@ -208,6 +208,11 @@ const supabaseBackend = {
     return row.message
   },
 
+  async deleteParticipant(participantId) {
+    const { error } = await sb.rpc('admin_delete_user', { p_participant_id: participantId })
+    if (error) throw new Error(error.message)
+  },
+
   async setModuleProgress(participantId, moduleCode, percent, status) {
     const { error } = await sb.rpc('admin_set_module_progress', {
       p_participant_id: participantId, p_module_code: moduleCode, p_percent: percent, p_status: status
