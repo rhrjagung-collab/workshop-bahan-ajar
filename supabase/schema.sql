@@ -319,7 +319,7 @@ begin
   values (trim(p_nama), p_email, p_username, coalesce(nullif(trim(p_kelompok), ''), '-'), 'peserta')
   on conflict (email) do update set peran = 'peserta', username = excluded.username;
 
-  return query select true, 'Peserta ' || coalesce(p_username, p_email) || ' berhasil dibuat — akun siap dipakai login.';
+  return query select true, 'Peserta ' || coalesce(p_username, p_email) || ' berhasil dibuat — akun siap dipakai login (email internal: ' || p_email || ').';
 
 exception
   when unique_violation then
