@@ -46,17 +46,28 @@
       "correct": 2,
       "rationale": "Storyboard memetakan narasi dan fungsi setiap slide sebelum produksi dimulai."
     },
-    { "type": "section", "num": "3", "title": "Bagaimana wujud storyboard yang benar", "sub": "Kolom visual • teks di layar • narasi • interaksi — dipakai desainer instruksional profesional" },
+    { "type": "section", "num": "3", "title": "Bagaimana wujud storyboard yang benar", "sub": "Contoh nyata dari portofolio desainer instruksional profesional, lalu adaptasinya" },
     {
       "type": "text",
-      "html": "<p>Storyboard desain instruksional yang baik bukan sekadar deretan kotak gambar. Setiap baris slide memuat <strong>empat keputusan yang harus dijawab sebelum buka PowerPoint</strong>: sketsa visualnya apa, teks apa yang tampil di layar, apa yang <em>diucapkan</em> fasilitator (narasi), dan interaksi apa yang memaksa peserta berpikir. Perhatikan bahwa teks di layar dan narasi <strong>tidak boleh sama</strong> — itu prinsip redundancy dari modul C4 yang sudah diantisipasi sejak storyboard.</p><p>Contoh berikut memakai format tiga kolom seperti yang dipakai desainer instruksional profesional (mis. format storyboard video/kursus ala Peck): sketsa + teks di layar + narasi + interaksi, satu blok per slide.</p>"
+      "html": "<p>Storyboard desain instruksional yang baik bukan sekadar deretan kotak gambar. Lihat contoh nyata berikut dari <strong>portofolio publik Devlin Peck</strong>, desainer instruksional e-learning yang karyanya banyak dipakai sebagai rujukan industri: satu blok per slide dengan kolom <strong>Title — On-screen text — Voiceover — Animation notes — Programming notes</strong>, plus placeholder gambar. Perhatikan hal terpenting: <strong>teks di layar (OST) dan narasi (VO) ditulis berbeda sejak storyboard</strong> — saluran layar dan saluran lisan tidak boleh menduplikasi satu sama lain (prinsip redundancy yang akan kita dalami di modul C4).</p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-peck-storyboard-storyline.jpg",
+      "alt": "Contoh storyboard nyata dari portofolio Devlin Peck: satu blok Slide 1.1 Introduction dengan kolom Title, On-screen text, Voiceover berisi nama file audio dan teks narasi, Animation notes, Programming notes, dan placeholder gambar",
+      "caption": "Satu blok storyboard profesional: judul slide, teks di layar (OST), narasi suara (VO) beserta nama file audionya, catatan animasi, catatan pemrograman, dan placeholder gambar.",
+      "credit": "© Devlin Peck (devlinpeck.com) — 'How to Create a Storyboard for eLearning'; digunakan utuh dengan atribusi untuk pendidikan internal."
+    },
+    {
+      "type": "text",
+      "html": "<p>Untuk pelatihan tatap muka klasik seperti milik Anda, format yang sama diterjemahkan menjadi empat kolom yang lebih ringkas: <strong>sketsa visual • teks di layar • narasi presenter • interaksi</strong>. Isi seluruh formatnya dengan topik internal, sehingga tim dapat meninjau alur dan fungsi tiap slide <em>sebelum</em> produksi dimulai.</p>"
     },
     {
       "type": "figure",
       "src": "figures/contoh-storyboard.svg",
       "alt": "Contoh storyboard tiga slide: slide pemantik, konsep inti, dan latihan — masing-masing dengan sketsa visual, teks di layar, narasi presenter, dan interaksi",
-      "caption": "Contoh storyboard sesi 20 menit 'mengurangi penolakan klaim': perhatikan narasi ≠ teks di layar, dan setiap slide punya interaksi.",
-      "credit": "Ilustrasi tim modul (2026), format storyboard desain instruksional profesional — bebas lisensi."
+      "caption": "Adaptasi format profesional untuk sesi pelatihan tatap muka: satu blok per slide, empat keputusan yang harus dijawab sebelum buka PowerPoint.",
+      "credit": "Ilustrasi tim modul (2026), mengikuti format storyboard desain instruksional profesional — bebas lisensi."
     },
     {
       "type": "figure",

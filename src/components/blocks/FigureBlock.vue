@@ -14,9 +14,12 @@ const props = defineProps({ block: { type: Object, required: true } })
 
 <style scoped>
 .figure { margin: 0 0 26px; }
+/* Gambar tampil pada ukuran aslinya (dibatasi area) — rasio selalu terjaga,
+   tanpa kotak putih raksasa untuk figur tinggi seperti bagan Mayer. */
 .figure img {
-  display: block; width: 100%; height: auto; max-height: 620px;
-  object-fit: contain; /* jaga rasio: gambar apa pun tidak melebar/menggulir */
+  display: block; width: auto; height: auto;
+  max-width: 100%; max-height: 620px;
+  margin: 0 auto;
   border: 1px solid var(--line); border-radius: var(--radius);
   background: #fff;
 }

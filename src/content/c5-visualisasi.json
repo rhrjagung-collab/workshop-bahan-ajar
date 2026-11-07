@@ -100,6 +100,52 @@
       "correct": 2,
       "rationale": "Tanpa sumber dan konteks, pembaca tidak dapat menilai keandalan — infografis tanpa sumber mudah menjadi misinformasi."
     },
+    { "type": "section", "num": "3", "title": "Contoh nyata: infografis publikasi resmi", "sub": "Seri Lancet tentang pangan ultra-proses dan infografik CDC — perhatikan judul, alur, dan sumbernya" },
+    {
+      "type": "text",
+      "html": "<p>Infografis terbaik di publikasi kesehatan punya pola yang konsisten: <strong>judul menyatakan pesan utama, narasi mengalir dari kiri ke kanan/atas ke bawah, setiap angka ada konteks dan sumbernya</strong>. Perhatikan tiga panel pertama dari infografik seri <em>The Lancet</em> tentang pangan ultra-proses (UPF) dan kesehatan manusia — infografik sains yang dirilis penerbit sebagai ringkasan visual seri penelitian:</p>"
+    },
+    {
+      "type": "figure",
+      "src": "figures/lancet_upf_1.png",
+      "alt": "Panel pertama infografik The Lancet tentang pangan ultra-proses: definisi NOVA, contoh produk UPF, dan pergeseran pola diet global",
+      "caption": "Panel 1 — definisi dan konteks: judul seri di atas, poin bernomor, ilustrasi pendukung. Layar pembuka yang membingungkan pesan tidak ditemukan di sini.",
+      "credit": "© The Lancet (2025), 'Ultra-Processed Foods and Human Health' — infografik seri; digunakan dengan atribusi untuk pendidikan internal. Sumber lengkap: thelancet.com/infographics-do/ultra-processed-food-2025"
+    },
+    {
+      "type": "figure",
+      "src": "figures/lancet_upf_2.png",
+      "alt": "Panel kedua infografik The Lancet: grafik tren konsumsi UPF per kelompok negara berpendapatan dan temuan studi kohort",
+      "caption": "Panel 2 — bukti kuantitatif: grafik tren berlabel lengkap dengan legenda, periode, dan satuan; setiap klaim mengacu studi.",
+      "credit": "© The Lancet (2025), infografik seri UPF — digunakan dengan atribusi untuk pendidikan internal."
+    },
+    {
+      "type": "figure",
+      "src": "figures/lancet_upf_3.png",
+      "alt": "Panel ketiga infografik The Lancet: mekanisme, implikasi kebijakan pangan, dan respons kesehatan global",
+      "caption": "Panel 3 — implikasi dan ajakan: bagian kebijakan ditutup pernyataan tindakan; identitas penerbit dan sumber tercantum di kaki infografik.",
+      "credit": "© The Lancet (2025), infografik seri UPF — digunakan dengan atribusi untuk pendidikan internal. PDF lengkap: bacaan/lancet-2025-upf-infografik.pdf"
+    },
+    {
+      "type": "figure",
+      "src": "figures/fig-cdc-dental-care.png",
+      "alt": "Infografik CDC National Center for Health Statistics tentang akses perawatan gigi: peta distribusi dokter gigi, kesenjangan berdasarkan pendapatan, dan grafik batang kunjungan perawatan gigi",
+      "caption": "Contoh dari CDC (NCHS, seri Health, United States): satu topik, tiga potongan data, masing-masing dengan judul mini dan sumber tahun — karya milik pemerintah AS (domain publik).",
+      "credit": "CDC / National Center for Health Statistics, 'Health, United States' infographics — karya pemerintah Amerika Serikat, domain publik; cdc.gov/nchs/hus/resources/infographics.htm"
+    },
+    {
+      "type": "mcq",
+      "item_key": "c5-mcq-nyata",
+      "question": "Berdasarkan contoh Lancet dan CDC di atas, pola yang konsisten pada infografis publikasi resmi adalah…",
+      "options": [
+        "Banyak dekorasi dan ikon agar terlihat ramai",
+        "Judul berisi pesan, alur baca jelas, angka dengan konteks, dan sumber di setiap bagian",
+        "Semua data disajikan sebagai pie chart berwarna-warni",
+        "Sumber hanya dicantumkan sekali di halaman terpisah"
+      ],
+      "correct": 1,
+      "rationale": "Kedua contoh memuat judul per bagian, alur baca terstruktur, angka dengan penyebut/periode, dan atribusi sumber — pola yang juga harus ada pada infografis unit Anda."
+    },
     {
       "type": "callout",
       "variant": "key",

@@ -31,14 +31,22 @@
       "credit": "Mayer (2024), Educational Psychology Review 36:8 — CC BY 4.0."
     },
     {
-      "type": "beforeafter",
+      "type": "compare",
       "item_key": "c4-ba1",
-      "instruction": "<p>Geser pembanding untuk melihat satu slide yang sama sebelum dan sesudah diperbaiki — perhatikan judul yang menjadi pesan, visual yang menjadi bukti, dan sumbernya.</p>",
+      "instruction": "<p>Dua slide berikut menyajikan materi yang sama secara utuh, berdampingan. Perhatikan judul, visual, dan sumbernya — lalu identifikasi perubahan mana yang benar-benar terjadi.</p>",
       "beforeHtml": "<div style='padding:0'><p style='margin:0 0 4px; font-size:11px; font-weight:700; color:#4A5060'>PROSEDUR VERIFIKASI KLAIM</p><p style='margin:0 0 6px; font-size:9.5px; line-height:1.5; color:#1F2430'>• Verifikasi klaim dilakukan oleh petugas verifikator yang telah ditetapkan berdasarkan surat keputusan yang berlaku dan mempertimbangkan beban kerja unit • Dokumen yang diverifikasi meliputi formulir klaim, lampiran bukti layanan, kartu identitas peserta, serta dokumen pendukung lainnya sesuai ketentuan yang berlaku • Bila terdapat ketidaksesuaian data maka petugas wajib melakukan konfirmasi kepada faskes pengirim melalui kanal resmi yang telah ditetapkan • Hasil verifikasi dicatat pada sistem dengan kode status yang telah ditentukan oleh kebijakan yang berlaku saat ini • Rekapitulasi hasil verifikasi dilaporkan secara berkala kepada kepala unit untuk ditindaklanjuti sesuai kebutuhan • Pertanyaan seputar prosedur dapat disampaikan melalui kanal resmi unit verifikasi</p><p style='margin:0; font-size:8.5px; color:#7A8090'>Sumber: rangkuman SOP hal. 4–9 (disalin utuh)</p></div>",
-      "afterHtml": "<div style='padding:0;background:#fff'><p style='margin:0 0 2px;font-size:8px;font-weight:700;letter-spacing:.08em;color:#009F3C'>PERBAIKAN VERIFIKASI</p><p style='margin:0 0 10px;font-size:12px;font-weight:800;line-height:1.25;color:#1F2430'>Dokumen tidak terbaca adalah penyebab penolakan terbanyak — periksa keterbacaan sebelum kirim</p><div style='display:flex;gap:8px;align-items:flex-end;height:46px;margin:4px 2px 3px'><div style='flex:1.8;background:#C8102E;height:46px;border-radius:3px 3px 0 0'></div><div style='flex:1;background:#2B3078;height:23px;border-radius:3px 3px 0 0'></div><div style='flex:1;background:#2B3078;height:15px;border-radius:3px 3px 0 0'></div></div><div style='display:flex;gap:8px;font-size:7px;color:#4A5060;margin-bottom:8px'><span style='flex:1.8;font-weight:700'>Tak terbaca 46%</span><span style='flex:1'>Data 22%</span><span style='flex:1'>Lain 32%</span></div><p style='margin:0;font-size:7.5px;color:#7A8090'>Langkah pencegahan: konfirmasi lewat kanal resmi; catat kode status. Sumber: contoh ilustratif unit verifikasi (n=1.240), Jan–Jun 2026.</p></div>",
+      "afterHtml": "<div style='padding:0;background:#fff'><p style='margin:0 0 2px;font-size:8px;font-weight:700;letter-spacing:.08em;color:#009F3C'>PERBAIKAN VERIFIKASI</p><p style='margin:0 0 10px;font-size:12px;font-weight:800;line-height:1.25;color:#1F2430'>Dokumen tidak terbaca adalah penyebab penolakan terbanyak — periksa keterbacaan sebelum kirim</p><div style='display:flex;gap:8px;align-items:flex-end;height:52px;margin:4px 2px 3px'><div style='flex:1.8;background:#C8102E;height:52px;border-radius:3px 3px 0 0'></div><div style='flex:1;background:#2B3078;height:26px;border-radius:3px 3px 0 0'></div><div style='flex:1;background:#2B3078;height:17px;border-radius:3px 3px 0 0'></div></div><div style='display:flex;gap:8px;font-size:7px;color:#4A5060;margin-bottom:8px'><span style='flex:1.8;font-weight:700'>Tak terbaca 46%</span><span style='flex:1'>Data 22%</span><span style='flex:1'>Lain 32%</span></div><p style='margin:0;font-size:7.5px;color:#7A8090'>Langkah pencegahan: konfirmasi lewat kanal resmi; catat kode status. Sumber: contoh ilustratif unit verifikasi (n=1.240), Jan–Jun 2026.</p></div>",
       "labelBefore": "Sebelum — dinding teks",
-      "labelAfter": "Sesudah — asersi + bukti",
-      "rationale": "Slide hasil mengikuti pola deck akademik: judul menyatakan kesimpulan (assertion), satu visual menjadi bukti (evidence), sumber tercantum, dan enam poin SOP dipindahkan ke handout (coherence). Narasi Anda mengisi sisanya."
+      "labelAfter": "Sesudah — asersi + bukti visual",
+      "question": "Perubahan mana yang benar-benar terjadi pada slide 'sesudah'?",
+      "statements": [
+        { "text": "Judul diubah dari nama topik menjadi pernyataan pesan lengkap (signaling)", "correct": true },
+        { "text": "Enam poin salinan SOP dipindahkan ke handout — slide menyisakan yang penting saja (coherence)", "correct": true },
+        { "text": "Ditambahkan visual bukti (bar chart) dengan nilai persen, label, dan sumber", "correct": true },
+        { "text": "Seluruh teks dihapus sehingga slide tinggal gambar tanpa penjelasan", "correct": false },
+        { "text": "Warna dan hiasan ditambah banyak agar slide terlihat meriah", "correct": false }
+      ],
+      "rationale": "Tiga perubahan itu adalah inti pola deck akademik: judul = asersi, visual = bukti, sumber = akuntabilitas. Menghapus semua teks dan menumpuk hiasan justru melanggar coherence."
     },
     {
       "type": "figure",

@@ -9,6 +9,7 @@ import DragWordsBlock from './DragWordsBlock.vue'
 import MatchingBlock from './MatchingBlock.vue'
 import SortBlock from './SortBlock.vue'
 import BeforeAfterBlock from './BeforeAfterBlock.vue'
+import CompareBlock from './CompareBlock.vue'
 import HotspotBlock from './HotspotBlock.vue'
 import FormBlock from './FormBlock.vue'
 import ReflectBlock from './ReflectBlock.vue'
@@ -24,6 +25,7 @@ const map = {
   matching: MatchingBlock,
   sort: SortBlock,
   beforeafter: BeforeAfterBlock,
+  compare: CompareBlock,
   hotspot: HotspotBlock,
   form: FormBlock,
   reflect: ReflectBlock,
